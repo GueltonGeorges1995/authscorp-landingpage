@@ -1,6 +1,6 @@
 <template>
     <div>
-        
+
     </div>
 </template>
 
@@ -12,3 +12,11 @@ export default {
 
 };
 </script>
+
+
+
+<style>
+    div {
+        background: #264EEE;
+    }
+</style>
