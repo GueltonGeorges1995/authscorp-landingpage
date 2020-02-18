@@ -5,9 +5,9 @@
                 <h2 >AML Monitoring</h2>
                 <h2>User Risk Management</h2>  
             </div>
-            <v-container>
+             <v-container>
                 <v-row>
-                    <v-col offset="1" lg="5">
+                    <v-col lg="5">
                         <div class="d-flex justify-end pr-6">
                             <img class="team" src="../../assets/images/team.png" alt="">    
                         </div>

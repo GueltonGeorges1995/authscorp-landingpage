@@ -48,7 +48,7 @@
   width: 700px;
   height: 700px;
   position: absolute;
-  top: 900px;
+  top: 950px;
   left: 0;
 }
 .square2 {
@@ -64,7 +64,7 @@
   width: 700px;
   height: 700px;
   position: absolute;
-  top: 900px;
+  top: 950px;
   left: -500px;
 }
 
