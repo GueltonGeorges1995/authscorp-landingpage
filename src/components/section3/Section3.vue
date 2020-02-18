@@ -5,15 +5,15 @@
                 <h2 >AML Monitoring</h2>
                 <h2>User Risk Management</h2>  
             </div>
-            <v-container>
+            <v-container fluid>
                 <v-row>
-                    <v-col offset="1" lg="5">
+                    <v-col offset="1" md="5" lg="5">
                         <div class="d-flex justify-end pr-6">
                             <img class="team" src="../../assets/images/team.png" alt="">    
                         </div>
                          <v-row class="first">
-                            <v-col offset="2" lg="2">
-                             <svg width="105px" height="105px" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <v-col offset="2" md="2" lg="2">
+                             <svg width="85px" height="85px" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
                                     <title>icon</title>
                                     <desc>Created with Sketch.</desc>
@@ -49,8 +49,8 @@
                             </v-col>
                         </v-row>
                         <v-row class="pt-3">
-                            <v-col offset="2" lg="2">
-                                <svg width="105px" height="105px" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <v-col offset="2" md="2" lg="2">
+                                <svg width="85px" height="85px" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
                                     <title>icon</title>
                                     <desc>Created with Sketch.</desc>
@@ -84,8 +84,8 @@
                     </v-col>
                     <v-col>
                         <v-row class="pt-12">
-                            <v-col lg="2">
-                               <svg width="105px" height="105px" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <v-col md="2" lg="2">
+                               <svg width="85px" height="85px" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
                                     <title>icon</title>
                                     <desc>Created with Sketch.</desc>
@@ -116,8 +116,8 @@
                             </v-col>
                         </v-row>
                         <v-row class="pt-3">
-                            <v-col lg="2">
-                                <svg width="105px" height="105px" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <v-col md="2" lg="2">
+                                <svg width="85px" height="85px" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
                                     <title>icon</title>
                                     <desc>Created with Sketch.</desc>
@@ -172,7 +172,7 @@
                         <p class="text-center subtitle">Known Phone Numbers</p>
                     </div>
                     <div class="drops1">
-                        <svg  width="70px" height="26px" viewBox="0 0 44 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <svg  width="55px" height="20px" viewBox="0 0 44 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
                             <title>indicator-1</title>
                             <desc>Created with Sketch.</desc>
@@ -196,7 +196,7 @@
                         </svg>
                     </div> 
                     <div class="drops2">
-                        <svg  width="70px" height="26px" viewBox="0 0 44 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <svg  width="50px" height="25px" viewBox="0 0 44 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
                             <title>indicator-1</title>
                             <desc>Created with Sketch.</desc>
@@ -249,25 +249,25 @@ export default {
     }
     h3{
         font-family: 'Lato', sans-serif; 
-        font-size: 33px;
+        font-size: 30px;
         /* font-weight: 600; */
         padding-bottom: 10px 
         
     }
     p{       
         font-family: 'Lato', sans-serif; 
-        font-size: 22px;
+        font-size: 20px;
         color: #7C7D8D;
         letter-spacing: 0;              
         font-weight: 600
         
     }
     .top{
-        width: 65%;
+        width: 64%;
         line-height: 175%;  
     }
     .bottom{
-        width:85%;
+        width:83%;
         line-height: 175%;  
     }
     .desk{

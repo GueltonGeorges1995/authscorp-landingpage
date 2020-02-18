@@ -1,15 +1,21 @@
 <template>
     <div>
-      
+      <Section3/>
+      <Section6/>
     </div>
 </template>
 
 <script>
-
+import Section3 from './components/section3/Section3'
+import Section6 from './components/section6/Section6'
 
 
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+    Section3,
+    Section6
+  }
   
 };
 </script>
