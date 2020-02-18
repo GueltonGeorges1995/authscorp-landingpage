@@ -1,8 +1,6 @@
 <template>
     <div>
-        
-
-        
+      
     </div>
 </template>
 
@@ -11,11 +9,8 @@
 
 
 export default {
-  name: 'App',
-  components: {
-     
-  }
-
+  name: 'App'
+  
 };
 </script>
 
