@@ -2,6 +2,8 @@
     <div>
       <Section3/>
       <Section6/>
+        <Roadmap />
+        <Pricing />
     </div>
 </template>
 
