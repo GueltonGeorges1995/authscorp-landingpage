@@ -1,8 +1,7 @@
 <template>
-  
+    <v-container class="pb-0">
     <v-row>
-        <v-col cols="2" class="pb-0"></v-col>
-        <v-col class="col-1-header pb-0" cols="3">
+        <v-col class="col-1-header pb-0" cols="5">
         <h1 class="title1">KYC / AML</h1>
         <h1 class="title1 color-blue">Integration</h1>
         <p
@@ -17,6 +16,7 @@
         <img src="../../assets/images/2933349a1546cbb67369596f469ecd19eb7178f3.png"/>
       </v-col>
     </v-row>
+    </v-container>
 </template>
 
 <style scoped>

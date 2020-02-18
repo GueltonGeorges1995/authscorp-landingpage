@@ -11,7 +11,6 @@
 import Section3 from './components/section3/Section3'
 import Section6 from './components/section6/Section6'
 
-
 export default {
   name: 'App',
   components:{
