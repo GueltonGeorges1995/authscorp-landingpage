@@ -1,22 +1,17 @@
 <template>
     <div>
-
+        <Roadmap />
     </div>
 </template>
 
 <script>
-
+import Roadmap from "./components/Roadmap"
 
 export default {
   name: 'App',
 
+  components: {
+      Roadmap
+  },
 };
 </script>
-
-
-
-<style>
-    div {
-        background: #264EEE;
-    }
-</style>
