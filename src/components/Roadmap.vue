@@ -90,7 +90,6 @@ export default {
     }
     #pill {
         height: 41.59px;
-        width: 124.03px;
         margin-bottom: 20px;
     }
     h5 {
