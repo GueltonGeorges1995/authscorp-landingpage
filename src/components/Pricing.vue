@@ -25,7 +25,7 @@
                         style="margin: 40px auto 50px auto;"
                         width="90px"
                         height="88px"
-                        src="../assets/icons/image (9).png"
+                        src="../assets/icons/cloud.png"
                       ></v-img>
                       <div>
                           <p class="a">$0.15</p>
@@ -44,7 +44,7 @@
                         style="margin: 40px auto 50px auto;"
                         width="99px"
                         height="88px"
-                        src="../assets/icons/image (10).png"
+                        src="../assets/icons/manual.png"
                       ></v-img>
                       <div>
                           <p class="a">$0.01</p>

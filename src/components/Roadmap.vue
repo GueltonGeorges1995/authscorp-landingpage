@@ -35,7 +35,7 @@
                         value="27"
                         color="#FFFFFF"
                         height="2px"
-                        buffer-value="93"
+                        buffer-value="100"
                     ></v-progress-linear>
                     <div class="dot-active"></div>
                     <div class="dot-active" style="left: 27%;">
