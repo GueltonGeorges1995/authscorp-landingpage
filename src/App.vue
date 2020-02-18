@@ -1,6 +1,6 @@
 <template>
     <div>
-
+      
     </div>
 </template>
 
@@ -8,15 +8,13 @@
 
 
 export default {
-  name: 'App',
-
+  name: 'App'
+  
 };
 </script>
 
 
 
 <style>
-    div {
-        background: #264EEE;
-    }
+    
 </style>
