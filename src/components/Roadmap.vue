@@ -13,23 +13,38 @@
         <v-container id="content">
             <v-row>
                 <v-col md="3" id="node1">
-                    <h4>2019 Q1</h4>  
+                    <h3>2019 Q1</h3>  
                     <h3>Nodes Alpha</h3>
                 </v-col>
                 <v-col md="3" id="node2">
-                    <h4>2019 Q1</h4>
+                    <h3>2019 Q1</h3>
                     <h3>Used Alpha</h3>
                 </v-col>
-                <v-col md="3" id="node3"></v-col>
-                <v-col md="3" id="node4"></v-col>
+                <v-col md="3" id="node3">
+                    <h3>2019 Q1</h3>  
+                    <h3>Network Beta</h3>
+                </v-col>
+                <v-col md="3" id="node4">
+                    <h3>2019 Q1</h3>  
+                    <h3>Partner Connection</h3>
+                </v-col>
             </v-row>
-            <v-row id="bar">
-                    <v-col md="3">
-                        <div id="bar-active"></div>
-                    </v-col>
-                    <v-col md="9">
-                        <div id="bar-inactive"></div>
-                    </v-col>
+            <v-row style="margin: 30px 0; position: relative;">
+                <v-col md="12">
+                    <v-progress-linear
+                        value="27"
+                        color="#FFFFFF"
+                        height="2px"
+                        buffer-value="93"
+                    ></v-progress-linear>
+                    <div class="dot-active"></div>
+                    <div class="dot-active" style="left: 27%;">
+                        <div id="dot-current"></div>
+                        <div id="dot-in-current"></div>
+                    </div>
+                    <div class="dot-active" style="right: 47%; background: #4b6fff;"></div>
+                    <div class="dot-active" style="right: 21%; background: #4b6fff;"></div>
+                </v-col>
             </v-row>
             <v-row>
                 <v-col md="3" id="details">
@@ -62,7 +77,7 @@
         <div id="abstract-1">
             <div id="rectangleC"></div>
             <div id="rectangleC" style="top: -35%;"></div>
-            <div id="polygon"></div>
+            <!-- <div id="polygon"></div> -->
         </div>
     </section>
 </template>
@@ -75,10 +90,10 @@ export default {
 
 <style scoped>
     @import url('https://fonts.google.com/specimen/Lato?selection.family=Lato');
-    /* @import url('https://www.fontify.me/webfont/92731/sf-ui-display-regular'); */
+    @import url('https://www.fontify.me/wf/7116669ff62ea6ce905b50766eaca6b8');
 
     section {
-        height: 696.3px;
+        height: 100vh;
         background: #264EEE;
         color: white;
         position: relative;
@@ -136,35 +151,46 @@ export default {
 
     #node3 {
         width: 143px;
+        color: rgba(255,255,255,0.1);
     }
 
     #node4 {
         width: 213px;
+        color: rgba(255,255,255,0.1);
     }
 
-    /**Progress Bar */
-    #bar {
-        z-index: 5;
-        width: 853.63px;
-        height: 10.22px;
-        margin: 30px 0;
-    }
+    /**Checkpoints */
 
-    #bar-active {
-        z-index: 6;
-        width: 232.74px;
-        height: 1.46px;
+    .dot-active {
+        width: 12px;
+        height: 12px;
         background: #ffffff;
-        transform: scaleY(-1);
+        position: absolute;
+        top: 30%;
+        border-radius: 50%;
     }
 
-    #bar-inactive {
-        opacity: 0.2;
-        z-index: 6;
-        width: 853.63px;
-        height: 1.46px;
-        background: #ffffff;
+    #dot-current {
+        width: 9px;
+        height: 9px;
+        background: #264EEE;
+        position: absolute;
+        top: 13%;
+        left: 14%;
+        border-radius: 50%;
     }
+
+    #dot-in-current {
+        width: 5px;
+        height: 5px;
+        background: #FFFFFF;
+        position: absolute;
+        top: 28%;
+        left: 30%;
+        border-radius: 50%;
+    }
+
+    /**Boxes */
 
     #details {
         width: 196.99px;
@@ -199,7 +225,7 @@ export default {
     #bg3 {
         width: 196.99px;
         height: 131.38px;
-        background-color: rgba(255,255,255,0.05);
+        background-color: rgba(255,255,255,0.1);
     }
 
     #a, #a2 {
@@ -230,7 +256,7 @@ export default {
     }
 
     .box {
-        background-color: rgba(255,255,255,0.05);
+        background-color: rgba(255,255,255,0.1);
     }
 
     #follow {
@@ -238,8 +264,9 @@ export default {
         padding: 50px 0;
         width: 303.51px;
         height: 46px;
-        font-family: "SFUIDisplay-Regular";
-        font-size: 17px;
+        /* font-family: "SFUIDisplay-Regular"; */
+        font-family: font92731;
+        font-size: 19px;
         font-weight: 400;
         line-height: 23px;
         text-align: center;
