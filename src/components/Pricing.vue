@@ -1,25 +1,28 @@
 <template>
   <section>
       <v-container>
-          <v-row>
-              <v-col md="12">
+          <v-row justify="center">
+              <v-col md="9">
                   <div id="bg">
-                    <v-chip color="#ffffff" id="pill">
+                    <v-chip color="#FFFFFF" id="pill">
                         Pricing
                     </v-chip>
                   </div>
-                  <h2 id="title">Choose the most suitable service for your needs with reasonable price.</h2>
+                  <div>
+                    <h2 id="title">Choose the most suitable service for your needs with reasonable price.</h2>
+                  </div>
               </v-col>
           </v-row>
           <v-row justify="center">
               <v-col md="3" style="margin-right: 0">
                   <v-card height="353px" color="#264EEE">
-                      <div style="width: 116.75px;">
+                      <div style="width: 116.75px; padding-top: 40px;">
                           <v-chip color="rgba(255,255,255,0.11)" class="cardtitle">
                               Cloud
                           </v-chip>
                       </div>
                       <v-img 
+                        style="margin: 40px auto 50px auto;"
                         width="90px"
                         height="88px"
                         src="../assets/icons/image (9).png"
@@ -32,12 +35,13 @@
               </v-col>
               <v-col md="3" style="margin-left: 0;">
                   <v-card height="353px" color="#1ed660">
-                      <div style="width: 116.75px;">
+                      <div style="width: 116.75px; padding-top: 40px;">
                           <v-chip color="rgba(255,255,255,0.11)" class="cardtitle">
                               Manual
                           </v-chip>
                       </div>
                       <v-img 
+                        style="margin: 40px auto 50px auto;"
                         width="99px"
                         height="88px"
                         src="../assets/icons/image (10).png"
@@ -51,7 +55,7 @@
           </v-row>
           <v-row>
               <v-col md="12">
-                  <div>
+                  <div style="margin: 20px auto;">
                     <p id="terms" style="margin: 0 auto">*Terms are subject to change</p>
                   </div>
                   <div style="width: 236px;">
@@ -74,6 +78,11 @@ export default {
 
     div {
         margin: 0 auto;
+        text-align: center;
+    }
+
+    section {
+        background: #f5f9ff;
     }
 
     #pill {
@@ -83,17 +92,15 @@ export default {
         font-size: 17px;
         font-weight: 700;
         line-height: 20px;
-        text-align: center;
     }
 
     .cardtitle {
-        height: 29px;
+        height: 40px;
         color: #ffffff;
         font-family: Lato;
         font-size: 24px;
         font-weight: 700;
         line-height: 29px;
-        text-align: center;
     }
 
     #bg {
@@ -110,7 +117,6 @@ export default {
         font-size: 32px;
         font-weight: 700;
         line-height: 61px;
-        text-align: center;
     }
 
     .a {
@@ -120,7 +126,6 @@ export default {
         font-size: 48px;
         font-weight: 700;
         line-height: 58px;
-        text-align: center;
     }
 
     .a2 {
@@ -130,7 +135,6 @@ export default {
         font-size: 18px;
         font-weight: 700;
         line-height: 22px;
-        text-align: center;
     }
 
     #terms {
@@ -141,18 +145,19 @@ export default {
         font-size: 16px;
         font-weight: 700;
         line-height: 19px;
-        text-align: center;
     }
 
     button {
         margin: 0 auto;
-        height: 22px;
+        height: 50px;
+        width: 237px;
         color: #264eee;
+        border-radius: 30px;
+        background-color: rgba(245,249,255);
         font-family: Lato;
         font-size: 18px;
         font-weight: 700;
         line-height: 22px;
-        text-align: center;
     }
 
 </style>

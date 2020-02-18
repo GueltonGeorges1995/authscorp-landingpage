@@ -4,7 +4,7 @@
             <v-row id="title" justify="center">
                 <div style="margin: 0 auto;">
                     <v-chip color="rgba(255,255,255,0.05)" id="pill">
-                        <h5>Roadmap</h5>
+                        Roadmap
                     </v-chip>
                 </div>
                 <h2>Artificial Intelligence</h2>
@@ -45,7 +45,7 @@
                     </div>
                 </v-col>
                 <v-col md="3" id="details3">
-                    <div class="box rectangle"></div>
+                    <div class="rectangle box"></div>
                     <div id="bg3"></div>
                 </v-col>
                 <v-col md="3" id="details3">
@@ -59,11 +59,11 @@
                 </div>
             </v-row>
         </v-container>
-        <!-- <div id="abstract-1">
+        <div id="abstract-1">
             <div id="rectangleC"></div>
-            <div id="rectangleC"></div>
+            <div id="rectangleC" style="top: -35%;"></div>
             <div id="polygon"></div>
-        </div> -->
+        </div>
     </section>
 </template>
 
@@ -81,20 +81,19 @@ export default {
         height: 696.3px;
         background: #264EEE;
         color: white;
+        position: relative;
     }
+
     #title {
         height: 121.69px;
         width: 510px;
         margin: 0 auto;
         padding: 70px 0;
     }
+
     #pill {
         height: 41.59px;
         margin-bottom: 20px;
-    }
-    h5 {
-        height: 23px;
-        width: 81px;
         color: #ffffff;
         font-family: Lato;
         font-size: 17px;
@@ -102,6 +101,7 @@ export default {
         line-height: 20px;
         text-align: center;
     }
+   
     h2 {
         width: 510px;
         height: 61px;
@@ -111,49 +111,35 @@ export default {
         line-height: 61px;
         text-align: center;
     }
+
     #content {
         height: 334px;
         padding: 60px 0;
     }
+
+    #node1, #node2, #node3, #node4 {
+        height: 80px;
+        color: #ffffff;
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 40px;
+    }
+
     #node1 {
-        z-index: 6;
         width: 182px;
-        height: 80px;
-        color: #ffffff;
-        font-family: Lato;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 40px;
     }
+
     #node2 {
-        z-index: 6;
         width: 140px;
-        height: 80px;
-        color: #ffffff;
-        font-family: Lato;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 40px;
     }
+
     #node3 {
-        z-index: 6;
         width: 143px;
-        height: 80px;
-        color: #ffffff;
-        font-family: Lato;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 40px;
     }
+
     #node4 {
-        z-index: 6;
         width: 213px;
-        height: 80px;
-        color: #ffffff;
-        font-family: Lato;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 40px;
     }
 
     /**Progress Bar */
@@ -181,28 +167,24 @@ export default {
     }
 
     #details {
-        z-index: 6;
         width: 196.99px;
         height: 116.69px;
         position: relative;
     }
 
     #details2 {
-        z-index: 6;
         width: 197px;
         height: 95px;
         position: relative;
     }
 
     #details3 {
-        z-index: 6;
         width: 197px;
         height: 139px;
         position: relative;
     }
 
     #bg, #bg2, #bg3 {
-        z-index: 7;
         width: 196.99px;
         height: 109.48px;
         background: #ffffff;
@@ -221,7 +203,6 @@ export default {
     }
 
     #a, #a2 {
-        z-index: 7;
         padding: 10px 15px;
         width: 164.89px;
         height: 64.96px;
@@ -238,7 +219,6 @@ export default {
     }
 
     .rectangle {
-        z-index: 7;
         width: 14.15px;
         height: 14.15px;
         border-radius: 2px;
@@ -254,7 +234,6 @@ export default {
     }
 
     #follow {
-        z-index: 5;
         margin: 0 auto;
         padding: 50px 0;
         width: 303.51px;
@@ -281,14 +260,21 @@ export default {
         z-index: 5;
         width: 461.83px;
         height: 462.01px;
-        background: linear-gradient(270deg, #00FFFFFF, #10FFFFFF);
+        position: absolute;
+        top: -22%;
+        left: -15%;
+        background: linear-gradient(270deg, rgba(0,255,255,0.07));
     }
 
     #rectangleC {
         z-index: 5;
         width: 313.83px;
         height: 513px;
-        background: linear-gradient(180deg, #00FFFFFF, #10FFFFFF);
+        position: absolute;
+        top: -50%;
+        left: -10%;
+        border-radius: 45%;
+        background: linear-gradient(180deg, rgba(0,255,255,0.07));
         transform: rotate(45.00001deg);
     }
 
