@@ -1,14 +1,20 @@
 <template>
     <div>
+        
 
+        
     </div>
 </template>
 
 <script>
 
 
+
 export default {
   name: 'App',
+  components: {
+     
+  }
 
 };
 </script>
@@ -16,7 +22,5 @@ export default {
 
 
 <style>
-    div {
-        background: #264EEE;
-    }
+    
 </style>

@@ -1,0 +1,17 @@
+transform: rotate(-30deg);
+background-image: linear-gradient(180deg, rgba(255,255,255,0.00) 0%, rgba(255,255,255,0.06) 100%);
+
+
+.test {
+    background
+}
+
+.test:before {
+    content: ' ';
+}
+
+transform: rotate(-30deg);
+background-image: linear-gradient(180deg, rgba(255,255,255,0.00) 0%, rgba(255,255,255,0.06) 100%);
+
+transform: rotate(-30deg);
+background-image: linear-gradient(180deg, rgba(255,255,255,0.00) 0%, rgba(255,255,255,0.06) 100%);
