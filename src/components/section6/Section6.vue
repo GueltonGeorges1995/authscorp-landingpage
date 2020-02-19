@@ -1,17 +1,17 @@
 <template>
-  <v-app>
+  
     <section>
       <v-row class="mb-10">
-        <v-col offset="2" md="4" lg="4">
+        <v-col offset-lg="2" offset="1" cols="5" lg="4">
           <div class="pill">
             <h3 class="text-center light-blue--text">AML</h3>
           </div>
           <h2>Payment Systems</h2>
           <p class="subtitle">Integrate payment details of your users to authscorp AML system to get a more accurate overview of your user risks.</p>
-          <v-card class="card-box" max-width="420" outlined>
+          <v-card class="card-box marg" max-width="420" outlined>
             <v-row>
-              <v-col md="10" lg="10 pa-0">
-                <div class="ma-7">
+              <v-col cols="10">
+                <div class="wrap">
                   <h3 class="card-title">Visa/Mastercard/...</h3>
                   <p class="card-sub">Connect fraudes reporting from your payment service provider.</p>
                 </div>
@@ -70,10 +70,10 @@
             </v-row>
             
           </v-card>
-           <v-card class="card-plain" max-width="420" outlined>
+           <v-card class="card-plain marg" max-width="420" outlined>
             <v-row>
-              <v-col md="10" lg="10 pa-0">
-                <div class="ma-7">
+              <v-col cols="10">
+                <div class="wrap">
                   <h3 class="card-title">Cryptos</h3>
                   <p class="card-sub">Integrate chainalysis to classify all the crypto transactions.</p>
                 </div>
@@ -132,8 +132,8 @@
           </v-card>
            <v-card class="card-plain" max-width="420" outlined>
             <v-row>
-              <v-col md="10" lg="10 pa-0">
-                <div class="ma-7">
+              <v-col cols="10">
+                <div class="wrap">
                   <h3 class="card-title">Custom</h3>
                   <p class="card-sub">Integrate events from your custom payment gateway</p>
                 </div>
@@ -196,7 +196,7 @@
         </v-col>
       </v-row>
     </section>      
-  </v-app>
+  
 </template>
 
 <script>
@@ -243,7 +243,7 @@ export default {
     background: #FFFFFF;
     box-shadow: -5px 0 0 0 #1ED660, 0 12px 24px 0 rgba(0,0,0,0.10);
     border-radius: 5px;
-    background: #1ED660;
+    /* background: #1ED660; */
     border: 2px solid #FFFFFF;
     border: 2px solid #FFFFFF;
     border: 2px solid #FFFFFF;  
@@ -252,12 +252,15 @@ export default {
   .card-plain{
     background: #FFFFFF;   
     border-radius: 5px;
-    background: #1ED660;
+    /* background: #1ED660; */
     border: 2px solid #FFFFFF;
     border: 2px solid #FFFFFF;
     border: 2px solid #FFFFFF;  
     margin-bottom: 4vh; 
 
+  }
+  .wrap{
+    margin: 28px
   }
   .card-title{
     font-size: 32px;
@@ -275,14 +278,191 @@ export default {
   button{
     outline: none;
   }
-  .play{
-    position: absolute;
-    top: 50%;
-    bottom: 50%;
-    left: 50%;
-    right: 50%;
+  
+  @media (max-width: 1300px){
+    h2{
+      font-size: 45px;
+    }
+    p{
+      font-size: 16px;
+    }
+    .card-title{
+      font-size: 24px;
+    }
+    .card-sub{
+      font-size: 14px;
+    }
+    svg{
+      height: 30px;
+      width: 30px;
+    }
   }
-  .relative{
-    position: relative;
+  @media (max-width: 1000px){
+    h2{
+      font-size: 40px;
+    }
+    p{
+      font-size: 14px;
+    }
+    .card-title{
+      font-size: 20px;
+    }
+    .card-sub{
+      font-size: 12px;
+    }
+    svg{
+      height: 28px;
+      width: 28px;
+    }
+    .pill{
+      width: 30%;
+      background-color: white;
+      border-radius: 20px;
+      padding: 10px;
+      margin-bottom: 3vh;
+      font-size: 15px
+    }
+    section{
+      padding-top: 12vh;
+    }
+    .wrap{
+      margin: 20px
+    }
+  }
+   @media (max-width: 800px){
+    h2{
+      font-size: 35px;
+    }
+    p{
+      font-size: 12px;
+    }
+    .card-title{
+      font-size: 18px;
+      padding-top: 8px;
+    }
+    .card-sub{
+      font-size: 11px;
+      padding-bottom: 8px; 
+    }
+    svg{
+      height: 25px;
+      width: 25px;
+    }
+    .wrap{
+      margin: 18px
+    }
+  }
+  @media (max-width: 700px){
+    h2{
+      font-size: 30px;
+    }
+    p{
+      font-size: 10px;
+    }
+    .subtitle{
+      margin-bottom: 20px;
+    }
+    .col-10{
+      padding: 2px 12px;
+    }
+    .card-title{
+      font-size: 15px;
+      padding-top: 0;
+    }
+    .card-sub{
+      font-size: 9px;
+      padding-bottom: 0; 
+    }
+    svg{
+      height: 22px;
+      width: 22px;
+    }
+    .marg{
+      margin-bottom: 20px;
+    }
+    .wrap{
+      margin: 12px;
+    }
+    .pill{
+      width: 32%;      
+      padding: 8px;
+      margin-bottom: 3vh;
+      font-size: 12px
+    }
+    section{
+      padding-top: 10vh;
+    }
+  }
+  @media (max-width: 600px){
+    h2{
+      font-size: 22px;
+    }
+    p{
+      font-size: 9px;
+    }
+    .subtitle{
+      margin-bottom: 20px;
+    }
+    .col-10{
+      padding: 2px 12px;
+    }
+    .card-title{
+      font-size: 12px;
+      padding-top: 0;
+    }
+    .card-sub{
+      font-size: 8px;
+      padding-bottom: 0; 
+    }
+    svg{
+      height: 18px;
+      width: 18px;
+    }
+    .marg{
+      margin-bottom: 20px;
+    }
+    .wrap{
+      margin: 10px;
+    }
+    .pill{
+      width: 30%;      
+      padding: 8px;      
+      font-size: 10px
+    }
+    section{
+      padding-top: 8vh;
+    }
+  }
+  @media (max-width:450px){
+    h2{
+      font-size: 18px;
+    }
+    p{
+      font-size: 7px;
+    }
+    .card-title{
+      font-size: 10px;
+      
+    }
+    .card-sub{
+      font-size: 6px;
+       
+    }
+    .col-10{
+      padding: 2px 6px;
+    }
+    svg{
+      height: 15px;
+      width: 15px;
+    }
+    .pill{
+      width: 34%;      
+      padding: 6px;
+      margin-bottom: 2vh;
+      font-size: 8px
+    }
+    section{
+      padding-top: 6vh;
+    }
   }
 </style>

@@ -1,5 +1,5 @@
 <template>  
-    <v-app>
+    
         <section>
             <div class="title">
                 <h2 >AML Monitoring</h2>
@@ -7,12 +7,12 @@
             </div>
             <v-container fluid>
                 <v-row>
-                    <v-col offset="1" md="5" lg="5">
+                    <v-col offset-md="1"  md="5" lg="5">
                         <div class="d-flex justify-end pr-6">
                             <img class="team" src="../../assets/images/team.png" alt="">    
                         </div>
                          <v-row class="first">
-                            <v-col offset="2" md="2" lg="2">
+                            <v-col offset="1"  offset-md="2" cols="2" >
                              <svg width="85px" height="85px" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
                                     <title>icon</title>
@@ -41,15 +41,15 @@
                                     </g>
                                 </svg>
                             </v-col>
-                            <v-col class="pl-8">
+                            <v-col class="bot-text">
                                 <h3>Behavior Analysis</h3>
                                 <p class="bottom">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                                 </p>
                             </v-col>
                         </v-row>
-                        <v-row class="pt-3">
-                            <v-col offset="2" md="2" lg="2">
+                        <v-row class="under">
+                            <v-col offset="1" offset-md="2" cols="2">
                                 <svg width="85px" height="85px" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
                                     <title>icon</title>
@@ -74,7 +74,7 @@
                                     </g>
                                 </svg>
                             </v-col>
-                            <v-col class="pl-8">
+                            <v-col class="bot-text">
                                 <h3>Custom Signals</h3>
                                 <p class="bottom">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -83,8 +83,8 @@
                         </v-row>                        
                     </v-col>
                     <v-col>
-                        <v-row class="pt-12">
-                            <v-col md="2" lg="2">
+                        <v-row class="media">
+                            <v-col cols="2">
                                <svg width="85px" height="85px" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
                                     <title>icon</title>
@@ -108,15 +108,15 @@
                                     </g>
                                 </svg>
                             </v-col>
-                            <v-col>
+                            <v-col class="infor">
                                 <h3>Analyse Sanction Lists</h3>
                                 <p class="top">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                                 </p>
                             </v-col>
                         </v-row>
-                        <v-row class="pt-3">
-                            <v-col md="2" lg="2">
+                        <v-row class="under">
+                            <v-col cols="2">
                                 <svg width="85px" height="85px" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
                                     <title>icon</title>
@@ -146,14 +146,14 @@
                                     </g>
                                 </svg>
                             </v-col>
-                            <v-col>
+                            <v-col class="infor">
                                 <h3>Detect suspect phone numbers</h3>
                                 <p class="top">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                                 </p>
                             </v-col>
                         </v-row>
-                        <div class="second pl-8" >
+                        <div class="second" >
                             <img class="desk" src="../../assets/images/2ec7ed81c4e1711fceb1e5a1b7fcf8431a6ee46b.png" alt="">    
                         </div>
                     </v-col>
@@ -222,7 +222,7 @@
                 </div> 
             </v-container>
         </section>
-    </v-app>  
+     
 </template>
 
 <script>
@@ -254,6 +254,9 @@ export default {
         padding-bottom: 10px 
         
     }
+    .media{
+        padding-top: 48px;
+    }
     p{       
         font-family: 'Lato', sans-serif; 
         font-size: 20px;
@@ -261,6 +264,9 @@ export default {
         letter-spacing: 0;              
         font-weight: 600
         
+    }
+    .bot-text{
+        padding-left: 32px;
     }
     .top{
         width: 64%;
@@ -275,9 +281,13 @@ export default {
     }
     .second{
         padding-top: 10vh;
+        padding-left: 32px;
     }
     .first{
         padding-top: 22vh;
+    }
+    .under{
+        padding-top: 12px;
     }
     .blue--text{
         font-size: 65px;
@@ -304,5 +314,175 @@ export default {
         position: absolute;
         top: 19%;
         right: 38%;        
+    }
+    @media (max-width: 1360px){
+        h2{
+        font-size: 50px;
+        }
+        h3{
+            font-size: 25px;
+        }
+        .media{
+            padding-top: 12px;
+        }
+        p{
+        font-size: 16px;
+        }   
+        svg{
+        height: 60px;
+        width: 60px;
+        }
+        .drops1{
+            top: 14%;
+        }
+        .drops2{
+            top: 14%;
+        }
+    }
+    @media (max-width: 1120px){
+        h2{
+            font-size: 46px;
+        }
+        h3{
+            font-size: 22px;
+        }
+        .media{
+            padding-top: 12px;
+        }
+        .bot-text{
+            padding-left: 24px;
+        }
+        .bottom{
+            width: 92%;
+        }
+        p{
+            font-size: 14px;
+        }   
+        svg{
+            height: 50px;
+            width: 50px;
+        }
+        .blue--text{
+            font-size: 50px;
+        }
+        .subtitle{
+            font-size: 22px
+        }
+        .numbers{
+            width: 70%;
+        }
+    }
+    @media (max-width: 980px){
+        .top{
+            width: 80%;
+        }
+        .first{
+            padding-top: 12vh;
+        }
+        .desk{
+            width: 90%;
+        }
+        .second{
+            padding-left: 20px;
+            padding-top: 4vh;
+        }
+    }
+    @media (max-width: 800px){
+        h2{
+            font-size: 40px;
+        }
+        h3{
+            font-size: 18px;
+        }
+        p{
+            font-size: 12px;
+        } 
+        svg{
+            height: 35px;
+            width: 35px;
+        }
+        .infor{
+            padding: 12px 0 0 0;
+        }
+        .bot-text{
+            padding: 12px 0 0 0;
+        }
+        h3{
+            padding: 0;
+        }
+        .top{
+            margin-bottom: 0;
+        }
+        .first{
+            padding-top: 8vh;
+        }
+        .blue--text{
+            font-size: 40px;
+        }
+        .subtitle{
+            font-size: 16px
+        }
+        .numbers{
+            width: 80%;
+        }
+         .drops1{
+            top: 18%;
+        }
+        .drops2{
+            top: 18%;
+        }        
+    }
+    @media (max-width: 600px){
+         
+        h2{
+            font-size: 30px;
+        }
+        h3{
+            font-size: 10px;
+        }
+        p{
+            font-size: 6px;
+        } 
+        svg{
+            height: 15px;
+            width: 15px;
+        }
+        .under{
+            padding-top: 0;
+        }
+        .second{
+            padding-left: 0;
+            padding-top: 2vh;
+        }        
+        .media{
+            padding-top: 0;
+        }
+        .infor{
+            padding: 12px 0 0 0;
+        }
+        .bot-text{
+            padding: 12px 0 0 0;
+        }
+        h3{
+            padding: 0;
+        }       
+        .first{
+            padding-top: 4vh;
+        }
+        .blue--text{
+            font-size: 30px;
+        }
+        .subtitle{
+            font-size: 12px
+        }
+        .numbers{
+            width: 90%;
+        }
+         .drops1{
+            top: 22%;
+        }
+        .drops2{
+            top: 22%;
+        }
     }
 </style>
