@@ -11,7 +11,7 @@
           <a href>Let's Go !</a>
         </v-btn>
       </v-col>
-      <v-col cols="2" sm='0' md="1" class="pb-0"></v-col>
+      <v-col cols="2" sm='2' md="1" class="pb-0"></v-col>
       <v-col cols="12" sm='12' md='6' class="pb-0">
         <!-- <img src="../../assets/images/2933349a1546cbb67369596f469ecd19eb7178f3.png" /> -->
         <v-img src="../../assets/images/2933349a1546cbb67369596f469ecd19eb7178f3.png"  class="img"/>

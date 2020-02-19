@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar flat color="white" app class="margin-x">
+    <v-app-bar flat color="white" app class="margin-x z-index-12">
       <v-app-bar-nav-icon flat @click="drawer = !drawer" class="hidden-md-and-up" />
       <v-toolbar-title class="logo">AUTHSCORP</v-toolbar-title>
       <v-spacer />
@@ -35,7 +35,7 @@
 <style scoped>
 @media screen and (max-width: 960px) {
   .margin-x {
-    margin: 0 !important;
+    padding: 0 !important;
   }
 }
 
@@ -52,12 +52,15 @@
 }
 
 .margin-x {
-  margin: 0 5rem;
+  padding: 0 5rem;
 }
 
 a {
   text-decoration: none;
   font-family: Helvetica;
+}
+.z-index-12 {
+    z-index: 12;
 }
 </style>
 

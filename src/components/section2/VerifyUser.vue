@@ -4,12 +4,10 @@
     <div class="square2"></div>
     <div class="square3"></div>
     <div class="square4"></div>
-    <v-container>
+    <v-container class="mobile-center">
       <v-row>
-        <v-col cols="7">
+        <v-col cols="12" sm="12" md="7">
           <div class="z-index-5">
-            <!-- <v-btn class="test">Test</v-btn> -->
-
             <span class="test">KYC</span>
             <h1>Verify the identity of your users</h1>
             <p>
@@ -19,8 +17,9 @@
             </p>
           </div>
         </v-col>
-        <v-col cols="5">
+        <v-col cols="12" sm="12" md="5">
           <img src="../../assets/images/image (1).png" alt />
+          <!-- <v-img  src="../../assets/images/image (1).png"/> -->
         </v-col>
       </v-row>
     </v-container>
@@ -28,9 +27,22 @@
 </template>
 
 <style scoped>
+@media screen and (max-width: 960px) {
+ .mobile-center {
+     text-align: center
+ }
+ .square1, .square2, .square3, .square4 {
+     display: none;
+ }
+}
+
+
+
 .bg-blue {
   padding: 5.5rem 0;
   background: #264eee;
+  overflow: hidden;
+  position: relative;
 }
 .z-index-5 {
   z-index: 5;
@@ -43,13 +55,13 @@
     rgba(255, 255, 255, 0) 0%,
     rgba(255, 255, 255, 0.06) 100%
   );
-  /* background-color: red; */
   z-index: 2;
   width: 700px;
-  height: 700px;
+  height: 830px;
   position: absolute;
-  top: 950px;
+  top: 0;
   left: 0;
+  /* background-color: red; */
 }
 .square2 {
   content: " ";
@@ -64,8 +76,9 @@
   width: 700px;
   height: 700px;
   position: absolute;
-  top: 950px;
-  left: -500px;
+  top: 104px;
+  left: -249px;
+  
 }
 
 .square3 {
@@ -75,9 +88,8 @@
   width: 300px;
   height: 300px;
   position: absolute;
-  top: 700px;
+  top: -75px;
   right: -100px;
-
   transform: rotate(-30deg);
   background-image: linear-gradient(
     0deg,
@@ -85,6 +97,7 @@
     rgba(255, 255, 255, 0.06) 100%
   );
   border-radius: 212px;
+  
 }
 
 .square4 {
@@ -94,7 +107,7 @@
   width: 300px;
   height: 300px;
   position: absolute;
-  top: 600px;
+  top: -110px;
   right: -150px;
   transform: rotate(-30deg);
   background-image: linear-gradient(
@@ -103,6 +116,7 @@
     rgba(255, 255, 255, 0.03) 100%
   );
   border-radius: 212px;
+  /* background-color: red; */
 }
 
 .test {

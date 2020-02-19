@@ -3,16 +3,16 @@
     <div class="bg-section">
       <v-container>
         <div class="bg-blue">
-          <div class="square1footer"></div>
-          <div class="square2footer"></div>
+          <div class="square1footer mobile-none"></div>
+          <div class="square2footer mobile-none"></div>
           <v-container>
             <v-row>
-              <v-col cols="6" class="flex-center">
+              <v-col cols="12" sm="12" md="6" class="flex-center">
                 <h2>Subscribe our newsletter and get useful information every week</h2>
               </v-col>
-              <v-col cols="6" class="flex-center">
+              <v-col cols="12" sm="12" md="6" class="flex-center">
                 <div class="bg-input">
-                  <input type="text" placeholder="Enter your email" />
+                  <input type="text" placeholder="Enter your email" class="padding-left" />
                   <a href class="input-button">
                     <svg
                       width="55px"
@@ -153,24 +153,34 @@
     </div>
     <div class="margin-bottom">
       <v-container>
-        <v-row>
-          <v-col cols="12" class="nav-bottom">
+        <v-row class="center-mobile">
+          <v-col cols="0" sm="0" md="2"></v-col>
+          <v-col cols="12" sm="12" md="2" class="nav-bottom inline">
             <v-btn color="white" class="social-btn">
               <v-icon color="#979EA5">fab fa-telegram-plane</v-icon>Telegram
             </v-btn>
+          </v-col>
+          <v-col cols="12" sm="12" md="2" class="nav-bottom inline">
             <v-btn color="white" class="social-btn">
               <v-icon color="#979EA5">fab fa-reddit-alien</v-icon>Subredit
             </v-btn>
+          </v-col>
+          <v-col cols="12" sm="12" md="2" class="nav-bottom inline">
             <v-btn color="primary" class="white--text social-btn">
               <v-icon color="#fff">fab fa-slack</v-icon>slack
             </v-btn>
+          </v-col>
+          <v-col cols="12" sm="12" md="2" class="nav-bottom inline">
             <v-btn color="white" class="social-btn">
               <v-icon color="#979EA5">fab fa-linkedin</v-icon>Linkedin
             </v-btn>
+          </v-col>
+          <v-col cols="12" sm="12" md="2" class="nav-bottom inline">
             <v-btn color="white" class="social-btn">
               <v-icon color="#979EA5">fab fa-twitter</v-icon>Twitter
             </v-btn>
           </v-col>
+          <v-col cols="0" sm="0" md="2"></v-col>
         </v-row>
       </v-container>
     </div>
@@ -179,6 +189,18 @@
 
 
 <style scoped>
+@media screen and (max-width: 960px) {
+  .mobile-none {
+    display: none;
+  }
+  .center-mobile {
+      text-align: center;
+      
+  }
+  .inline {
+      display: inline !important;
+  }
+}
 .square1footer {
   transform: rotate(-45deg);
   background-image: linear-gradient(
@@ -266,6 +288,9 @@ input {
 }
 .margin-bottom {
   margin-bottom: 15rem;
+}
+.padding-left {
+  padding-left: 10px;
 }
 </style>
 
