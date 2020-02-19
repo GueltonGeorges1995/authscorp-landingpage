@@ -1,7 +1,7 @@
 <template>
   
     <section>
-      <v-row class="mb-10">
+      <v-row class="mb-10 mr-0">
         <v-col offset-lg="2" offset="1" cols="5" lg="4">
           <div class="pill">
             <h3 class="text-center light-blue--text">AML</h3>
