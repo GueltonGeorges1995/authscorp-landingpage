@@ -232,6 +232,10 @@ export default {
 </script>
 
 <style scoped>
+    section{
+        z-index: 10;
+        background-color: white;
+    }
     h2{
         font-family: 'Lato', sans-serif; 
         font-size: 65px; 

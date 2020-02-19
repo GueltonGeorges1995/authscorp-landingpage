@@ -15,7 +15,7 @@
           </v-row>
           <v-row justify="center">
               <v-col md="3" sm="5" style="margin-right: 0">
-                  <v-card height="353px" color="#264EEE">
+                  <v-card height="353px" color="#264EEE" class="dessus">
                       <div style="width: 116.75px; padding-top: 40px;">
                           <v-chip color="rgba(255,255,255,0.11)" class="cardtitle">
                               Cloud
@@ -25,7 +25,7 @@
                         style="margin: 40px auto 50px auto;"
                         width="90px"
                         height="88px"
-                        src="../assets/icons/cloud.png"
+                        src="../../assets/icons/cloud.png"
                       ></v-img>
                       <div>
                           <p class="a">$0.15</p>
@@ -34,7 +34,7 @@
                   </v-card>
               </v-col>
               <v-col md="3" sm="5" style="margin-left: 0;">
-                  <v-card height="353px" color="#1ed660">
+                  <v-card height="353px" color="#1ed660" class="dessus">
                       <div style="width: 116.75px; padding-top: 40px;">
                           <v-chip color="rgba(255,255,255,0.11)" class="cardtitle">
                               Manual
@@ -44,7 +44,7 @@
                         style="margin: 40px auto 50px auto;"
                         width="99px"
                         height="88px"
-                        src="../assets/icons/manual.png"
+                        src="../../assets/icons/manual.png"
                       ></v-img>
                       <div>
                           <p class="a">$0.01</p>
@@ -54,7 +54,7 @@
               </v-col>
           </v-row>
           <v-row>
-              <v-col cols="12">
+              <v-col cols="12" class="dessus">
                   <div style="margin: 20px auto;">
                     <p id="terms" style="margin: 0 auto">*Terms are subject to change</p>
                   </div>
@@ -64,6 +64,7 @@
               </v-col>
           </v-row>
       </v-container>
+      <div id="parallelogram"></div>
   </section>
 </template>
 
@@ -107,6 +108,10 @@ export default {
         margin-top: 30px;
         width: 109.45px;
         height: 41.65px;
+    }
+
+    .dessus {
+        z-index: 1;
     }
 
     #title {
@@ -161,6 +166,16 @@ export default {
         line-height: 22px;
     }
 
+    #parallelogram {
+        width: 100%;
+        height: 55vh;
+        background: #FFFFFF;
+        position: absolute;
+        top: 64%;
+        transform: rotate(-5deg) skew(-5deg);
+    }
+
+
     /**Mediaqueries */
 
     @media screen and (min-width: 240px) and (max-width: 580px) {
@@ -175,6 +190,18 @@ export default {
         #title {
             font-size: 25px;
             margin-top: 20px;
+        }
+    }
+
+    @media screen and (min-width: 600px) and (max-width: 700px) {
+        #parallelogram {
+            height: 67vh;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        #parallelogram {
+           display: none;
         }
     }
 
