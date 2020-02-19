@@ -200,6 +200,9 @@
   .inline {
       display: inline !important;
   }
+  h2 {
+      font-size: 15px !important;
+  }
 }
 .square1footer {
   transform: rotate(-45deg);
