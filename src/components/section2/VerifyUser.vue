@@ -11,7 +11,7 @@
             <!-- <v-btn class="test">Test</v-btn> -->
 
             <span class="test">KYC</span>
-            <h1 class="white">Verify the identity of your users</h1>
+            <h1>Verify the identity of your users</h1>
             <p>
               "Lorem ipsum dolor sit, amet consectetur
               <br />adipisicing elit. Eius, voluptatibus iusto dolores

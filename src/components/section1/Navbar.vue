@@ -21,7 +21,6 @@
     <v-card
     color="grey lighten-4"
     flat = true
-    height="200px"
     tile
     class="margin-x"
   >

@@ -1,5 +1,5 @@
 <template>
-    <v-container class="pb-0">
+    <v-container class="pb-0 margin-top">
     <v-row>
         <v-col class="col-1-header pb-0" cols="5">
         <h1 class="title1">KYC / AML</h1>
@@ -20,6 +20,9 @@
 </template>
 
 <style scoped>
+.margin-top {
+    margin-top: 5rem;
+}
 .col-1-header {
   margin-top: 7rem;
 }

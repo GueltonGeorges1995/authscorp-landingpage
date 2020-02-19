@@ -1,5 +1,5 @@
 <template>  
-    <v-app>
+    
         <section>
             <div class="title">
                 <h2 >AML Monitoring</h2>
@@ -222,7 +222,7 @@
                 </div> 
             </v-container>
         </section>
-    </v-app>  
+     
 </template>
 
 <script>

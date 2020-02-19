@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+
     <section>
       <v-row class="mb-10">
         <v-col offset="2" md="4" lg="4">
@@ -196,7 +196,7 @@
         </v-col>
       </v-row>
     </section>      
-  </v-app>
+  
 </template>
 
 <script>
