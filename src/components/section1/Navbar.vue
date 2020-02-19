@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <v-app-bar flat color="white" app class="margin-x z-index-12">
       <v-app-bar-nav-icon flat @click="drawer = !drawer" class="hidden-md-and-up" />
       <v-toolbar-title class="logo">AUTHSCORP</v-toolbar-title>
@@ -38,10 +38,8 @@
     padding: 0 !important;
   }
 }
-
 .nav-item {
   color: gray;
-  /* margin: 0 2.5rem; */
   font-family: Helvetica;
 }
 .active {
@@ -60,7 +58,7 @@ a {
   font-family: Helvetica;
 }
 .z-index-12 {
-    z-index: 12;
+    z-index: 200 !important;
 }
 </style>
 

@@ -143,7 +143,6 @@
                       </g>
                     </svg>
                   </a>
-                  <!-- <p>test</p> -->
                 </div>
               </v-col>
             </v-row>
