@@ -279,11 +279,12 @@ export default {
     }
 
     /** Polygons */
-    #abstract-1 {
+    
+    /* #abstract-1 {
         z-index: 4;
         width: 624.06px;
         height: 750.27px;
-    }
+    } */
 
     #polygon {
         width: 461.83px;
