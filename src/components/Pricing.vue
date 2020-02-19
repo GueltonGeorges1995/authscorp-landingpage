@@ -2,7 +2,7 @@
   <section>
       <v-container>
           <v-row justify="center">
-              <v-col md="9">
+              <v-col cols="9">
                   <div id="bg">
                     <v-chip color="#FFFFFF" id="pill">
                         Pricing
@@ -14,7 +14,7 @@
               </v-col>
           </v-row>
           <v-row justify="center">
-              <v-col md="3" style="margin-right: 0">
+              <v-col md="3" sm="5" style="margin-right: 0">
                   <v-card height="353px" color="#264EEE">
                       <div style="width: 116.75px; padding-top: 40px;">
                           <v-chip color="rgba(255,255,255,0.11)" class="cardtitle">
@@ -33,7 +33,7 @@
                       </div>
                   </v-card>
               </v-col>
-              <v-col md="3" style="margin-left: 0;">
+              <v-col md="3" sm="5" style="margin-left: 0;">
                   <v-card height="353px" color="#1ed660">
                       <div style="width: 116.75px; padding-top: 40px;">
                           <v-chip color="rgba(255,255,255,0.11)" class="cardtitle">
@@ -54,7 +54,7 @@
               </v-col>
           </v-row>
           <v-row>
-              <v-col md="12">
+              <v-col cols="12">
                   <div style="margin: 20px auto;">
                     <p id="terms" style="margin: 0 auto">*Terms are subject to change</p>
                   </div>
@@ -120,6 +120,7 @@ export default {
     }
 
     .a {
+        margin: 0;
         height: 58px;
         color: #ffffff;
         font-family: Lato;
@@ -158,6 +159,23 @@ export default {
         font-size: 18px;
         font-weight: 700;
         line-height: 22px;
+    }
+
+    /**Mediaqueries */
+
+    @media screen and (min-width: 240px) and (max-width: 580px) {
+        #title {
+            font-size: initial;
+            margin-top: 10px;
+            height: initial;
+        }
+    }
+
+    @media screen and (min-width: 580px) and (max-width: 800px) {
+        #title {
+            font-size: 25px;
+            margin-top: 20px;
+        }
     }
 
 </style>
