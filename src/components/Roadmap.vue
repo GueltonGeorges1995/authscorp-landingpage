@@ -12,71 +12,66 @@
         </v-container>
         <v-container id="content">
             <v-row>
-                <v-col md="3" id="node1">
+                <v-col cols="3" id="node1">
                     <h3>2019 Q1</h3>  
                     <h3>Nodes Alpha</h3>
                 </v-col>
-                <v-col md="3" id="node2">
+                <v-col cols="3" id="node2">
                     <h3>2019 Q1</h3>
                     <h3>Used Alpha</h3>
                 </v-col>
-                <v-col md="3" id="node3">
+                <v-col cols="3" id="node3">
                     <h3>2019 Q1</h3>  
                     <h3>Network Beta</h3>
                 </v-col>
-                <v-col md="3" id="node4">
+                <v-col cols="3" id="node4">
                     <h3>2019 Q1</h3>  
                     <h3>Partner Connection</h3>
                 </v-col>
             </v-row>
             <v-row style="margin: 30px 0; position: relative;">
-                <v-col md="12">
+                <v-col cols="12">
                     <v-progress-linear
                         value="27"
                         color="#FFFFFF"
                         height="2px"
-                        buffer-value="100"
                     ></v-progress-linear>
                     <div class="dot-active"></div>
                     <div class="dot-active" style="left: 27%;">
                         <div id="dot-current"></div>
                         <div id="dot-in-current"></div>
                     </div>
-                    <div class="dot-active" style="right: 47%; background: #4b6fff;"></div>
-                    <div class="dot-active" style="right: 21%; background: #4b6fff;"></div>
+                    <div class="dot-active" id="network"></div>
+                    <div class="dot-active" id="partner"></div>
                 </v-col>
             </v-row>
             <v-row>
-                <v-col md="3" id="details">
-                    <div class="rectangle"></div>
-                    <div id="bg">
+                <v-col cols="3" id="details">
+                    <div id="bg" class="bulle">
                         <p id="a">...</p>
                     </div>
                 </v-col>
-                <v-col md="3" id="details2">
-                    <div class="rectangle"></div>
-                    <div id="bg2">
+                <v-col cols="3" id="details2">
+                    <div id="bg2" class="bulle">
                         <p id="a2">...</p>
                     </div>
                 </v-col>
-                <v-col md="3" id="details3">
-                    <div class="rectangle box"></div>
-                    <div id="bg3"></div>
+                <v-col cols="3" id="details3">
+                    <div id="bg3" class="bulle invisible"></div>
                 </v-col>
-                <v-col md="3" id="details3">
-                    <div class="rectangle box"></div>
-                    <div id="bg3"></div>
+                <v-col cols="3" id="details3">
+                    <div id="bg3" class="bulle invisible"></div>
                 </v-col>
             </v-row>
             <v-row>
                 <div id="follow">
-                    <p>Follow our progress on and plans on our <a href="">public roadmap</a>.</p>
+                    <p>Follow our progress on and plans on our <a href="" style="color: #ff9c36;">public roadmap</a>.</p>
                 </div>
             </v-row>
         </v-container>
         <div id="abstract-1">
-            <div id="rectangleC"></div>
-            <div id="rectangleC" style="top: -35%;"></div>
+            <div class="rectangleC"></div>
+            <div class="rectangleC" style="top: -35%;"></div>
             <!-- <div id="polygon"></div> -->
         </div>
     </section>
@@ -190,6 +185,16 @@ export default {
         border-radius: 50%;
     }
 
+    #network {
+        right: 47%; 
+        background: #4b6fff;
+    }
+
+    #partner {
+        right: 21%; 
+        background: #4b6fff;
+    }
+
     /**Boxes */
 
     #details {
@@ -218,6 +223,22 @@ export default {
         box-shadow: 0px 3px24px rgba(0,0,0,0.07);
     }
 
+    .bulle:before {
+        content: "";
+        width: 0;
+        height: 0;
+        left: 8%;
+        top: 0%;
+        position: absolute;
+        border-bottom: 12px solid white;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+    }
+
+    .invisible:before {
+        border-bottom: 12px solid rgba(255,255,255,0.1);
+    }
+
     #bg2 {
         height: 86.86px;
     }
@@ -244,21 +265,6 @@ export default {
         line-height: 32px;
     }
 
-    .rectangle {
-        width: 14.15px;
-        height: 14.15px;
-        border-radius: 2px;
-        position: absolute;
-        top: 5%;
-        left: 10%;
-        background: #ffffff;
-        transform: rotate(45.00001deg);
-    }
-
-    .box {
-        background-color: rgba(255,255,255,0.1);
-    }
-
     #follow {
         margin: 0 auto;
         padding: 50px 0;
@@ -272,10 +278,6 @@ export default {
         text-align: center;
     }
 
-    a {
-        color: #ff9c36;
-    }
-
     /** Polygons */
     #abstract-1 {
         z-index: 4;
@@ -284,7 +286,6 @@ export default {
     }
 
     #polygon {
-        z-index: 5;
         width: 461.83px;
         height: 462.01px;
         position: absolute;
@@ -293,8 +294,7 @@ export default {
         background: linear-gradient(270deg, rgba(0,255,255,0.07));
     }
 
-    #rectangleC {
-        z-index: 5;
+    .rectangleC {
         width: 313.83px;
         height: 513px;
         position: absolute;
@@ -303,6 +303,156 @@ export default {
         border-radius: 45%;
         background: linear-gradient(180deg, rgba(0,255,255,0.07));
         transform: rotate(45.00001deg);
+    }
+
+    /** Mediaqueries */
+
+    @media screen and (min-width: 240px) and (max-width: 350px) {
+        h2 {
+            font-size: initial;
+        }
+
+        #title {
+            width: initial;
+        }
+
+        #node1, #node2, #node3, #node4 {
+            height: 100px;
+            font-size: 7.5px;
+        }
+
+        #bg, #bg2, #bg3 {
+            width: 60px;
+            height: 109.48px;
+        }
+
+        .bulle {
+            left: 25%;
+        }
+
+        #network {
+            right: 40%;
+        }
+
+        #partner {
+            right: 12%;
+        }
+
+        #follow {
+            padding: 10px 0;
+        }
+
+        #content {
+            padding: 60px 29px;
+        }
+    }
+
+    @media screen and (min-width: 350px) and (max-width: 600px) {
+        h2 {
+            font-size: 25px;
+        }
+
+        #title {
+            width: initial;
+        }
+
+        #node1, #node2, #node3, #node4 {
+            height: 100px;
+            font-size: 12px;
+        }
+
+        #content {
+            padding: 60px 29px;
+        }
+
+        #dot-in-current {
+            top: 31%;
+            left: 29%;
+        }
+
+        #follow {
+            padding: 10px 0;
+        }
+
+        .rectangleC {
+            width: 260px;
+            height: 390px;
+        }
+    }
+
+    @media screen and (min-width: 600px) and (max-width: 800px) {
+        #node1, #node2, #node3, #node4 {
+            height: 100px;
+            font-size: 18px;
+        }
+
+        #content {
+            padding: 60px 29px;
+        }
+
+        #bg, #bg2, #bg3 {
+            width: 126.99px;
+            height: 109.48px;
+        }
+
+        .bulle:before {
+            left: 10%;
+        }
+
+        #network {
+            right: 45%;
+        }
+
+        #partner {
+            right: 19%;
+        }
+
+        #follow {
+            padding: 10px 0;
+        }
+
+        .rectangleC {
+            width: 260px;
+            height: 390px;
+        }
+    }
+
+    @media screen and (min-width: 350px) and (max-width: 500px) {
+        #bg, #bg2, #bg3 {
+            width: 56.99px;
+            height: 100.48px;
+        }
+
+        .bulle:before {
+            left: 22%;
+        }
+
+        #network {
+            right: 41%;
+        }
+
+        #partner {
+            right: 14%;
+        }
+    }
+
+    @media screen and (min-width: 500px) and (max-width: 600px) {
+        #bg, #bg2, #bg3 {
+            width: 90px;
+            height: 100.48px;
+        }
+
+        .bulle:before {
+            left: 18%;
+        }
+
+        #network {
+            right: 43%;
+        }
+
+        #partner {
+            right: 17%;
+        }
     }
 
 </style>
