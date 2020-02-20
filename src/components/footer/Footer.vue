@@ -12,7 +12,9 @@
               </v-col>
               <v-col cols="12" sm="12" md="6" class="flex-center">
                 <div class="bg-input">
-                  <input type="text" placeholder="Enter your email" class="padding-left" />
+                  <form action="http://localhost:3000/subscribe" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email" class="padding-left" />
+                  </form>
                   <a href class="input-button">
                     <svg
                       width="55px"

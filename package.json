@@ -9,6 +9,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "mailchimp-api-v3": "^1.13.1",
     "vue": "^2.6.11",
     "vuetify": "^2.2.11"
   },
