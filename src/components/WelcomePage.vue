@@ -3,6 +3,7 @@
     <Home />
     <News />
     <Welcome />
+    <!-- <Welcome2 /> -->
     <Footer />
   </v-app>
 </template>
@@ -12,6 +13,7 @@ import Home from "./section1/Home";
 import News from "./section2/News";
 import Footer from "./footer/Footer";
 import Welcome from "./welcome/Welcome";
+// import Welcome2 from './welcome/Welcome2';
 
 export default {
   name: "WelcomePage",
@@ -19,7 +21,8 @@ export default {
     Home,
     News,
     Footer,
-    Welcome
+    Welcome,
+    // Welcome2,
   }
 };
 </script>
