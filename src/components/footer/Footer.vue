@@ -201,6 +201,10 @@
   }
   h2 {
       font-size: 15px !important;
+      line-height: 15px !important;
+  }
+  .bg-blue {
+      padding: 2rem !important;
   }
 }
 .square1footer {
