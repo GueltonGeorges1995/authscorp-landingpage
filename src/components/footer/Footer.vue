@@ -153,7 +153,7 @@
     <div class="margin-bottom">
       <v-container>
         <v-row class="center-mobile">
-          <v-col cols="0" sm="0" md="2"></v-col>
+          <v-col cols="0" sm="0" md="1"></v-col>
           <v-col cols="12" sm="12" md="2" class="nav-bottom inline">
             <v-btn color="white" class="social-btn">
               <v-icon color="#979EA5">fab fa-telegram-plane</v-icon>Telegram
@@ -179,7 +179,7 @@
               <v-icon color="#979EA5">fab fa-twitter</v-icon>Twitter
             </v-btn>
           </v-col>
-          <v-col cols="0" sm="0" md="2"></v-col>
+          <v-col cols="0" sm="0" md="1"></v-col>
         </v-row>
       </v-container>
     </div>
