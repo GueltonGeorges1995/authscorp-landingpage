@@ -1,14 +1,18 @@
 <template>
-  <div >
+  <div>
     <v-app-bar flat color="white" app class="margin-x z-index-12">
       <v-app-bar-nav-icon flat @click="drawer = !drawer" class="hidden-md-and-up" />
-      <v-toolbar-title class="logo">AUTHSCORP</v-toolbar-title>
+      <v-toolbar-title class="logo">
+        <router-link to="/">AUTHSCORP</router-link>
+      </v-toolbar-title>
       <v-spacer />
       <div class="hidden-sm-and-down">
         <v-btn text class="nav-item" color="primary">Product</v-btn>
         <v-btn text class="nav-item" color="secondary">Download</v-btn>
         <v-btn text class="nav-item" color="secondary">Support</v-btn>
         <v-btn text class="nav-item" color="secondary">Contact</v-btn>
+        <v-btn text class="nav-item" color="secondary" href="/signin">Sign In</v-btn>
+        <v-btn text class="nav-item" color="secondary" href="/signup">Sign Up</v-btn>
       </div>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" absolute temporary>
@@ -47,6 +51,7 @@
 }
 .logo {
   font-family: Helvetica;
+  color: dark !important;
 }
 
 .margin-x {
@@ -58,7 +63,7 @@ a {
   font-family: Helvetica;
 }
 .z-index-12 {
-    z-index: 200 !important;
+  z-index: 200 !important;
 }
 </style>
 

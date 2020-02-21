@@ -33,7 +33,7 @@
             <v-checkbox
               v-model="checkbox"
               :rules="[v => !!v || 'You must agree to continue!']"
-              label="Do you agree with our terms and conditions"
+              label="You agree with our terms and conditions"
               required
             ></v-checkbox>
 

@@ -246,6 +246,7 @@
   padding: 5rem;
   background-size: 100% 50%;
   position: relative;
+  overflow: hidden;
 }
 h2 {
   font-family: Helvetica;
