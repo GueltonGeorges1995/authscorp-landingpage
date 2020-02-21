@@ -262,13 +262,13 @@ input {
   font-size: 17px;
   color: #979ea5;
   letter-spacing: 0;
-  z-index: 200;
+  /* z-index: 200; */
   height: 3.5rem;
   width: 20rem;
 }
 
 .bg-input {
-  z-index: 1;
+  /* z-index: 1; */
   padding: 1rem;
   background: rgba(245, 249, 255, 0.1);
   border-radius: 5px;

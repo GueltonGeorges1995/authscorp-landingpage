@@ -13,11 +13,18 @@
         <v-btn text class="nav-item" color="secondary">Contact</v-btn>
         <v-btn text class="nav-item" color="secondary" href="/signin">Sign In</v-btn>
         <v-btn text class="nav-item" color="secondary" href="/signup">Sign Up</v-btn>
+        <v-btn text class="nav-item" color="secondary" href="/welcome">Welcome</v-btn>
       </div>
     </v-app-bar>
-    <v-navigation-drawer v-model="drawer" absolute temporary>
+    <v-navigation-drawer v-model="drawer" app temporary>
       <v-list nav dense>
-        <v-list-item-group active-class="deep-purple--text text--accent-4">
+        <v-list-item-group active-class="primary--text text--accent-4">
+          <v-list-item>
+            <v-list-item-title>Product</v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title><router-link to="/">Home</router-link></v-list-item-title>
+          </v-list-item>
           <v-list-item>
             <v-list-item-title>Product</v-list-item-title>
           </v-list-item>
@@ -28,7 +35,16 @@
             <v-list-item-title>Support</v-list-item-title>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title class="bluuue">Contact</v-list-item-title>
+            <v-list-item-title h>Contact</v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title><router-link to="/signin">Sign In</router-link></v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title><router-link to="/signup">Sign Up</router-link></v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title><router-link to="/welcome">Welcome</router-link></v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>

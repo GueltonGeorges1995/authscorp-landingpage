@@ -107,8 +107,8 @@ export default {
     passwordRules: [
       v => !!v || "Password is required",
     ],
-    select: null,
     
+
     checkbox: false
   }),
 
@@ -116,6 +116,7 @@ export default {
     validate() {
       if (this.$refs.form.validate()) {
         this.snackbar = true;
+        
       }
     },
   }
