@@ -3,7 +3,7 @@
     <v-app-bar flat color="white" app class="margin-x z-index-12">
       <v-app-bar-nav-icon flat @click="drawer = !drawer" class="hidden-md-and-up" />
       <v-toolbar-title class="logo">
-        <router-link to="/">AUTHSCORP</router-link>
+        <router-link to="/" class="black--text">AUTHSCORP</router-link>
       </v-toolbar-title>
       <v-spacer />
       <div class="hidden-sm-and-down">
@@ -23,7 +23,7 @@
             <v-list-item-title>Product</v-list-item-title>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title><router-link to="/">Home</router-link></v-list-item-title>
+            <v-list-item-title><router-link to="/" class="black--text">Home</router-link></v-list-item-title>
           </v-list-item>
           <v-list-item>
             <v-list-item-title>Product</v-list-item-title>
@@ -38,13 +38,13 @@
             <v-list-item-title h>Contact</v-list-item-title>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title><router-link to="/signin">Sign In</router-link></v-list-item-title>
+            <v-list-item-title><router-link to="/signin" class="black--text">Sign In</router-link></v-list-item-title>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title><router-link to="/signup">Sign Up</router-link></v-list-item-title>
+            <v-list-item-title><router-link to="/signup" class="black--text">Sign Up</router-link></v-list-item-title>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title><router-link to="/welcome">Welcome</router-link></v-list-item-title>
+            <v-list-item-title><router-link to="/welcome" class="black--text">Welcome</router-link></v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
@@ -57,6 +57,10 @@
   .margin-x {
     padding: 0 !important;
   }
+}
+
+.black {
+    color: black;
 }
 .nav-item {
   color: gray;
