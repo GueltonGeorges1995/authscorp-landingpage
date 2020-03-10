@@ -8,8 +8,8 @@
             <v-container fluid>
                 <v-row>
                     <v-col offset-md="1"  md="5" lg="5">
-                        <div class="d-flex justify-end pr-6">
-                            <img class="team" src="../../assets/images/team.png" alt="">    
+                        <div class="pr-6">
+                            <img class="team" src="../../assets/images/team.png" alt=""> 
                         </div>
                          <v-row class="first">
                             <v-col offset="1"  offset-md="2" cols="2" >
@@ -153,7 +153,7 @@
                                 </p>
                             </v-col>
                         </v-row>
-                        <div class="second" >
+                        <div class="second">
                             <img class="desk" src="../../assets/images/2ec7ed81c4e1711fceb1e5a1b7fcf8431a6ee46b.png" alt="">    
                         </div>
                     </v-col>
@@ -248,8 +248,9 @@ export default {
         padding: 18vh 0 10vh 0;
     }
     .team{
-        
         width: 95%;
+        /* height: 95%; */
+        /* height: 1%; */
     }
     h3{
         font-family: 'Lato', sans-serif; 
