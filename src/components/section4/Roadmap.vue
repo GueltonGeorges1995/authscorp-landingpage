@@ -72,7 +72,6 @@
         <div id="abstract-1">
             <div class="rectangleC"></div>
             <div class="rectangleC" style="top: -35%;"></div>
-            <!-- <div id="polygon"></div> -->
         </div>
     </section>
 </template>
@@ -85,7 +84,14 @@ export default {
 
 <style scoped>
     @import url('https://fonts.google.com/specimen/Lato?selection.family=Lato');
-    @import url('https://www.fontify.me/wf/7116669ff62ea6ce905b50766eaca6b8');
+
+    @font-face {
+        font-family: 'sf_ui_displayregular';
+        src: url('../../assets/fonts/sf-ui-display-regular-webfont.woff2') format('woff2'),
+             url('../../assets/fonts/sf-ui-display-regular-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
 
     section {
         height: 100vh;
@@ -270,8 +276,7 @@ export default {
         padding: 50px 0;
         width: 303.51px;
         height: 46px;
-        /* font-family: "SFUIDisplay-Regular"; */
-        font-family: font92731;
+        font-family: 'sf_ui_displayregular';
         font-size: 19px;
         font-weight: 400;
         line-height: 23px;
@@ -279,21 +284,6 @@ export default {
     }
 
     /** Polygons */
-    
-    /* #abstract-1 {
-        z-index: 4;
-        width: 624.06px;
-        height: 750.27px;
-    } */
-
-    #polygon {
-        width: 461.83px;
-        height: 462.01px;
-        position: absolute;
-        top: -22%;
-        left: -15%;
-        background: linear-gradient(270deg, rgba(0,255,255,0.07));
-    }
 
     .rectangleC {
         width: 313.83px;
