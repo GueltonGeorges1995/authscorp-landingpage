@@ -184,7 +184,7 @@ input {
 }
 
 .bg-input {
-  /* z-index: 10; */
+  z-index: 10;
   padding: 1rem;
   background: rgba(245, 249, 255, 0.1);
   border-radius: 5px;
