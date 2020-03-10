@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section style="position: relative;">
       <v-container>
           <v-row justify="center">
               <v-col cols="9">
@@ -168,11 +168,12 @@ export default {
 
     #parallelogram {
         width: 100%;
-        height: 55vh;
+        height: 65vh;
         background: #FFFFFF;
         position: absolute;
-        top: 64%;
+        top: 44%;
         transform: rotate(-5deg) skew(-5deg);
+        overflow: hidden;
     }
 
 
