@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify';
 import VueRouter from 'vue-router';
+// import 'material-design-icons-iconfont/dist/material-design-icons.css'
+import '../node_modules/material-design-icons-iconfont/dist/material-design-icons.css'
 
 import LandingPage from './components/LandingPage.vue';
 import WelcomePage from './components/WelcomePage.vue';
