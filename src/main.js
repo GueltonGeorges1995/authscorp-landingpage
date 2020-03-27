@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify';
 import VueRouter from 'vue-router';
+import VueMeta from 'vue-meta'
 // import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import '../node_modules/material-design-icons-iconfont/dist/material-design-icons.css'
 
@@ -12,6 +13,7 @@ import SignUp from './components/SignUp.vue';
 import ForgotPassword from './components/ForgotPassword.vue';
 
 Vue.use(VueRouter);
+Vue.use(VueMeta)
 
 const router = new VueRouter({
     mode: 'history',
@@ -38,8 +40,18 @@ const router = new VueRouter({
 
 Vue.config.productionTip = false
 
-new Vue({
-  vuetify,
- router,
-  render: h => h(App)
-}).$mount('#app')
+const app = new Vue(Object.assign(App, {
+    vuetify,
+    router,
+}))
+
+export default (context) => {
+    app.$router.push(context.url)
+    context.$router = app.$router
+    context.meta = app.$meta() // and here
+
+    return app
+}
+  
+if(typeof(window) !== "undefined")
+    app.$mount('#app');

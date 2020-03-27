@@ -27,7 +27,7 @@ function actual_version() {
 
 version=$(increment_version $(actual_version))
 registry=$registry$version
-echo "building image "registry
+echo "building image "$registry
 
 npm run build && \
 docker build . -t $registry && \
