@@ -8,12 +8,10 @@
       <v-spacer />
       <div class="hidden-sm-and-down">
         <v-btn text class="nav-item" color="primary">Product</v-btn>
-        <v-btn text class="nav-item" color="secondary">Download</v-btn>
+        <v-btn text class="nav-item" color="secondary">About us</v-btn>
         <v-btn text class="nav-item" color="secondary">Support</v-btn>
-        <v-btn text class="nav-item" color="secondary">Contact</v-btn>
         <v-btn text class="nav-item" color="secondary" href="/signin">Sign In</v-btn>
         <v-btn text class="nav-item" color="secondary" href="/signup">Sign Up</v-btn>
-        <v-btn text class="nav-item" color="secondary" href="/welcome">Welcome</v-btn>
       </div>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" app temporary>
@@ -29,13 +27,10 @@
             <v-list-item-title>Product</v-list-item-title>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title>Download</v-list-item-title>
+            <v-list-item-title>About us</v-list-item-title>
           </v-list-item>
           <v-list-item>
             <v-list-item-title>Support</v-list-item-title>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-title h>Contact</v-list-item-title>
           </v-list-item>
           <v-list-item>
             <v-list-item-title><router-link to="/signin" class="black--text">Sign In</router-link></v-list-item-title>
