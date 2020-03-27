@@ -5,17 +5,28 @@
   "scripts": {
     "start": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "npm run build:server -- --silent && npm run build:client -- --no-clean --silent && npm run prerender",
+    "build:client": "vue-cli-service build",
+    "build:server": "WEBPACK_TARGET=node vue-cli-service build",
+    "prerender": "vue-cli-service prerender",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "bn.js": "^5.1.1",
     "core-js": "^3.6.4",
     "express": "^4.17.1",
     "express-validator": "^6.4.0",
+    "html-minifier": "^4.0.0",
     "mailchimp-api-v3": "^1.13.1",
     "material-design-icons-iconfont": "^5.0.1",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.8",
+    "sitemap": "^6.1.0",
     "vue": "^2.6.11",
+    "vue-cli-plugin-pressr": "^1.0.2",
+    "vue-meta": "^2.3.3",
     "vue-router": "^3.1.5",
+    "vue-server-renderer": "^2.6.11",
     "vuetify": "^2.2.11"
   },
   "devDependencies": {

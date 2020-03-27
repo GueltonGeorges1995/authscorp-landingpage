@@ -1,5 +1,8 @@
 module.exports = {
-  "transpileDependencies": [
+  // prerender: {
+  //   domain: 'https://www.authscorp.com',
+  // },
+  transpileDependencies: [
     "vuetify"
   ]
 }
