@@ -1,0 +1,46 @@
+{
+    "name": "authscorp - Openid security platform",
+    "short_name": "authscorp",
+    "icons": [{
+        "src": "/img/manifest/logo-42.png",
+        "sizes": "42x42",
+        "type": "image/png"
+      }, {
+        "src": "/img/manifest/logo-80.png",
+        "sizes": "80x80",
+        "type": "image/png"
+      }, {
+        "src": "/img/manifest/logo-120.png",
+        "sizes": "120x120",
+        "type": "image/png"
+      }, {
+        "src": "/img/manifest/logo-144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      }, {
+        "src": "/img/manifest/logo-152.png",
+        "sizes": "152x152",
+        "type": "image/png"
+      }, {
+        "src": "/img/manifest/logo-192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }, {
+        "src": "/img/manifest/logo-256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      }, {
+        "src": "/img/manifest/logo-384.png",
+        "sizes": "384x384",
+        "type": "image/png"
+      }, {
+        "src": "/img/manifest/logo-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }],
+    "start_url": "/",
+    "background_color": "#f2f3f5",
+    "display": "standalone",
+    "theme_color": "#006bff"
+  }
+  
