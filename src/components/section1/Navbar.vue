@@ -3,7 +3,7 @@
     <v-app-bar flat color="white" app class="margin-x z-index-12">
       <v-app-bar-nav-icon @click="drawer = !drawer" class="hidden-md-and-up" />
       <v-toolbar-title class="logo">
-        <router-link to="/" class="black--text">AUTHSCORP</router-link>
+        <router-link to="/" class="black--text"><img src="/img/logo.svg" height=42 style="vertical-align: bottom; margin-right: 10px;" /> AUTHSCORP</router-link>
       </v-toolbar-title>
       <v-spacer />
       <div class="hidden-sm-and-down">
