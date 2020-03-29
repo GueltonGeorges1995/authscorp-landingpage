@@ -87,8 +87,8 @@ export default {
 
     @font-face {
         font-family: 'sf_ui_displayregular';
-        src: url('../../assets/fonts/sf-ui-display-regular-webfont.woff2') format('woff2'),
-             url('../../assets/fonts/sf-ui-display-regular-webfont.woff') format('woff');
+        src: url('../../../assets/fonts/sf-ui-display-regular-webfont.woff2') format('woff2'),
+             url('../../../assets/fonts/sf-ui-display-regular-webfont.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     }

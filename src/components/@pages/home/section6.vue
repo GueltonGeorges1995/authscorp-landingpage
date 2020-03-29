@@ -392,7 +392,7 @@
         </v-card>
       </v-col>
       <v-col class="d-flex align-center">
-        <img src="../../assets/images/computer.png" alt />
+        <img src="@assets/images/computer.png" alt />
       </v-col>
     </v-row>
   </section>

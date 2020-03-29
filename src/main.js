@@ -6,11 +6,12 @@ import VueMeta from 'vue-meta'
 // import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import '../node_modules/material-design-icons-iconfont/dist/material-design-icons.css'
 
-import LandingPage from './components/LandingPage.vue';
+import LandingPage from '@pages/home/index.vue';
 import WelcomePage from './components/WelcomePage.vue';
-import SignIn from './components/SignIn.vue';
-import SignUp from './components/SignUp.vue';
-import ForgotPassword from './components/ForgotPassword.vue';
+import SignIn from '@pages/signin/index.vue';
+import SignUp from '@pages/signup/index.vue';
+import ForgotPassword from '@pages/forgotpassword/index.vue';
+import Error from '@pages/error/index.vue';
 
 Vue.use(VueRouter);
 Vue.use(VueMeta)
@@ -34,7 +35,10 @@ const router = new VueRouter({
     },{
         path: '/forgotpassword',
         component: ForgotPassword
-    },
+    },{
+        path: '*',
+        component: Error
+    }
     ]
 })
 

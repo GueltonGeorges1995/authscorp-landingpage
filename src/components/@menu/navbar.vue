@@ -10,8 +10,8 @@
         <v-btn text class="nav-item" color="primary">Product</v-btn>
         <v-btn text class="nav-item" color="secondary">About us</v-btn>
         <v-btn text class="nav-item" color="secondary">Support</v-btn>
-        <v-btn text class="nav-item" color="secondary" href="/signin">Sign In</v-btn>
-        <v-btn text class="nav-item" color="secondary" href="/signup">Sign Up</v-btn>
+        <v-btn text class="nav-item" color="secondary" to="/signin">Sign In</v-btn>
+        <v-btn text class="nav-item" color="secondary" to="/signup">Sign Up</v-btn>
       </div>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" app temporary>

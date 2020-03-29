@@ -137,8 +137,8 @@
           </div>
         </v-col>
         <v-col cols="12" sm="12" md="5" xl="6" class="flex-xl">
-          <img src="../../assets/images/image (1).png" alt />
-          <!-- <v-img  src="../../assets/images/image (1).png"/> -->
+          <img src="@assets/images/image (1).png" alt />
+          <!-- <v-img  src="@assets/images/image (1).png"/> -->
         </v-col>
       </v-row>
     </v-container>

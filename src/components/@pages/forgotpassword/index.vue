@@ -3,9 +3,9 @@
     <v-container fluid>
       <v-col cols="12" sm="12" md="12" class="flex-mobile">
         <div class="bg-col">
-          <h2>I've Forgot My Password</h2>
+          <h2 class="mb-4">I've Forgot My Password</h2>
           <v-form ref="form" v-model="valid" lazy-validation>
-            <v-text-field v-model="email" :rules="emailRules" label="E-mail" required></v-text-field>
+            <v-text-field outlined v-model="email" :rules="emailRules" label="E-mail" required></v-text-field>
             <p>You'll receive an E-mail with a new password</p>
             <v-btn :disabled="!valid"  color="primary" class="mr-4" @click="validate">Submit</v-btn>
           </v-form>
