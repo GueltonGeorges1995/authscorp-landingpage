@@ -20,6 +20,14 @@ module.exports = {
         // '@tools':         path.join(__dirname, '../tools'),
       }
     },
+    module: {
+      rules: [
+        {
+          test: /\.md$/i,
+          use: 'raw-loader',
+        },
+      ],
+    }
   },
   transpileDependencies: [
     "vuetify"

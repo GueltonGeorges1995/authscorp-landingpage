@@ -295,9 +295,11 @@ input {
   box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
+
 .margin-bottom {
-  margin-bottom: 15rem;
+  margin-bottom: 2rem;
 }
+
 .padding-left {
   padding-left: 10px;
 }

@@ -9,8 +9,8 @@
       <div class="hidden-sm-and-down">
         <v-btn text class="nav-item" color="primary" to="/">Product</v-btn>
         <v-btn text class="nav-item" color="secondary" to="/about-us">About us</v-btn>
-        <v-btn text class="nav-item" color="secondary" to="/docs">Documentation</v-btn>
         <v-btn text class="nav-item" color="secondary" to="/pricing">Pricing</v-btn>
+        <v-btn text class="nav-item" color="secondary" to="/docs">Documentation</v-btn>
         <v-btn text class="nav-item" color="secondary" to="/support">Support</v-btn>
         <v-btn text class="nav-item" color="secondary" to="/signin">Sign In</v-btn>
         <v-btn text class="nav-item" color="secondary" to="/signup">Sign Up</v-btn>
