@@ -13,6 +13,8 @@ import SignUp from '@pages/signup/index.vue';
 import ForgotPassword from '@pages/forgotpassword/index.vue';
 import AboutUs from '@pages/about-us/index.vue';
 import Docs from '@pages/docs/index.vue';
+import Pricing from '@pages/pricing/index.vue';
+import Support from '@pages/support/index.vue';
 import Error from '@pages/error/index.vue';
 
 Vue.use(VueRouter);
@@ -43,6 +45,12 @@ const router = new VueRouter({
     },{
         path: '/docs',
         component: Docs
+    },{
+        path: '/pricing',
+        component: Pricing
+    },{
+        path: '/support',
+        component: Support
     },{
         path: '*',
         component: Error
