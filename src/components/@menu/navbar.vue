@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="{ menu: true , 'white-cover-menu': $route.path == '/docs' }">
     <v-app-bar flat color="white" app class="margin-x z-index-12">
       <v-app-bar-nav-icon @click="drawer = !drawer" class="hidden-md-and-up" />
       <v-toolbar-title class="logo">
@@ -7,9 +7,11 @@
       </v-toolbar-title>
       <v-spacer />
       <div class="hidden-sm-and-down">
-        <v-btn text class="nav-item" color="primary">Product</v-btn>
-        <v-btn text class="nav-item" color="secondary">About us</v-btn>
+        <v-btn text class="nav-item" color="primary" to="/">Product</v-btn>
+        <v-btn text class="nav-item" color="secondary" to="/about-us">About us</v-btn>
         <v-btn text class="nav-item" color="secondary">Support</v-btn>
+        <v-btn text class="nav-item" color="secondary">Pricing</v-btn>
+        <v-btn text class="nav-item" color="secondary" to="/docs">Documentation</v-btn>
         <v-btn text class="nav-item" color="secondary" to="/signin">Sign In</v-btn>
         <v-btn text class="nav-item" color="secondary" to="/signup">Sign Up</v-btn>
       </div>
@@ -47,7 +49,24 @@
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+
+.menu {
+  padding-top: 64px
+}
+
+.white-cover-menu {
+  padding-top: 0;
+
+  header {
+    background: transparent !important;
+  }
+
+  a {
+    color: #fff !important;
+  }
+}
+
 @media screen and (max-width: 960px) {
   .margin-x {
     padding: 0 !important;
@@ -83,11 +102,11 @@ a {
 </style>
 
 <script>
-export default {
-  data: () => ({
-    drawer: false
-  })
-};
+  export default {
+    data: () => ({
+      drawer: false
+    })
+  };
 </script>
 
 

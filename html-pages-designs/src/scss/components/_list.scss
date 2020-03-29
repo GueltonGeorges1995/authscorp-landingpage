@@ -1,0 +1,32 @@
+
+.c-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  &.w-50p {
+    width: 100%;
+
+    li {
+      width: 50%;
+    }
+  }
+
+  li {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: flex-start;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    img {
+      margin-right: 12px;
+    }
+
+    p {
+      margin-bottom: 0;
+      line-height: normal !important;
+    }
+  }
+}

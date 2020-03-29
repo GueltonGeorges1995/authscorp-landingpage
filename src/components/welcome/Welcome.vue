@@ -20,9 +20,7 @@
   p {
     color: #7c7d8d;
   }
-  .margin-top {
-    margin-top: 3rem;
-  }
+
   .bg-section {
     background: #f5f9ff;
     padding: 10rem 0;

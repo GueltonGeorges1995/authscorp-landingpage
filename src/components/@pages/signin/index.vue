@@ -17,7 +17,7 @@
               @click:append="show1 = !show1"
             />
 
-            <v-btn :disabled="!valid" color="primary" class="mr-4" to="/admin">Sign In</v-btn>
+            <v-btn :disabled="!valid" color="primary" class="mr-4" href="/admin">Sign In</v-btn>
           </v-form>
           <br />
           
