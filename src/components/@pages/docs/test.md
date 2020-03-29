@@ -1,20 +1,8 @@
----
-title: Kubernetes Scheduler
-content_template: templates/concept
-weight: 50
----
+In Kubernetes, _scheduling_ refers to making sure that
+are matched to so that
+can run them.
 
-{{% capture overview %}}
-
-In Kubernetes, _scheduling_ refers to making sure that {{< glossary_tooltip text="Pods" term_id="pod" >}}
-are matched to {{< glossary_tooltip text="Nodes" term_id="node" >}} so that
-{{< glossary_tooltip term_id="kubelet" >}} can run them.
-
-{{% /capture %}}
-
-{{% capture body %}}
-
-## Scheduling overview {#scheduling}
+## Scheduling overview
 
 A scheduler watches for newly created Pods that have no Node assigned. For
 every Pod that the scheduler discovers, the scheduler becomes responsible
@@ -54,7 +42,7 @@ individual and collective resource requirements, hardware / software /
 policy constraints, affinity and anti-affinity specifications, data
 locality, inter-workload interference, and so on.
 
-### Node selection in kube-scheduler {#kube-scheduler-implementation}
+### Node selection in kube-scheduler
 
 kube-scheduler selects a node for the pod in a 2-step operation:
 
@@ -86,12 +74,27 @@ of the scheduler:
   `QueueSort`, `Filter`, `Score`, `Bind`, `Reserve`, `Permit`, and others. You
   can also configure the kube-scheduler to run different profiles.
 
-{{% /capture %}}
-{{% capture whatsnext %}}
+# whatsnext
+
 * Read about [scheduler performance tuning](/docs/concepts/scheduling/scheduler-perf-tuning/)
 * Read about [Pod topology spread constraints](/docs/concepts/workloads/pods/pod-topology-spread-constraints/)
 * Read the [reference documentation](/docs/reference/command-line-tools-reference/kube-scheduler/) for kube-scheduler
 * Learn about [configuring multiple schedulers](/docs/tasks/administer-cluster/configure-multiple-schedulers/)
 * Learn about [topology management policies](/docs/tasks/administer-cluster/topology-manager/)
 * Learn about [Pod Overhead](/docs/concepts/configuration/pod-overhead/)
-{{% /capture %}}
+
+# questions
+
+
+
+Api authorization
+---
+
+
+Contribute
+---
+
+
+
+Api's
+---

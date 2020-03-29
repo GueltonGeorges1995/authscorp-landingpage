@@ -10,7 +10,7 @@
                         <div class="text-center">
                             <h1 class="white--text mb-10">We are here to help you</h1>
                             <v-text-field prepend-inner-icon="search" outlined hide-details placeholder="Ask a question">
-                                <v-btn color="primary" slot="append">Search</v-btn>
+                                <v-btn color="primary" slot="append" to="/docs/test">Search</v-btn>
                             </v-text-field>
                         </div>
                     </v-flex>

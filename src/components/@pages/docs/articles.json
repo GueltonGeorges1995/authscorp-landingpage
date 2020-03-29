@@ -1,0 +1,90 @@
+[
+    {
+        "title": "Getting started",
+        "articles": [
+            "What is authscorp",
+            "Use cases",
+            "Configure my first project"
+        ]
+    },
+    {
+        "title": "Libraries",
+        "articles": [
+            {
+                "title": "Mobile app",
+                "articles": [
+                    "React native",
+                    "Android project",
+                    "Swift project",
+                    "Cordova project",
+                    "Ionic project",
+                    "Windows universal apps",
+                    "WPF Forms",
+                    "Xamarin"
+                ]
+            },
+            {
+                "title": "Web app",
+                "articles": [
+                    "Vuejs",
+                    "Angular",
+                    "React",
+                    "Php",
+                    "Java",
+                    "ASP.NET",
+                    "Golang"
+                ]
+            },
+            {
+                "title": "Machine to machine",
+                "articles": [
+                    "nodejs",
+                    "golang",
+                    "python",
+                    "c#",
+                    "java",
+                    "laravel",
+                    "PHP"
+                ]
+            },
+            {
+                "title": "CMS",
+                "articles": [
+                    "Wordpress",
+                    "Joomla"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Tutorials",
+        "articles": [
+            "Setup an api middleware",
+            "How to define custom permissions",
+            "Securise linux servers with authscorp",
+            "Setup my own portal",
+            "Customise pages",
+            "Start my first web project",
+            "Start my first mobile app project",
+            "Setting up machine-to-machine authorization",
+            "Setup windows logon",
+            "Kubernetes authentification",
+            "Grafana authentification",
+            "Elasticsearch authentification"
+        ]
+    },
+    {
+        "title": "Openid",
+        "articles": [
+            "What is openid",
+            "What are clients",
+            "What is the difference between a client and a user"
+        ]
+    },
+    {
+        "title": "Plugins",
+        "articles": [
+            "Use my own database"
+        ]
+    }
+]

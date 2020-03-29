@@ -1,29 +1,33 @@
 <template>
     <div style="min-height: 100vh">
-        <v-toolbar dense>
+        <v-toolbar color="primary" dark style="padding: 0 6rem;">
             <v-btn text>Sections</v-btn>
             <v-btn text>Getting started</v-btn>
             <v-btn text>Api's</v-btn>
             <v-btn text>Tutorials</v-btn>
             <v-btn text>Contribute</v-btn>
         </v-toolbar>
-        <div style="padding: 50px 100px">
+        <div style="padding: 30px 100px">
             <v-layout row wrap>
                 <v-flex xs2>
                     <v-list-item>
-                        <v-list-item-content>
-                            <v-list-item-title class="title">
-                                Getting started
-                            </v-list-item-title>
-                        </v-list-item-content>
+                        <v-list-item-title class="title">
+                            {{title}}
+                        </v-list-item-title>
+                        <v-list-item-action>
+                            <v-tooltip bottom>
+                                <template v-slot:activator="{ on }">
+                                    <v-btn icon v-on="on">
+                                        <v-icon>add</v-icon>
+                                    </v-btn>
+                                </template>
+                                <span>Add an article</span>
+                            </v-tooltip>
+                        </v-list-item-action>
                     </v-list-item>
 
                     <v-list dense nav>
-                        <v-list-item v-for="item in items" :key="item.title" link>
-                            <v-list-item-content>
-                                <v-list-item-title>{{ item.title }}</v-list-item-title>
-                            </v-list-item-content>
-                        </v-list-item>
+                        <docs-nav :articles="articles" />
                     </v-list>
                 </v-flex>
                 <v-flex xs8 offset-xs1>
@@ -44,33 +48,35 @@
 
     import marked from 'marked'
     import test from './test.md'
+    import articles from './articles.json'
+
+    import Vue from 'vue'
+    import DocsNav from './nav'
+    Vue.component('docs-nav', DocsNav)
 
     export default {
         data() {
             return {
                 article: marked(test),
+                title: articles[2].title,
+                articles: articles[2].articles,
                 breadcrumbs: [
                     {
-                        text: 'Dashboard',
+                        text: 'Getting started',
                         disabled: false,
                         href: 'breadcrumbs_dashboard',
                     },
                     {
-                        text: 'Link 1',
+                        text: 'Introduction',
                         disabled: false,
                         href: 'breadcrumbs_link_1',
                     },
                     {
-                        text: 'Link 2',
+                        text: 'What is authscorp',
                         disabled: true,
                         href: 'breadcrumbs_link_2',
                     },
                 ],
-                items: [
-                    { title: 'Dashboard', icon: 'mdi-view-dashboard' },
-                    { title: 'Photos', icon: 'mdi-image' },
-                    { title: 'About', icon: 'mdi-help-box' },
-                ]
             }
         }
     }
