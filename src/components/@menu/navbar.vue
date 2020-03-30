@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ menu: true , 'white-cover-menu': $route.path == '/docs' }">
+  <div :class="{ menu: true , 'white-cover-menu': $route.path == '/docs' || $route.path == '/about-us' }">
     <v-app-bar flat color="white" app class="margin-x z-index-12">
       <v-app-bar-nav-icon @click="drawer = !drawer" class="hidden-md-and-up" />
       <v-toolbar-title class="logo">
