@@ -9,7 +9,7 @@
                     <v-flex xs12 lg8 offset-lg-2>
                         <div class="text-center">
                             <h1 class="white--text mb-10">We are here to help you</h1>
-                            <v-text-field prepend-inner-icon="search" outlined hide-details placeholder="Ask a question">
+                            <v-text-field prepend-inner-icon="search" outlined hide-details placeholder="Ask a question" class="white">
                                 <v-btn color="primary" slot="append" to="/docs/test">Search</v-btn>
                             </v-text-field>
                         </div>
@@ -22,6 +22,14 @@
 </template>
 
 <style lang="scss">
+
+    .v-text-field.white {
+        background-color: #fff !important;
+
+        fieldset {
+            top: -6px;
+        }
+    }
 
     .company-faq header {
         background-color: #264EEE;
@@ -69,14 +77,6 @@
 
         .v-btn {
             margin-top: -6px;
-        }
-
-        .v-text-field {
-            background-color: #fff !important;
-
-            fieldset {
-                top: -6px;
-            }
         }
 
         h1 {

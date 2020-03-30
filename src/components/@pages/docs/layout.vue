@@ -1,11 +1,15 @@
 <template>
-    <div style="min-height: 100vh">
+    <div class="docs-template">
         <v-toolbar color="primary" dark style="padding: 0 6rem;">
             <v-btn text>Sections</v-btn>
             <v-btn text>Getting started</v-btn>
             <v-btn text>Api's</v-btn>
             <v-btn text>Tutorials</v-btn>
             <v-btn text>Contribute</v-btn>
+            <v-spacer />
+            <div class="search">
+                <v-text-field prepend-inner-icon="search" solo hide-details placeholder="Search" light />
+            </div>
         </v-toolbar>
         <div style="padding: 30px 100px">
             <v-layout row wrap>
@@ -82,3 +86,19 @@
     }
 
 </script>
+
+<style lang="scss">
+
+    .docs-template {
+        min-height: 100vh;
+
+        .search {
+            width: 250px;
+
+            > .v-text-field .v-input__control {
+                min-height: 40px;
+            }
+        }
+    }
+
+</style>
