@@ -63,7 +63,7 @@
             return {
                 article: marked(test),
                 title: articles[2].title,
-                articles: articles[2].articles,
+                articles: articles[1].articles,
                 breadcrumbs: [
                     {
                         text: 'Getting started',
