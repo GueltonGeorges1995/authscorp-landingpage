@@ -1,7 +1,34 @@
+const path = require('path')
+
 module.exports = {
   // prerender: {
   //   domain: 'https://www.authscorp.com',
   // },
+  configureWebpack: {
+    resolve: {
+      extensions: ['.web.js', '.web.vue'],
+      alias: {
+        // '@components':    path.join(__dirname, './@components'),
+        // '@vuetify':       path.join(__dirname, './@vuetify'),
+        // '@config':        path.join(__dirname, './@config'),
+        // '@locales':       path.join(__dirname, './@locales'),
+        '@menu':          path.join(__dirname, './src/components/@menu'),
+        // '@screens':       path.join(__dirname, './@screens'),
+        '@pages':         path.join(__dirname, './src/components/@pages'),
+        // '@addons':        path.join(__dirname, '../../src/addons'),
+        '@assets':        path.join(__dirname, './src/assets'),
+        // '@tools':         path.join(__dirname, '../tools'),
+      }
+    },
+    module: {
+      rules: [
+        {
+          test: /\.md$/i,
+          use: 'raw-loader',
+        },
+      ],
+    }
+  },
   transpileDependencies: [
     "vuetify"
   ]

@@ -1,0 +1,102 @@
+.form-control {
+  border-radius: .5rem;
+  border: solid 1px #e5eaf4;
+  background-color: white;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+
+  &[type="text"],
+  &[type="password"],
+  &[type="email"],
+  &[type="number"],
+  &[type="color"],
+  &[type="date"],
+  &[type="datetime-local"],
+  &[type="file"],
+  &[type="hidden"],
+  &[type="image"],
+  &[type="month"],
+  &[type="reset"],
+  &[type="tel"],
+  &[type="time"],
+  &[type="url"],
+  &[type="week"],
+  &select{
+    height: 3.5rem;
+  }
+
+  &::placeholder {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: rgba(#183b56, 0.3);
+  }
+
+  &:focus {
+    box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.1);
+    border: solid 1px #1565d8;
+    font-size: 1rem;
+    color: #183b56;
+  }
+}
+
+.bootstrap-select {
+  .btn-light {
+    height: 3.5rem !important;
+  }
+}
+
+select {
+  &.form-control {
+    height: 3.375rem;
+    padding-left: 1.25rem;
+    color: #183b56;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+  }
+}
+
+textarea {
+  &.form-control {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+label {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #5a7184;
+  margin-bottom: .75rem;
+}
+
+// search
+.form-search {
+  .input-group-prepend {
+    position: absolute;
+    color: $s-color-gray;
+    z-index: 11;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .form-control {
+    padding-left: 50px;
+    padding-right: 120px;
+    border-radius: 8px !important;
+  }
+
+  .input-group-append {
+    position: absolute;
+    right: 0;
+    z-index: 111;
+    display: flex;
+    align-items: center;
+    padding-right: 8px;
+    height: 100%;
+
+    .btn {
+      border-radius: 8px;
+    }
+  }
+}

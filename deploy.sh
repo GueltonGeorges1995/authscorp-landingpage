@@ -29,7 +29,10 @@ version=$(increment_version $(actual_version))
 registry=$registry$version
 echo "building image "$registry
 
-npm run build && \
+if [ "$1" != "--nobuild" ]; then
+   npm run build || exit 1
+fi
+
 docker build . -t $registry && \
 docker push $registry && \
 kubectl set image deployment/$name --namespace=$namespace $name=$registry && \
