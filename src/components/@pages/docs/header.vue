@@ -12,6 +12,8 @@
                             <v-text-field prepend-inner-icon="search" outlined hide-details placeholder="Ask a question" class="white">
                                 <v-btn color="primary" slot="append" to="/docs/test">Search</v-btn>
                             </v-text-field>
+                            <br>
+                            <p style="color:#D8D8D8">*We are collect your searching keywords to improve our FAQ</p>
                         </div>
                     </v-flex>
                 </v-layout>
@@ -52,7 +54,6 @@
                 height: 750px;
             }
         }
-
         .round-before {
             background-image: linear-gradient(270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 100%);
             top: -500px;

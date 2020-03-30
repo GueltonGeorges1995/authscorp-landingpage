@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="35px" viewBox="0 0 34 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon_Substract</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F8FBFF" offset="0%"></stop>
+            <stop stop-color="#FAFBFB" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="360" height="317" rx="16"></rect>
+        <filter x="-9.7%" y="-7.9%" width="119.4%" height="122.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.02 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Other-pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Documentation" transform="translate(-539.000000, -3046.000000)">
+            <g id="Features" transform="translate(-36.000000, 1963.000000)">
+                <rect id="Base" fill="url(#linearGradient-1)" x="0" y="175" width="1440" height="1532"></rect>
+                <g id="Item" transform="translate(540.000000, 1043.000000)">
+                    <g id="Base">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                        <rect stroke="#E5EAF4" stroke-width="1" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="359" height="316" rx="16"></rect>
+                    </g>
+                    <g id="Icon_Substract" transform="translate(32.000000, 36.000000)">
+                        <polygon id="Path" points="0 0 40 0 40 40 0 40"></polygon>
+                        <path d="M25.6,28.8 L25.6,36 C25.6,37.3254834 24.5254834,38.4 23.2,38.4 L5.6,38.4 C4.2745166,38.4 3.2,37.3254834 3.2,36 L3.2,18.4 C3.2,17.0745166 4.2745166,16 5.6,16 L12.8,16 L12.8,24.8 C12.8,27.009139 14.590861,28.8 16.8,28.8 L25.6,28.8 Z" id="Path" fill="#1565D8" opacity="0.3"></path>
+                        <path d="M16.8,4.8 L34.4,4.8 C35.7254834,4.8 36.8,5.8745166 36.8,7.2 L36.8,24.8 C36.8,26.1254834 35.7254834,27.2 34.4,27.2 L16.8,27.2 C15.4745166,27.2 14.4,26.1254834 14.4,24.8 L14.4,7.2 C14.4,5.8745166 15.4745166,4.8 16.8,4.8 Z" id="Path" fill="#1565D8"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

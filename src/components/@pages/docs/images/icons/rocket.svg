@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Icon_Rocket</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1440" height="740"></rect>
+        <rect id="path-3" x="0" y="0" width="466" height="162" rx="16"></rect>
+        <filter x="-12.9%" y="-27.8%" width="125.8%" height="174.1%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="15" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="17.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Other-pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Documentation" transform="translate(-282.000000, -609.000000)">
+            <g id="Hero">
+                <g id="Background">
+                    <g id="Base">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#264EEE" xlink:href="#path-1"></use>
+                    </g>
+                    <path d="M1440,740 L0,740 L0,565 C240,618.333333 480,645 720,645 C960,645 1200,618.333333 1440,565 L1440,740 Z" id="Wave" fill="#FFFFFF"></path>
+                </g>
+            </g>
+            <g id="Features" transform="translate(246.000000, 573.000000)">
+                <g id="Item">
+                    <g id="Base">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                        <rect stroke="#E5EAF4" stroke-width="1" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="465" height="161" rx="16"></rect>
+                    </g>
+                    <g id="Icon_Rocket" transform="translate(32.000000, 32.000000)">
+                        <polygon id="Path" points="0 0 40 0 40 40 0 40"></polygon>
+                        <path d="M34.9446573,5.69534077 C36.0308875,11.5254774 33.5964337,17.708992 28.7064414,21.5774369 L15.7496682,31.8274659 C15.4312778,32.0793428 14.9747078,32.0528066 14.6876412,31.76574 L8.23432067,25.3124194 C7.94725409,25.0253528 7.92071784,24.5687829 8.1725947,24.2503924 L18.4226238,11.2936193 C22.2910686,6.40362698 28.4745833,3.9691731 34.3047199,5.05540334 C34.6297845,5.1159671 34.8840935,5.37027618 34.9446573,5.69534077 Z M23.5715729,10.7715729 C22.0094757,12.33367 22.0094757,14.86633 23.5715729,16.4284271 C25.13367,17.9905243 27.66633,17.9905243 29.2284271,16.4284271 C30.7905243,14.86633 30.7905243,12.33367 29.2284271,10.7715729 C27.66633,9.20947571 25.13367,9.20947571 23.5715729,10.7715729 Z M28.0970563,15.2970563 C27.159798,16.2343146 25.640202,16.2343146 24.7029437,15.2970563 C23.7656854,14.359798 23.7656854,12.840202 24.7029437,11.9029437 C25.640202,10.9656854 27.159798,10.9656854 28.0970563,11.9029437 C29.0343146,12.840202 29.0343146,14.359798 28.0970563,15.2970563 Z" id="Path" fill="#1565D8"></path>
+                        <path d="M12.8,32.2508222 L12.0893698,32.9614525 C11.237973,33.8128492 9.85758621,33.8128492 9.00618949,32.9614525 L7.03854754,30.9938105 C6.18715082,30.1424138 6.18715082,28.762027 7.03854754,27.9106302 L7.74917777,27.2 L12.8,32.2508222 Z M8.59612943,20.8 L5.16741637,18.5206079 C4.70278632,18.211724 4.6736158,17.5414231 5.10966529,17.1935628 L11.2998927,12.2756074 C12.6337577,11.2158904 14.4089719,10.9227829 15.9981855,11.469535 L8.59612943,20.8 Z M28.5072016,24 C29.0896845,25.620701 28.7936762,27.4426589 27.7032133,28.7975186 L22.7995225,34.8901729 C22.4523356,35.3264502 21.7833323,35.2972645 21.4750464,34.8323917 L19.2,31.4017867 L28.5072016,24 L28.5072016,24 Z" id="Path" fill="#1565D8" opacity="0.3"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
