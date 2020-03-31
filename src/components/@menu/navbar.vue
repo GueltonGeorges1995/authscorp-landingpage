@@ -1,9 +1,11 @@
 <template>
-  <div :class="{ menu: true , 'white-cover-menu': $route.path == '/docs' || $route.path == '/about-us' }">
+  <div :class="{ menu: true , 'white-cover-menu': !isActive && ($route.path == '/docs' || $route.path == '/about-us') }">
     <v-app-bar flat color="white" app class="margin-x z-index-12">
       <v-app-bar-nav-icon @click="drawer = !drawer" class="hidden-md-and-up" />
       <v-toolbar-title class="logo">
-        <router-link to="/" class="black--text"><img src="/img/logo.svg" height=42 style="vertical-align: bottom; margin-right: 10px;" /> AUTHSCORP</router-link>
+        <router-link to="/" class="black--text">
+          <img src="/img/logo.svg" height="42" style="vertical-align: bottom; margin-right: 10px;" /> AUTHSCORP
+        </router-link>
       </v-toolbar-title>
       <v-spacer />
       <div class="hidden-sm-and-down">
@@ -23,7 +25,9 @@
             <v-list-item-title>Product</v-list-item-title>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title><router-link to="/" class="black--text">Home</router-link></v-list-item-title>
+            <v-list-item-title>
+              <router-link to="/" class="black--text">Home</router-link>
+            </v-list-item-title>
           </v-list-item>
           <v-list-item>
             <v-list-item-title>Product</v-list-item-title>
@@ -35,13 +39,19 @@
             <v-list-item-title>Support</v-list-item-title>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title><router-link to="/signin" class="black--text">Sign In</router-link></v-list-item-title>
+            <v-list-item-title>
+              <router-link to="/signin" class="black--text">Sign In</router-link>
+            </v-list-item-title>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title><router-link to="/signup" class="black--text">Sign Up</router-link></v-list-item-title>
+            <v-list-item-title>
+              <router-link to="/signup" class="black--text">Sign Up</router-link>
+            </v-list-item-title>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title><router-link to="/welcome" class="black--text">Welcome</router-link></v-list-item-title>
+            <v-list-item-title>
+              <router-link to="/welcome" class="black--text">Welcome</router-link>
+            </v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
@@ -49,10 +59,40 @@
   </div>
 </template>
 
-<style scoped lang="scss">
+<script>
 
+  export default {
+    data: () => ({
+      drawer: false,
+      isActive: false
+    }),
+    created() {
+      if(typeof(window) !== 'undefined')
+        window.addEventListener("scroll", this.handleScroll);
+    },
+    destroyed() {
+      if(typeof(window) !== 'undefined')
+        window.removeEventListener("scroll", this.handleScroll);
+    },
+    methods: {
+      handleScroll(event) {
+        if (event.target.documentElement.scrollTop >= "50") {
+          if(!this.isActive) {
+            this.isActive = true;
+            this.$forceUpdate()
+          }
+        } else {
+          this.isActive = false;
+        }
+      }
+    }
+  };
+
+</script>
+
+<style scoped lang="scss">
 .menu {
-  padding-top: 64px
+  padding-top: 64px;
 }
 
 .white-cover-menu {
@@ -74,7 +114,7 @@
 }
 
 .black {
-    color: black;
+  color: black;
 }
 .nav-item {
   color: gray;
@@ -100,13 +140,3 @@ a {
   z-index: 200 !important;
 }
 </style>
-
-<script>
-  export default {
-    data: () => ({
-      drawer: false
-    })
-  };
-</script>
-
-

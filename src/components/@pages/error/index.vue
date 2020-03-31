@@ -955,10 +955,80 @@
       </svg>
     </div>
     <center>
-      <h1>Whoops! That page doesn't exist.</h1>
-      <p style="color:#979797">The page you requested could not be found</p>
+      <h1>{{error.title}}</h1>
+      <p style="color:#979797">{{error.message}}</p>
       <v-btn color="primary" class="white--text" to="/">Back to home</v-btn>
     </center>
   </v-container>
 </template>
 
+<script>
+
+  const statuses = {
+    "400": {
+      title: '',
+      message: '',
+    },
+    "401": {
+      title: 'Unauthorized Request',
+      message: 'You do not have access to the requested resource',
+    },
+    "402": null,
+    "403": {
+      title: 'Forbidden',
+      message: 'Your account is not allowed to access the required resource',
+    },
+    "405": {
+      title: 'Method Not Allowed',
+      message: 'The required method is not supported for the given url',
+    },
+    "406": {
+      title: 'Not Acceptable Request',
+      message: 'Please verify your request',
+    },
+    "429": {
+      title: 'Too Many Requests',
+      message: 'You reached the rate limitter, please try again later',
+    },
+    "500": {
+      title: 'Internal Server Error',
+      message: 'We encountered an internal error. Please try again later',
+    },
+    "502": {
+      title: 'Bad Gateway',
+      message: 'Please contact an admistrator to verify the TLS settings',
+    },
+    "503": {
+      title: 'Service unavailable',
+      message: 'This service is temporary unavailable, please try again alter',
+    },
+    "504": {
+      title: 'Gateway Timeout',
+      message: 'Some difficulties occured during internal communications. Please try again later',
+    }
+  }
+
+  export default {
+    routes(component) {
+      return Object.keys(statuses).map((o) => {
+        return {
+          path: '/error/' + o,
+          component,
+          meta: { status: parseInt(o) }
+        }
+      })
+    },
+    computed: {
+      status() {
+        return String(this.$route.meta.status || 404)
+      },
+      error() {
+          return statuses[this.status] || {
+            title:   "Whoops! That page doesn't exist.",
+            message: "The page you requested could not be found"
+          }
+      }
+    }
+  }
+
+</script>

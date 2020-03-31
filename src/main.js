@@ -23,8 +23,8 @@ Vue.use(VueMeta)
 
 const router = new VueRouter({
     mode: 'history',
-    routes: [
-        {
+    routes: Error.routes(Error).concat([
+    {
         path: '/',
         component: LandingPage
     },
@@ -58,8 +58,7 @@ const router = new VueRouter({
     },{
         path: '*',
         component: Error
-    }
-    ]
+    }])
 })
 
 Vue.config.productionTip = false
