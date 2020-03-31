@@ -66,7 +66,7 @@
             height: 600px;
 
             p{
-                font-family: Exo 2;
+                
                 font-style: normal;
                 font-weight: normal;
                 font-size: 24px;
