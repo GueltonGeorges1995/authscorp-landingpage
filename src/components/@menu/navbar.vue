@@ -1,7 +1,5 @@
 <template>
-  <div
-    :class="{ menu: true , 'white-cover-menu': $route.path == '/docs' && !isActive || $route.path == '/about-us' && !isActive }"
-  >
+  <div :class="{ menu: true , 'white-cover-menu': !isActive && ($route.path == '/docs' || $route.path == '/about-us') }">
     <v-app-bar flat color="white" app class="margin-x z-index-12">
       <v-app-bar-nav-icon @click="drawer = !drawer" class="hidden-md-and-up" />
       <v-toolbar-title class="logo">
@@ -61,6 +59,35 @@
   </div>
 </template>
 
+<script>
+
+  export default {
+    data: () => ({
+      drawer: false,
+      isActive: false
+    }),
+    created() {
+      window.addEventListener("scroll", this.handleScroll);
+    },
+    destroyed() {
+      window.removeEventListener("scroll", this.handleScroll);
+    },
+    methods: {
+      handleScroll(event) {
+        if (event.target.documentElement.scrollTop >= "50") {
+          const wasActive = this.isActive
+          this.isActive = true;
+          if(wasActive)
+            this.$forceUpdate()
+        } else {
+          this.isActive = false;
+        }
+      }
+    }
+  };
+
+</script>
+
 <style scoped lang="scss">
 .menu {
   padding-top: 64px;
@@ -111,29 +138,3 @@ a {
   z-index: 200 !important;
 }
 </style>
-
-<script>
-export default {
-  data: () => ({
-    drawer: false,
-    isActive: false
-  }),
-  created() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
-  },
-  methods: {
-    handleScroll(event) {
-      if (event.target.documentElement.scrollTop >= "500") {
-        this.isActive = true;
-      } else {
-        this.isActive = false;
-      }
-    }
-  }
-};
-</script>
-
-
