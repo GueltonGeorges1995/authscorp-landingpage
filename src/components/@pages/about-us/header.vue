@@ -9,8 +9,7 @@
                     <v-flex xs12 lg8 offset-lg-2>
                         <div class="text-center">
                             <p class="white--text mb-10">From year to year we strive to invent the most innovative technology that is used by both small enterprises and space enterprises.</p>
-                            <div class="white">
-                            </div>                          
+                            <v-btn color="white" rounded large light>Subscribe now</v-btn>                       
                         </div>
                     </v-flex>
                 </v-layout>
@@ -21,15 +20,6 @@
 </template>
 
 <style lang="scss" scoped>
-
-    div.white {
-        background-color: #fff !important;
-        height: 55px;
-        width: 210px;
-        border-radius: 30px;
-        margin: 0 auto;
-        
-    }
 
     .company-faq header {
         background-color: #264EEE;

@@ -1,37 +1,122 @@
 <template>
   <div class="bg-main-section">
-    <v-container fluid>
-      <v-col cols="12" sm="12" md="12" class="flex-mobile">
+    <v-container fluid class="d-flex justify-center">
+      <v-col cols="12" sm="6" md="6" class="flex-mobile">
         <div class="bg-col">
-          <h2 class="mb-4">Sign In</h2>
-          <v-form ref="form" v-model="valid" lazy-validation>
-            <v-text-field v-model="email" outlined :rules="emailRules" label="E-mail" required></v-text-field>
+          <v-row class="d-flex justify-center align-center">
+            <h1 class="my-2">Welcome Back.</h1>
+            <v-col cols="12" sm="8">
+              <v-btn
+                color="primary"
+                x-large
+                class="mb-10 signInGoogleBtn"
+                style="position:relative; width: 100%"
+              >
+                <div class="bg-img-btn">
+                  <img class="img-btn" src="./image/google-img-btn.png" alt />
+                </div>Sign in with google
+              </v-btn>
 
-            <v-text-field
-              outlined
-              v-model="password"
-              :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
-              :rules="passwordRules"
-              :type="show1 ? 'text' : 'password'"
-              label="Password"
-              @click:append="show1 = !show1"
-            />
+              <div class="d-flex justify-center align-center">
+                <div class="barre"></div>
+                <h4 class="mx-5">Or, sign in with your email</h4>
+                <div class="barre"></div>
+              </div>
+            </v-col>
+          </v-row>
 
-            <v-btn :disabled="!valid" color="primary" class="mr-4" href="/admin">Sign In</v-btn>
-          </v-form>
-          <br />
-          
-          <router-link to="/signup">I Don't Have An Account yet</router-link>
-          <br />
-          <br />
-          <router-link to="/forgotpassword">I Have Forgot My Password</router-link>
-          
+          <form
+            ref="form"
+            action="http://10.3.146.65:3030/webapi/auth/connect"
+            authscorp
+            @apiPrepare="err = null"
+            @apiError="onError"
+          >
+            <v-row class="d-flex justify-center">
+              <v-col cols="12" sm="8">
+                <v-text-field
+                  v-model="email"
+                  outlined
+                  :rules="emailRules"
+                  label="Email address"
+                  name="username"
+                />
+              </v-col>
+              <v-col cols="12" sm="8">
+                <v-text-field
+                  outlined
+                  v-model="password"
+                  :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+                  :rules="passwordRules"
+                  :type="show1 ? 'text' : 'password'"
+                  label="Enter password"
+                  name="password"
+                  @click:append="show1 = !show1"
+                />
+              </v-col>
+            </v-row>
+            <v-row class="d-flex justify-center align-center">
+              <v-col cols="12" sm="4" class="d-flex justify-center align-center">
+                <v-checkbox label="Keep me sign in"></v-checkbox>
+              </v-col>
+              <v-col cols="12" sm="4" class="d-flex justify-center align-center">
+                <router-link to="/forgotpassword">Forgot password ?</router-link>
+              </v-col>
+              <v-col cols="12" sm="8">
+                <v-alert type="error" outlined class="text-left" :value="err !== null">{{err}}</v-alert>
+                <v-btn
+                  :disabled="!valid"
+                  color="primary"
+                  class="signInBtn"
+                  x-large
+                  type="submit"
+                  style="width: 100%"
+                >Sign In</v-btn>
+                <p class="mt-5">
+                  Don't have an account ?
+                  <router-link to="/signup">Sign up now</router-link>
+                </p>
+              </v-col>
+            </v-row>
+          </form>
         </div>
       </v-col>
     </v-container>
   </div>
 </template>
 
+<script>
+import AuthscorpLib from "../../../authscorp-lib";
+
+AuthscorpLib.init();
+
+export default {
+  data: () => ({
+    show1: false,
+    password: "",
+    valid: true,
+    err: null,
+    email: "",
+    emailRules: [
+      v => !!v || "E-mail is required",
+      v => /.+@.+\..+/.test(v) || "E-mail must be valid"
+    ],
+    passwordRules: [v => !!v || "Password is required"]
+  }),
+
+  methods: {
+    validate() {
+      if (this.$refs.form.validate()) {
+        this.snackbar = true;
+      }
+    },
+    onError(e) {
+      e.preventDefault();
+      this.err = e.error;
+    }
+  }
+};
+</script>
 
 <style scoped>
 @media screen and (max-width: 960px) {
@@ -47,11 +132,50 @@
   .bg-col {
     padding: 1rem !important;
   }
+  .bg-img-btn {
+    display: none !important;
+  }
+  h1 {
+    font-size: xx-large !important;
+  }
 }
 
-h2 {
-  color: #264eee;
+p {
+  color: gray;
   font-family: Helvetica;
+}
+.signInBtn {
+  padding: 0 10rem;
+  height: 60px;
+}
+.barre {
+  background-color: gainsboro;
+  height: 1px;
+  width: 70px;
+}
+.bg-img-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 3px;
+  position: absolute;
+  top: -11px;
+  left: -15px;
+  z-index: 10;
+}
+.img-btn {
+  height: 25px;
+  width: 25px;
+}
+.signInGoogleBtn {
+  height: 60px;
+}
+h1 {
+  font-family: Helvetica;
+  font-size: 40px;
 }
 
 a {
@@ -60,36 +184,10 @@ a {
 .bg-main-section {
   padding: 10rem;
   background-color: #f5f9ff;
-  text-align: center;
 }
 .bg-col {
   background-color: #ffffff;
-  padding: 10rem;
+  padding: 1rem 2rem;
   border-radius: 10px;
 }
 </style>
-
-
-<script>
-export default {
-  data: () => ({
-    show1: false,
-    password: "",
-    valid: true,
-    email: "",
-    emailRules: [
-      v => !!v || "E-mail is required",
-      v => /.+@.+\..+/.test(v) || "E-mail must be valid"
-    ],
-    passwordRules: [v => !!v || "Password is required"],
-  }),
-
-  methods: {
-    validate() {
-      if (this.$refs.form.validate()) {
-        this.snackbar = true;
-      }
-    }
-  }
-};
-</script>

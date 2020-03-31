@@ -1,5 +1,5 @@
 <template>
-  <v-container style="min-height: 250px; margin-top: 50px; margin-bottom:20px; text-align:center">
+  <v-container style="min-height: 250px; margin-top: 50px; margin-bottom:100px; text-align:center">
     <div class="SVG-IMAGE">
       <svg
         width="500px"

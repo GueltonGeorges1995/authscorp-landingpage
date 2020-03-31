@@ -64,32 +64,32 @@ import Editor from "./editor";
 Vue.component("docs-nav", DocsNav);
 Vue.component("docs-editor", Editor);
 
-export default {
-  data() {
-    return {
-      article: marked(test),
-      title: articles[2].title,
-      articles: articles[2].articles,
-      showEditor: false,
-      breadcrumbs: [
-        {
-          text: "Getting started",
-          disabled: false,
-          href: "breadcrumbs_dashboard"
+    export default {
+        data() {
+            return {
+                article: marked(test),
+                title: articles[2].title,
+                articles: articles[1].articles,
+                breadcrumbs: [
+                    {
+                        text: 'Getting started',
+                        disabled: false,
+                        href: 'breadcrumbs_dashboard',
+                    },
+                    {
+                        text: 'Introduction',
+                        disabled: false,
+                        href: 'breadcrumbs_link_1',
+                    },
+                    {
+                        text: 'What is authscorp',
+                        disabled: true,
+                        href: 'breadcrumbs_link_2',
+                    },
+                ],
+            }
         },
-        {
-          text: "Introduction",
-          disabled: false,
-          href: "breadcrumbs_link_1"
-        },
-        {
-          text: "What is authscorp",
-          disabled: true,
-          href: "breadcrumbs_link_2"
-        }
-      ]
-    };
-  },
+    
   methods:{
       openEditor(){
           if(!this.showEditor){
