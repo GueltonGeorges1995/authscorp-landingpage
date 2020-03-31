@@ -44,8 +44,8 @@
             <v-icon dark>mdi-pencil</v-icon>
           </v-btn>
 
-          <div v-html="article" v-if="showEditor" />
-          <docs-editor/>
+          <article v-html="article" v-if="!showEditor" id="article-content" />
+          <docs-editor v-else />
         </v-flex>
       </v-layout>
     </div>
@@ -53,71 +53,72 @@
 </template>
 
 <script>
-import marked from "marked";
-import test from "./test.md";
-import articles from "./articles.json";
 
-import Vue from "vue";
-import DocsNav from "./nav";
-import Editor from "./editor";
+  import marked from "marked";
+  import test from "./test.md";
+  import articles from "./articles.json";
 
-Vue.component("docs-nav", DocsNav);
-Vue.component("docs-editor", Editor);
+  import Vue from "vue";
+  import DocsNav from "./nav";
+  import Editor from "./editor";
 
-    export default {
-        data() {
-            return {
-                article: marked(test),
-                title: articles[2].title,
-                articles: articles[1].articles,
-                breadcrumbs: [
-                    {
-                        text: 'Getting started',
-                        disabled: false,
-                        href: 'breadcrumbs_dashboard',
-                    },
-                    {
-                        text: 'Introduction',
-                        disabled: false,
-                        href: 'breadcrumbs_link_1',
-                    },
-                    {
-                        text: 'What is authscorp',
-                        disabled: true,
-                        href: 'breadcrumbs_link_2',
-                    },
-                ],
-            }
-        },
-    
-  methods:{
-      openEditor(){
-          if(!this.showEditor){
-              this.showEditor = true
-          }else{
-              this.showEditor=false
-          }
+  Vue.component("docs-nav", DocsNav);
+  Vue.component("docs-editor", Editor);
+
+  export default {
+    data() {
+      return {
+        article: marked(test),
+        title: articles[2].title,
+        articles: articles[1].articles,
+        showEditor: false,
+        breadcrumbs: [
+          {
+            text: 'Getting started',
+            disabled: false,
+            href: 'breadcrumbs_dashboard',
+          },
+          {
+            text: 'Introduction',
+            disabled: false,
+            href: 'breadcrumbs_link_1',
+          },
+          {
+            text: 'What is authscorp',
+            disabled: true,
+            href: 'breadcrumbs_link_2',
+          },
+        ],
       }
-  }
-};
+    },
+      
+    methods:{
+      openEditor(){
+        this.showEditor = !this.showEditor
+      }
+    }
+  };
+
 </script>
 
 <style lang="scss">
-.docs-template {
-  min-height: 100vh;
 
-  .edit{
-      position: fixed;
-      right:5%;
-      top:20%;
-  }
+  .docs-template {
+    min-height: 100vh;
 
-  .search {
-    width: 250px;
+    .edit{
+        position: fixed;
+        right:5%;
+        top:20%;
+    }
 
-    > .v-text-field .v-input__control {
-      min-height: 40px;
+    .search {
+      width: 250px;
+
+      > .v-text-field .v-input__control {
+        min-height: 40px;
+      }
     }
   }
-}
+
 </style>

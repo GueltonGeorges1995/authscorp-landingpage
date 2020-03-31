@@ -13,7 +13,7 @@ import SignUp from '@pages/signup/index.vue';
 import ForgotPassword from '@pages/forgotpassword/index.vue';
 import AboutUs from '@pages/about-us/index.vue';
 import Docs from '@pages/docs/index.vue';
-import DocsLayout from '@pages/docs/layout.vue';
+import DocsLayout from '@pages/docs/article/index.vue';
 import Pricing from '@pages/pricing/index.vue';
 import Support from '@pages/support/index.vue';
 import Error from '@pages/error/index.vue';
@@ -47,7 +47,7 @@ const router = new VueRouter({
         path: '/docs',
         component: Docs
     },{
-        path: '/docs/test',
+        path: '/docs/:section/:uri', // ToDo use SSR generator
         component: DocsLayout
     },{
         path: '/pricing',
