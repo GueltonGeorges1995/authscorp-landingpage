@@ -67,18 +67,20 @@
       isActive: false
     }),
     created() {
-      window.addEventListener("scroll", this.handleScroll);
+      if(typeof(window) !== 'undefined')
+        window.addEventListener("scroll", this.handleScroll);
     },
     destroyed() {
-      window.removeEventListener("scroll", this.handleScroll);
+      if(typeof(window) !== 'undefined')
+        window.removeEventListener("scroll", this.handleScroll);
     },
     methods: {
       handleScroll(event) {
         if (event.target.documentElement.scrollTop >= "50") {
-          const wasActive = this.isActive
-          this.isActive = true;
-          if(wasActive)
+          if(!this.isActive) {
+            this.isActive = true;
             this.$forceUpdate()
+          }
         } else {
           this.isActive = false;
         }
