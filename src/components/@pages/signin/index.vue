@@ -60,7 +60,7 @@
                 <v-checkbox label="Keep me sign in"></v-checkbox>
               </v-col>
               <v-col cols="12" sm="4" class="d-flex justify-center align-center">
-                <a href>Forgot password ?</a>
+                <router-link to="/forgotpassword">Forgot password ?</router-link>
               </v-col>
               <v-col cols="12" sm="8">
                 <v-alert type="error" outlined class="text-left" :value="err !== null">{{err}}</v-alert>
@@ -74,13 +74,11 @@
                 >Sign In</v-btn>
                 <p class="mt-5">
                   Don't have an account ?
-                  <a href>Sign up now</a>
+                  <router-link to="/signup">Sign up now</router-link>
                 </p>
               </v-col>
             </v-row>
           </form>
-          <!-- <router-link to="/signup">I Don't Have An Account yet</router-link> -->
-          <!-- <router-link to="/forgotpassword">I Have Forgot My Password</router-link> -->
         </div>
       </v-col>
     </v-container>
