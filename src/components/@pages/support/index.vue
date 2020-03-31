@@ -13,7 +13,6 @@
         <v-row justify="center">
             <v-col cols="9">
                 <h2 id="title">Let’s find an answer to all of your questions</h2>
-
             </v-col>
         </v-row>
         <v-row>
