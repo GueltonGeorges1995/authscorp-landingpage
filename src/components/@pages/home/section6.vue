@@ -406,7 +406,6 @@ export default {
 
 <style scoped>
 section {
-  font-family: "Lato", sans-serif;
   background-color: #f5f9ff;
   padding-top: 15vh;
 }

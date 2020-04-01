@@ -35,11 +35,9 @@
   }
   h2 {
     font-size: 57px;
-    font-family: Helvetica;
     color: #264eee;
   }
   h3 {
-    font-family: Helvetica;
     color: #7c7d8d;
     font-size: 40px;
   }

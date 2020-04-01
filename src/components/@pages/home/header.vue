@@ -30,7 +30,6 @@
   margin-top: 7rem;
 }
 .title1 {
-  font-family: Helvetica;
   font-size: 48px;
   color: #313236;
   line-height: 64px;
@@ -40,7 +39,6 @@
 }
 .text-header {
   opacity: 0.8;
-  font-family: Helvetica;
   font-size: 20px;
   color: #7c7d8d;
   letter-spacing: 0;
@@ -50,7 +48,6 @@
 .button-header {
   background-image: linear-gradient(90deg, #ffa466 0%, #ff5360 100%);
   border-radius: 4px;
-  font-family: Helvetica;
   font-size: 18px;
   color: #ffffff;
   letter-spacing: 0;

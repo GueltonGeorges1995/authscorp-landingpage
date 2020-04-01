@@ -40,11 +40,10 @@
 
 h2 {
   color: #264eee;
-  font-family: Helvetica;
 }
+
 p {
   color: #264eee;
-  font-family: Helvetica;  
 }
 
 a {

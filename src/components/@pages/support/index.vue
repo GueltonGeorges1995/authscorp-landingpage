@@ -169,7 +169,6 @@ export default {
 
     .list-title {
         color: #1565d8;
-        font-family: "Exo 2";
         font-size: 20px;
         font-weight: 700;
         line-height: 28px;

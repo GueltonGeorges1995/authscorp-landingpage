@@ -113,7 +113,6 @@ export default {
 
 p {
   color: gray;
-  font-family: Helvetica;
 }
 .signInBtn {
   padding: 0 10rem;
@@ -145,7 +144,6 @@ p {
   height: 60px;
 }
 h1 {
-  font-family: Helvetica;
   font-size: 40px;
 }
 

@@ -174,7 +174,6 @@ input {
   background: #ffffff;
   border: 1px solid #e6e8f6;
   border-radius: 7px;
-  font-family: Helvetica;
   font-size: 17px;
   color: #979ea5;
   letter-spacing: 0;
@@ -284,21 +283,18 @@ input {
   padding: 0.5rem 2.5rem;
   font-size: 1rem;
   font-weight: bold;
-  font-family: Helvetica;
   letter-spacing: 0;
   text-align: center;
 }
 
 h1 {
   margin-top: 3rem;
-  font-family: Helvetica;
   font-size: 32px;
   color: #ffffff;
   line-height: 58px;
 }
 p {
   opacity: 0.8;
-  font-family: Helvetica;
   font-size: 17px;
   color: #ffffff;
   letter-spacing: 0;

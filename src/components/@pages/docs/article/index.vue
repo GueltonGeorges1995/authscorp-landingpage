@@ -17,7 +17,7 @@
           <v-list-item>
             <v-list-item-title class="title">{{sectionName}}</v-list-item-title>
             <v-list-item-action>
-               <addArticle title="Add Article"/> 
+                 <docs-addArticle title="Add article" />
             </v-list-item-action>
           </v-list-item>
 
@@ -33,13 +33,9 @@
           </v-breadcrumbs>
           <h1 v-if="title !== null">{{title}}</h1>
 
-          <v-btn @click="openEditor()" v-if="edit" class="edit mx-2" fab dark large color="primary">
+          <v-btn @click="openEditor()" class="edit mx-2" fab dark large color="primary">
             <v-icon dark>mdi-pencil</v-icon>
           </v-btn>
-            <v-btn @click="openEditor()" v-if="save" class="edit mx-2" fab dark large color="green">
-            <v-icon dark>mdi-check</v-icon>
-          </v-btn>
-
 
           <v-alert type="error" :value="err !== null" v-if="err !== null">{{err}}</v-alert>
           <v-skeleton-loader type="article" v-else-if="content === null" />
@@ -58,17 +54,14 @@
 
   import Vue from "vue";
   import DocsNav from "./nav";
-  import Editor from "./editor2";
-  import addArticle from "./addArticle"
-
+  import Editor from "./editor";
+  import addArticle from "./addArticle";
 
   Vue.component("docs-nav", DocsNav);
   Vue.component("docs-editor", Editor);
+  Vue.component("docs-addArticle", addArticle);
 
   export default {
-    components:{
-      addArticle
-    },
     props: {
       section: String,
       uri:     String,
@@ -82,8 +75,8 @@
         title:      null,
         time:       null,
         err:        null,
-        save:false,
-        edit:true,
+        id:         null,
+
         articles:   articles[1].articles,
         showEditor: false,
       }
@@ -112,33 +105,46 @@
         ]
       }
     },
+    watch: {
+      content(val, oldval) {
+        if(this.showEditor && oldval !== null && val !== oldval && val !== null) {
+          alert(this.saveTimeout)
+          if(this.saveTimeout)
+            clearTimeout(this.saveTimeout)
+
+          this.saveTimeout = setTimeout(this.save, 500);
+        }
+      }
+    },
     mounted() {
       this.loadArticle()
     },
     methods:{
       openEditor(){
-        this.edit = !this.edit
-        this.save = !this.save
         this.showEditor = !this.showEditor
       },
       loadArticle() {
         return this.$api.get('docs/article?section='+this.section+'&uri='+this.uri).then((res) => {
           this.content = res.content
-          this.title = res.title
-          this.time = res.time
+          this.title   = res.title
+          this.time    = res.time
+          this.id      = res.id
+
           return res
         }).catch((err) => {
           this.err = err.error || err.message || err
           console.error(err)
         })
       },
-      updateArticle(){
-        return this.$api.put('docs/article?section='+this.section+'&uri='+this.uri).then((res) => {
-          return res
-        }).catch((err) => {
-          this.err = err.error || err.message || err
-          console.error(err)
-        })
+      save() {
+          this.$api.put('docs/article', { id: this.id, title: this.title, content: this.content, section: this.section }).then((res) => {
+            // Temporary direct approval
+            return this.$api.post('docs/proposal', {
+              id: res.id
+            })
+          }).catch((err) => {
+            this.err = err.error || err.message || err
+          })
       }
     }
   };
@@ -155,11 +161,6 @@
         right:5%;
         top:20%;
     }
-    .save{
-        position: fixed;
-        right:5%;
-        top:20%;
-    }
 
     .search {
       width: 250px;
@@ -167,6 +168,52 @@
       > .v-text-field .v-input__control {
         min-height: 40px;
       }
+    }
+  }
+
+  article {
+    h1 {
+      margin-top: 35px;
+      margin-bottom: 10px;
+      font-size: 2em;
+    }
+  
+    h2 {
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-size: 1.6em;
+    }
+  
+    h3 {
+      margin-top: 5px;
+      margin-bottom: 3px;
+      font-size: 1.4em;
+    }
+  
+    h4 {
+      margin-top: 3px;
+      font-size: 1.2em;
+    }
+  
+    h5 {
+      margin-top: 3px;
+      font-size: 1.1em;
+    }
+
+    blockquote {
+      border-left: 4px solid #ccc;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      padding-left: 16px;
+    }
+
+    pre.ql-syntax, code {
+      background: #0f1f2b !important;
+      color: #fff !important;
+      width: 100%;
+      padding: 10px;
+      display: block;
+      border-radius: 3px;
     }
   }
 

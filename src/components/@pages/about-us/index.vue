@@ -168,9 +168,6 @@
 </script>
 
 <style lang="scss">
-.section{
-  font-family: 'Exo 2', sans-serif;
-}
 
 .clip-eb {
     clip-path: ellipse(150% 120% at 50% -30%);

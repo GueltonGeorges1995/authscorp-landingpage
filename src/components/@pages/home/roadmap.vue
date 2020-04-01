@@ -111,7 +111,6 @@ export default {
         height: 41.59px;
         margin-bottom: 20px;
         color: #ffffff;
-        font-family: Lato;
         font-size: 17px;
         font-weight: 700;
         line-height: 20px;
@@ -121,7 +120,6 @@ export default {
     h2 {
         width: 510px;
         height: 61px;
-        font-family: Lato;
         font-size: 48px;
         font-weight: 700;
         line-height: 61px;
@@ -136,7 +134,6 @@ export default {
     #node1, #node2, #node3, #node4 {
         height: 80px;
         color: #ffffff;
-        font-family: Lato;
         font-size: 18px;
         font-weight: 700;
         line-height: 40px;
@@ -260,7 +257,6 @@ export default {
         width: 164.89px;
         height: 64.96px;
         color: #313236;
-        font-family: Lato;
         font-size: 16px;
         font-weight: 700;
         line-height: 30px;
