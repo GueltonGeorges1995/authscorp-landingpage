@@ -73,7 +73,7 @@
             },
             model(val) {
                 if(typeof(val) === 'object' && val.uri)
-                    location.href = val.uri
+                    this.$router.push(val.uri)
             }
         },
     }

@@ -15,7 +15,7 @@
       <v-layout row wrap>
         <v-flex xs2>
           <v-list-item>
-            <v-list-item-title class="title">{{title}}</v-list-item-title>
+            <v-list-item-title class="title">{{sectionName}}</v-list-item-title>
             <v-list-item-action>
               <v-tooltip bottom>
                 <template v-slot:activator="{ on }">
@@ -38,14 +38,16 @@
               <v-icon>mdi-chevron-right</v-icon>
             </template>
           </v-breadcrumbs>
-          <h1>Getting started</h1>
+          <h1 v-if="title !== null">{{title}}</h1>
 
           <v-btn @click="openEditor()" class="edit mx-2" fab dark large color="primary">
             <v-icon dark>mdi-pencil</v-icon>
           </v-btn>
 
-          <article v-html="article" v-if="!showEditor" id="article-content" />
-          <docs-editor v-else />
+          <v-alert type="error" :value="err !== null" v-if="err !== null">{{err}}</v-alert>
+          <v-skeleton-loader type="article" v-else-if="content === null" />
+          <article v-html="article" v-else-if="!showEditor" id="article-content" />
+          <docs-editor v-model="content" v-else />
         </v-flex>
       </v-layout>
     </div>
@@ -55,46 +57,76 @@
 <script>
 
   import marked from "marked";
-  import test from "./test.md";
   import articles from "./articles.json";
 
   import Vue from "vue";
   import DocsNav from "./nav";
-  import Editor from "./editor";
+  import Editor from "./editor2";
 
   Vue.component("docs-nav", DocsNav);
   Vue.component("docs-editor", Editor);
 
   export default {
+    props: {
+      section: String,
+      uri:     String,
+    },
+    serverPrefetch() {
+      return this.loadArticle()
+    },
     data() {
       return {
-        article: marked(test),
-        title: articles[2].title,
-        articles: articles[1].articles,
-        showEditor: false,
-        breadcrumbs: [
-          {
-            text: 'Getting started',
-            disabled: false,
-            href: 'breadcrumbs_dashboard',
-          },
-          {
-            text: 'Introduction',
-            disabled: false,
-            href: 'breadcrumbs_link_1',
-          },
-          {
-            text: 'What is authscorp',
-            disabled: true,
-            href: 'breadcrumbs_link_2',
-          },
-        ],
+        content:    null,
+        title:      null,
+        time:       null,
+        err:        null,
+
+        articles:   articles[1].articles,
+        showEditor: true,
       }
     },
-      
+    computed: {
+      article() {
+        if(this.content === null)
+          return null
+        return marked(this.content)
+      },
+      sectionName() {
+        const sectionName = this.section.split('-').join(' ').toLowerCase()
+        return sectionName.substr(0,1).toUpperCase() + sectionName.substr(1)
+      },
+      breadcrumbs() {
+        return [
+          {
+            text: this.sectionName,
+            disabled: false,
+            href: '/docs/' + this.section,
+          },
+          {
+            text: this.title,
+            disabled: true,
+          }
+        ]
+      }
+    },
+    mounted() {
+      this.loadArticle()
+    },
     methods:{
       openEditor(){
         this.showEditor = !this.showEditor
+      },
+      loadArticle() {
+        return this.$api.get('docs/article?section='+this.section+'&uri='+this.uri).then((res) => {
+          this.content = 'test\ntest2\n\ntest3' // res.content
+          this.title = res.title
+          this.time = res.time
+
+          return res
+        }).catch((err) => {
+          this.err = err.error || err.message || err
+          console.error(err)
+        })
       }
     }
   };

@@ -48,6 +48,7 @@ const router = new VueRouter({
         component: Docs
     },{
         path: '/docs/:section/:uri', // ToDo use SSR generator
+        props: true,
         component: DocsLayout
     },{
         path: '/pricing',
@@ -63,12 +64,49 @@ const router = new VueRouter({
 
 Vue.config.productionTip = false
 
+//------------------------------------
+
+import Forms from './authscorp-lib/forms'
+Vue.prototype.$api = {
+    catch(err) {
+        var error = (err.response && err.response.data) || err.error || err.message || err
+        error = error.error || error
+        throw({ error, result: err })
+    },
+    uri(api) {
+        if(api.indexOf('://') !== -1 || api.substr(0,1) == '/')
+            return api
+        return '/api/' + api
+    },
+    request(method, api, data) {
+        api = Vue.prototype.$api.uri(api)
+        return Forms.request(method, api, data).then((e) => e.data).catch(Vue.prototype.$api.catch)
+    },
+    get(api, data) {
+        return Vue.prototype.$api.request('GET', api, data)
+    },
+    post(api, data) {
+        return Vue.prototype.$api.request('POST', api, data)
+    },
+    put(api, data) {
+        return Vue.prototype.$api.request('PUT', api, data)
+    },
+    delete(api, data) {
+        return Vue.prototype.$api.request('DELETE', api, data)
+    }
+}
+
+//------------------------------------
+
 const app = new Vue(Object.assign(App, {
     vuetify,
     router,
 }))
 
 export default (context) => {
+    if(context.$api)
+        Vue.prototype.$api = context.$api(Vue.prototype.$api)
+
     app.$router.push(context.url)
     context.$router = app.$router
     context.meta = app.$meta() // and here
