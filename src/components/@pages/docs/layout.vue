@@ -44,8 +44,8 @@
             <v-icon dark>mdi-pencil</v-icon>
           </v-btn>
 
-          <div v-html="article" v-if="showEditor" />
-          <docs-editor/>
+          <div v-html="article" v-if="!showEditor" />
+          <docs-editor :data="edit" v-else/>
         </v-flex>
       </v-layout>
     </div>
@@ -67,9 +67,11 @@ Vue.component("docs-editor", Editor);
     export default {
         data() {
             return {
+                showEditor:false,
                 article: marked(test),
+                edit:test,
                 title: articles[2].title,
-                articles: articles[1].articles,
+                articles: articles[2].articles,
                 breadcrumbs: [
                     {
                         text: 'Getting started',
@@ -89,15 +91,26 @@ Vue.component("docs-editor", Editor);
                 ],
             }
         },
+        watch:{
+            edit:function(val){
+               this.article = marked(val)
+            }
+        },
     
   methods:{
       openEditor(){
+          console.log('CLICKED!')
           if(!this.showEditor){
               this.showEditor = true
           }else{
               this.showEditor=false
           }
       }
+  },
+  mounted(){
+    if(localStorage.edit){
+      this.edit = localStorage.edit
+    }
   }
 };
 </script>

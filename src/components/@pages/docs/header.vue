@@ -9,9 +9,23 @@
                     <v-flex xs12 lg8 offset-lg-2>
                         <div class="text-center">
                             <h1 class="white--text mb-10">We are here to help you</h1>
-                            <v-text-field prepend-inner-icon="search" outlined hide-details placeholder="Ask a question" class="white">
-                                <v-btn color="primary" slot="append" to="/docs/test">Search</v-btn>
-                            </v-text-field>
+                            <v-combobox
+                                no-filter
+                                prepend-inner-icon="search"
+                                placeholder="Ask a question"
+                                outlined
+                                hide-details
+                                class="white"
+                                v-model="model"
+                                :items="entries"
+                                :loading="isLoading"
+                                :search-input.sync="search"
+                                hide-no-data
+                                item-text="title"
+                            >
+                                <v-btn color="primary" slot="append" to="/docs/getting-started/how-it-works">Search</v-btn>
+                            </v-combobox>
+
                             <br>
                             <p style="color:#D8D8D8">*We are collect your searching keywords to improve our FAQ</p>
                         </div>
@@ -22,6 +36,49 @@
         <!--end:hero-->
     </header>
 </template>
+
+<script>
+    import authscorp from '../../../authscorp-lib/forms'
+
+    export default {
+        data: () => ({
+            entries: [],
+            isLoading: false,
+            model: null,
+            search: null,
+        }),
+        watch: {
+            search() {
+                if(this.$timeout)
+                    clearTimeout(this.$timeout)
+
+                // Set timeout to lower search requests (do not performs every time a key is pressed)
+                this.$timeout = setTimeout(() => {
+                    if(!this.search || this.search.length < 3) {
+                        if(!this.search)
+                            this.entries = []
+
+                        return
+                    }
+
+                    this.isLoading = true
+                    authscorp.request('POST', '/api/docs/search', {
+                        query: this.search,
+                    }).then((res) => {
+                        this.entries = res.data
+                    }).catch((err) => {
+                        console.error(err)
+                    }).finally(() => (this.isLoading = false))
+                }, 200);
+            },
+            model(val) {
+                if(typeof(val) === 'object' && val.uri)
+                    this.$router.push(val.uri)
+            }
+        },
+    }
+
+</script>
 
 <style lang="scss">
 

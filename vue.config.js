@@ -29,6 +29,21 @@ module.exports = {
       ],
     }
   },
+  devServer: {
+    // disableHostCheck: true, // localtunnel / NGROK
+    proxy: {
+      '^/api': {
+        target: 'http://10.3.177.83/',
+        ws: false,
+        changeOrigin: true
+      },
+      '^/graphql': {
+        target: 'http://10.3.177.83/',
+        ws: false,
+        changeOrigin: true
+      }
+    }
+  },
   transpileDependencies: [
     "vuetify"
   ]

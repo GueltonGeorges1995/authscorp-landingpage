@@ -1,10 +1,6 @@
 .DS_Store
 node_modules
 .git
-ssr-server
-html-pages-designs
-src
-public
 
 # local env files
 .env.local
