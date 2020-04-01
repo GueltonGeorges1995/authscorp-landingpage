@@ -40,9 +40,13 @@
           </v-breadcrumbs>
           <h1 v-if="title !== null">{{title}}</h1>
 
-          <v-btn @click="openEditor()" class="edit mx-2" fab dark large color="primary">
+          <v-btn @click="openEditor()" v-if="edit" class="edit mx-2" fab dark large color="primary">
             <v-icon dark>mdi-pencil</v-icon>
           </v-btn>
+            <v-btn @click="openEditor()" v-if="save" class="edit mx-2" fab dark large color="green">
+            <v-icon dark>mdi-check</v-icon>
+          </v-btn>
+
 
           <v-alert type="error" :value="err !== null" v-if="err !== null">{{err}}</v-alert>
           <v-skeleton-loader type="article" v-else-if="content === null" />
@@ -80,9 +84,10 @@
         title:      null,
         time:       null,
         err:        null,
-
+        save:false,
+        edit:true,
         articles:   articles[1].articles,
-        showEditor: true,
+        showEditor: false,
       }
     },
     computed: {
@@ -114,14 +119,23 @@
     },
     methods:{
       openEditor(){
+        this.edit = !this.edit
+        this.save = !this.save
         this.showEditor = !this.showEditor
       },
       loadArticle() {
         return this.$api.get('docs/article?section='+this.section+'&uri='+this.uri).then((res) => {
-          this.content = 'test\ntest2\n\ntest3' // res.content
+          this.content = res.content
           this.title = res.title
           this.time = res.time
-
+          return res
+        }).catch((err) => {
+          this.err = err.error || err.message || err
+          console.error(err)
+        })
+      },
+      updateArticle(){
+        return this.$api.put('docs/article?section='+this.section+'&uri='+this.uri).then((res) => {
           return res
         }).catch((err) => {
           this.err = err.error || err.message || err
@@ -139,6 +153,11 @@
     min-height: 100vh;
 
     .edit{
+        position: fixed;
+        right:5%;
+        top:20%;
+    }
+    .save{
         position: fixed;
         right:5%;
         top:20%;
