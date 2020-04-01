@@ -17,14 +17,7 @@
           <v-list-item>
             <v-list-item-title class="title">{{sectionName}}</v-list-item-title>
             <v-list-item-action>
-              <v-tooltip bottom>
-                <template v-slot:activator="{ on }">
-                  <v-btn icon v-on="on">
-                    <v-icon>add</v-icon>
-                  </v-btn>
-                </template>
-                <span>Add an article</span>
-              </v-tooltip>
+               <addArticle title="Add Article"/> 
             </v-list-item-action>
           </v-list-item>
 
@@ -66,11 +59,16 @@
   import Vue from "vue";
   import DocsNav from "./nav";
   import Editor from "./editor2";
+  import addArticle from "./addArticle"
+
 
   Vue.component("docs-nav", DocsNav);
   Vue.component("docs-editor", Editor);
 
   export default {
+    components:{
+      addArticle
+    },
     props: {
       section: String,
       uri:     String,
