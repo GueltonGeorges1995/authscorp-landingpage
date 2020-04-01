@@ -19,8 +19,7 @@
                 <v-img
                 class="gallery1"
                 src="./images/773c8a152478bb6b7f5db1f1910287310ce7058a.png"
-                width="440px"
-                height="520px"
+                aspect-ratio="1"
                 fluid
                 >
                 </v-img>
@@ -31,7 +30,7 @@
                 <v-img
                 class="gallery1"
                 src="./images/d960d85e048bf725c54d2b15bbd8bf8b2a2b47f0.png"  
-                height="400px"              
+                aspect-ratio="1"              
                 >
                 </v-img>
               </v-col>
@@ -39,7 +38,7 @@
                 <v-img
                 class="gallery1"
                 src="./images/c36effee15a7e3f6e549f83ac1b2b8a0afd18acf.png" 
-                height="300px"               
+                aspect-ratio="1"               
                 >
                 </v-img>
               </v-col>
@@ -51,7 +50,7 @@
                 <v-img
                 class="gallery1"
                 src="./images/aad829cb817613d5f3ae609054a67b5646b05386.png"
-                height="250px"
+                aspect-ratio="1.7"
                 >
 
                 </v-img>
@@ -60,7 +59,7 @@
                 <v-img
                 class="gallery1"
                 src="./images/674c0a8b035d1277ba6c548f343397510f060b1d.png"
-                height="350px"
+                aspect-ratio="1.4"
                 >
 
                 </v-img>
@@ -71,11 +70,12 @@
                 <v-img
                 class="gallery1"
                 src="./images/99d01fcf49f4a770f7fb859c19b3feda020cd295.png"
+                aspect-ratio="1.5"
                 >
                 </v-img>
               </v-col>
               <v-col>
-                <img src="./images/icons/pattern.svg" alt="">
+                <img class="pattern" src="./images/icons/pattern.svg" alt="">
               </v-col>
             </v-row>
           </v-col>
@@ -108,37 +108,27 @@
             <img class="dots" src="./images/icons/dots.svg" alt="">
             <v-img 
             class="photo1" 
-            src="./images/087993198189dcd62239d693db7e5061d9b7894a.png"
-            width="160"
-            height="160"             
+            src="./images/087993198189dcd62239d693db7e5061d9b7894a.png"                        
             >
             </v-img>
             <v-img 
             class="photo2" 
-            src="./images/3977559ad9656be8491e442c30c49aa136e29958.png"
-            width="80"
-            height="80"             
+            src="./images/3977559ad9656be8491e442c30c49aa136e29958.png"                       
             >
             </v-img>
             <v-img 
             class="photo3" 
-            src="./images/515ddb88c9f3f4edc8229c4b8da49f3ce44d3cd3.png"
-            width="120"
-            height="120"             
+            src="./images/515ddb88c9f3f4edc8229c4b8da49f3ce44d3cd3.png"                        
             >
             </v-img>
             <v-img 
             class="photo4" 
-            src="./images/0432ebe42463be07dfe2e32a7fefb384999fe047.png"
-            width="180"
-            height="200"             
+            src="./images/0432ebe42463be07dfe2e32a7fefb384999fe047.png"                        
             >
             </v-img>
              <v-img 
             class="photo5" 
-            src="./images/3c229e2f8df28e640c202e8a2ebc5ae2890eb2da.png"
-            width="120"
-            height="120"             
+            src="./images/3c229e2f8df28e640c202e8a2ebc5ae2890eb2da.png"                       
             >
             </v-img>
             <img class="oval" src="./images/icons/oval.svg" alt="">
@@ -149,14 +139,17 @@
 
         </div>
         <v-row class="logos">          
-          <v-col offset="1" class="d-flex">
+          <v-col  class="d-flex brands" cols="12">
             <img class="brand" src="./images/icons/netflix.svg" alt="">
             <img class="brand" src="./images/icons/airbnb.svg" alt="">
             <img class="brand" src="./images/icons/fitbit.svg" alt="">
             <img class="brand" src="./images/icons/google.svg" alt="">
             <img class="brand" src="./images/icons/uber.svg" alt="">
-            <v-btn class="white" rounded large color="primary">Get a free quote <v-icon dark right>arrow_forward_ios</v-icon></v-btn>
+            <v-btn  class="white d-none d-md-block" rounded color="primary">Get a free quote <v-icon dark right>arrow_forward_ios</v-icon></v-btn>
           </v-col>
+          <div class="d-flex justify-center center d-md-none pt-5">
+            <v-btn  class="white d-inline " rounded color="primary">Get a free quote <v-icon dark right>arrow_forward_ios</v-icon></v-btn>
+          </div>
         </v-row>
     </div>
 </template>
@@ -218,9 +211,7 @@
   .gallery1{
     border-radius: 12px;
   }
-  .right-top{
-    height: 450px;
-  }
+
 }
 .values{
   margin-bottom: 200px;
@@ -295,6 +286,7 @@
       bottom: 0;
       left:7%;
       border-radius: 15px;
+      
     } 
     .photo2{
       position: absolute;
@@ -302,6 +294,7 @@
       left: 25%;
       top:40%;
       border-radius: 12px;
+      
     } 
     .photo3{
       position: absolute;
@@ -309,6 +302,7 @@
       left: -10%;
       top:22%;
       border-radius: 14px;
+      
     } 
     .photo4{
       position: absolute;
@@ -316,6 +310,7 @@
       left: 42%;
       top:-10%;
       border-radius: 18px;
+      
     } 
     .photo5{
       position: absolute;
@@ -323,6 +318,7 @@
       left: 48%;
       top:48%;
       border-radius: 14px;
+      
     } 
     .oval{
       position: absolute;
@@ -360,11 +356,12 @@
   padding-top:450px;
   padding-bottom: 200px;
   background-color: #F5F9FF;  
-  .brand{
-    margin-right: 80px;
-  }
+  
   .white{
     color: white;
+  }
+  .center{
+    width:100%;
   }
  
 }
@@ -385,6 +382,42 @@
       }
     }
   }
+   .circle{
+    height: 50px;
+  }
+   .right-top{
+    height: 100px;
+  }
+   .photo1{      
+    width: 95px;
+    height: 95px;
+  } 
+  .photo2{      
+    width: 55px;
+    height: 55px;
+  } 
+  .photo3{      
+    width: 75px;
+    height: 75px;
+  } 
+  .photo4{     
+    width: 120px;
+    height: 130px;
+  } 
+  .photo5{      
+    width: 75px;
+    height: 75px;
+  } 
+  .dots{
+    height: 80px;
+  }
+   .brands{
+    padding-left: 10px;
+  }
+  .brand{
+    margin-right: 18px;
+    height: 24px;
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -397,6 +430,45 @@
         padding-bottom: 64px;
       }
     }
+  }
+   .circle{
+    height: 65px;
+  }
+  .pattern{
+    height: 40px;
+  }
+   .right-top{
+    height: 150px;
+  }
+   .photo1{      
+    width: 95px;
+    height: 95px;
+  } 
+  .photo2{      
+    width: 55px;
+    height: 55px;
+  } 
+  .photo3{      
+    width: 75px;
+    height: 75px;
+  } 
+  .photo4{     
+    width: 120px;
+    height: 130px;
+  } 
+  .photo5{      
+    width: 75px;
+    height: 75px;
+  } 
+  .dots{
+    height: 80px;
+  }
+  .brands{
+    padding-left: 20px;
+  }
+  .brand{
+    margin-right: 22px;
+    height: 28px;
   }
 }
 
@@ -414,6 +486,194 @@
         padding-bottom: 64px;
       }
     }
+  }
+   .circle{
+    height: 90px;
+  }
+  .pattern{
+    height: 60px;
+  }
+   .right-top{
+    height: 220px;
+  }
+   .photo1{      
+    width: 110px;
+    height: 110px;
+  } 
+  .photo2{      
+    width: 65px;
+    height: 65px;
+  } 
+  .photo3{      
+    width: 90px;
+    height: 90px;
+  } 
+  .photo4{     
+    width: 150px;
+    height: 160px;
+  } 
+  .photo5{      
+    width: 90px;
+    height: 90px;
+  } 
+  .dots{
+    height: 90px;
+  }
+  .brands{
+    padding-left: 70px;
+  }
+  .brand{
+    margin-right: 32px;
+    height: 36px;
+  }
+}
+
+@media (min-width: 991.98px) and (max-width: 1100px) {
+  .photo1{      
+    width: 110px;
+    height: 110px;
+  } 
+  .photo2{      
+    width: 65px;
+    height: 65px;
+  } 
+  .photo3{      
+    width: 90px;
+    height: 90px;
+  } 
+  .photo4{     
+    width: 150px;
+    height: 160px;
+  } 
+  .photo5{      
+    width: 90px;
+    height: 90px;
+  } 
+  .circle{
+    height: 90px;
+  }
+  .right-top{
+    height: 250px;
+  }
+  .pattern{
+    height: 80px;
+  }
+  .dots{
+    height: 90px;
+  }
+  .logos{
+    padding-left: 70px;
+  }
+  .brand{
+    margin-right: 30px;
+    height: 30px;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1400px) {
+  
+  .photo1{      
+    width: 140px;
+    height: 140px;
+  } 
+  .photo2{      
+    width: 70px;
+    height: 70px;
+  } 
+  .photo3{      
+    width: 100px;
+    height: 100px;
+  } 
+  .photo4{     
+    width: 160px;
+    height: 175px;
+  } 
+  .photo5{      
+    width: 100px;
+    height: 100px;
+  } 
+  .right-top{
+    height: 300px;
+  }
+  .circle{
+    height: 120px;
+  }
+  .brand{
+    margin-right: 55px;
+    height: 36px;
+  }
+  .logos{
+    padding-left: 80px;
+  }
+    
+  
+}
+@media (min-width: 1400px) and (max-width: 1800px) {
+  
+  .photo1{      
+    width: 160px;
+    height: 160px;
+  } 
+  .photo2{      
+    width: 80px;
+    height: 80px;
+  } 
+  .photo3{      
+    width: 120px;
+    height: 120px;
+  } 
+  .photo4{     
+    width: 180px;
+    height: 200px;
+  } 
+  .photo5{      
+    width: 120px;
+    height: 120px;
+  } 
+  .right-top{
+    height: 400px;
+  }
+  .brand{
+    margin-right: 70px;
+  }
+  .logos{
+    padding-left: 140px;
+  }
+    
+  
+}
+@media (min-width: 1800px){
+  .photo1{      
+    width: 160px;
+    height: 160px;
+  } 
+  .photo2{      
+    width: 80px;
+    height: 80px;
+  } 
+  .photo3{      
+    width: 120px;
+    height: 120px;
+  } 
+  .photo4{     
+    width: 180px;
+    height: 200px;
+  } 
+  .photo5{      
+    width: 120px;
+    height: 120px;
+  } 
+  .right-top{
+    height: 400px;
+  }
+  
+  .right-top{
+    height: 450px;
+  }
+  .brand{
+    margin-right: 80px;
+  }
+  .logos{
+    padding-left: 180px;
   }
 }
 
