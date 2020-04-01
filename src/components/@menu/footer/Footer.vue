@@ -12,7 +12,7 @@
               </v-col>
               <v-col cols="12" sm="12" md="6" class="flex-center">
                 <div class="bg-input">
-                  <form ref="form" action="http://localhost:8081/api/news/subscribe" method="POST" @apiSuccess="onSuccess" @apiError="onError">
+                  <form ref="form" action="/api/news/subscribe" method="POST" @apiSuccess="onSuccess" @apiError="onError">
                     <input type="email" name="email" placeholder="Enter your email" class="padding-left" />
                         <v-btn color="d-inline primary white--text" style="margin-left:-70px" type="submit"><v-icon>mdi-arrow-right</v-icon></v-btn>
                    </form>

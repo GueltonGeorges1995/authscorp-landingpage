@@ -1,11 +1,11 @@
 <template>
   <div class="docs-template">
     <v-toolbar color="primary" dark style="padding: 0 6rem;">
-      <v-btn text>Sections</v-btn>
-      <v-btn text>Getting started</v-btn>
-      <v-btn text>Api's</v-btn>
-      <v-btn text>Tutorials</v-btn>
-      <v-btn text>Contribute</v-btn>
+      <v-btn text to="/docs/getting-started/test">Getting started</v-btn>
+      <v-btn text to="/docs/tutorials/test">Tutorials</v-btn>
+      <v-btn text to="/docs/libraries/test">Libraries</v-btn>
+      <v-btn text to="/docs/openid/test">Openid</v-btn>
+      <v-btn text to="/docs/plugins/test">Plugins</v-btn>
       <v-spacer />
       <div class="search">
         <v-text-field prepend-inner-icon="search" solo hide-details placeholder="Search" light />
@@ -16,13 +16,13 @@
         <v-flex xs2>
           <v-list-item>
             <v-list-item-title class="title">{{sectionName}}</v-list-item-title>
-            <v-list-item-action>
+            <!--<v-list-item-action>
                  <docs-addArticle title="Add article" />
-            </v-list-item-action>
+            </v-list-item-action>!-->
           </v-list-item>
 
           <v-list dense nav>
-            <docs-nav :articles="articles" />
+            <docs-nav :articles="articles" :section="section" />
           </v-list>
         </v-flex>
         <v-flex xs8 offset-xs1>
@@ -76,12 +76,16 @@
         time:       null,
         err:        null,
         id:         null,
-
-        articles:   articles[1].articles,
         showEditor: false,
       }
     },
     computed: {
+      articles() {
+        var section = articles.find((o) => o.section == this.section)
+        if(!section)
+          return null
+        return section.articles
+      },
       article() {
         if(this.content === null)
           return null
@@ -113,6 +117,17 @@
 
           this.saveTimeout = setTimeout(this.save, 500);
         }
+      },
+      uri(val, oldval) {
+        if(val == oldval)
+          return
+        this.content = null
+        this.title = null
+        this.time = null
+        this.err = null
+        this.id = null
+        this.showEditor = false
+        this.$nextTick(this.loadArticle)
       }
     },
     mounted() {

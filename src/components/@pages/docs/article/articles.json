@@ -1,90 +1,223 @@
 [
     {
-        "title": "Getting started",
+        "section": "getting-started",
         "articles": [
-            "What is authscorp",
-            "Use cases",
-            "Configure my first project"
+            {
+                "title": "What is authscorp",
+                "uri": "what-is-authscorp"
+            },
+            {
+                "title": "Use cases",
+                "uri": "use-cases"
+            },
+            {
+                "title": "Configure my first project",
+                "uri": "configure-my-first-project"
+            },
+            {
+                "title": "How it works",
+                "uri": "how-it-works"
+            }
         ]
     },
     {
-        "title": "Libraries",
+        "section": "libraries",
         "articles": [
             {
                 "title": "Mobile app",
                 "articles": [
-                    "React native",
-                    "Android project",
-                    "Swift project",
-                    "Cordova project",
-                    "Ionic project",
-                    "Windows universal apps",
-                    "WPF Forms",
-                    "Xamarin"
+                    {
+                        "title": "React native",
+                        "uri": "mobile-app/react-native"
+                    },
+                    {
+                        "title": "Android project",
+                        "uri": "mobile-app/android-project"
+                    },
+                    {
+                        "title": "Swift project",
+                        "uri": "mobile-app/swift-project"
+                    },
+                    {
+                        "title": "Cordova project",
+                        "uri": "mobile-app/cordova-project"
+                    },
+                    {
+                        "title": "Ionic project",
+                        "uri": "mobile-app/ionic-project"
+                    },
+                    {
+                        "title": "Windows universal apps",
+                        "uri": "mobile-app/windows-universal-apps"
+                    },
+                    {
+                        "title": "WPF Forms",
+                        "uri": "mobile-app/wpf-forms"
+                    },
+                    {
+                        "title": "Xamarin",
+                        "uri": "mobile-app/xamarin"
+                    }
                 ]
             },
             {
                 "title": "Web app",
                 "articles": [
-                    "Vuejs",
-                    "Angular",
-                    "React",
-                    "Php",
-                    "Java",
-                    "ASP.NET",
-                    "Golang"
+                    {
+                        "title": "Vuejs",
+                        "uri": ""
+                    },
+                    {
+                        "title": "Angular",
+                        "uri": ""
+                    },
+                    {
+                        "title": "React",
+                        "uri": ""
+                    },
+                    {
+                        "title": "Php",
+                        "uri": ""
+                    },
+                    {
+                        "title": "Java",
+                        "uri": ""
+                    },
+                    {
+                        "title": "ASP.NET",
+                        "uri": ""
+                    },
+                    {
+                        "title": "Golang",
+                        "uri": ""
+                    }
                 ]
             },
             {
                 "title": "Machine to machine",
                 "articles": [
-                    "nodejs",
-                    "golang",
-                    "python",
-                    "c#",
-                    "java",
-                    "laravel",
-                    "PHP"
+                    {
+                        "title": "nodejs",
+                        "uri": ""
+                    },
+                    {
+                        "title": "golang",
+                        "uri": ""
+                    },
+                    {
+                        "title": "python",
+                        "uri": ""
+                    },
+                    {
+                        "title": "c#",
+                        "uri": ""
+                    },
+                    {
+                        "title": "java",
+                        "uri": ""
+                    },
+                    {
+                        "title": "laravel",
+                        "uri": ""
+                    },
+                    {
+                        "title": "PHP",
+                        "uri": ""
+                    }
                 ]
             },
             {
                 "title": "CMS",
                 "articles": [
-                    "Wordpress",
-                    "Joomla"
+                    {
+                        "title": "Wordpress",
+                        "uri": ""
+                    },
+                    {
+                        "title": "Joomla",
+                        "uri": ""
+                    }
                 ]
             }
         ]
     },
     {
-        "title": "Tutorials",
+        "section": "tutorials",
         "articles": [
-            "Setup an api middleware",
-            "How to define custom permissions",
-            "Securise linux servers with authscorp",
-            "Setup my own portal",
-            "Customise pages",
-            "Start my first web project",
-            "Start my first mobile app project",
-            "Setting up machine-to-machine authorization",
-            "Setup windows logon",
-            "Kubernetes authentification",
-            "Grafana authentification",
-            "Elasticsearch authentification"
+            {
+                "title": "Setup an api middleware",
+                "uri": "tutorials/setup-an-api-middleware"
+            },
+            {
+                "title": "How to define custom permissions",
+                "uri": "tutorials/custom-permissions"
+            },
+            {
+                "title": "Securise linux servers with authscorp",
+                "uri": "tutorials/linux-servers"
+            },
+            {
+                "title": "Setup my own portal",
+                "uri": "tutorials/own-portal"
+            },
+            {
+                "title": "Customise pages",
+                "uri": "tutorials/customise-ui"
+            },
+            {
+                "title": "Start my first web project",
+                "uri": "tutorials/first-web-project"
+            },
+            {
+                "title": "Start my first mobile app project",
+                "uri": "tutorials/first-mobile-project"
+            },
+            {
+                "title": "Setting up machine-to-machine authorization",
+                "uri": "tutorials/machine-to-machine"
+            },
+            {
+                "title": "Setup windows logon",
+                "uri": "tutorials/windows"
+            },
+            {
+                "title": "Kubernetes authentification",
+                "uri": "tutorials/kubernetes"
+            },
+            {
+                "title": "Grafana authentification",
+                "uri": "tutorials/grafana"
+            },
+            {
+                "title": "Elasticsearch authentification",
+                "uri": "tutorials/elasticsearch"
+            }
         ]
     },
     {
-        "title": "Openid",
+        "section": "openid",
         "articles": [
-            "What is openid",
-            "What are clients",
-            "What is the difference between a client and a user"
+            {
+                "title": "What is openid",
+                "uri": "openid/what-is-openid"
+            },
+            {
+                "title": "What are clients",
+                "uri": "openid/what-are-clients"
+            },
+            {
+                "title": "What is the difference between a client and a user",
+                "uri": "openid/difference-between-client-and-user"
+            }
         ]
     },
     {
-        "title": "Plugins",
+        "section": "plugins",
         "articles": [
-            "Use my own database"
+            {
+                "title": "Use my own database",
+                "uri": "plugins/use-my-own-database"
+            }
         ]
     }
 ]
