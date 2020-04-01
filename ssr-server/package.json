@@ -1,0 +1,14 @@
+{
+  "name": "ssr-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "Sacha Vandamme <sacha@skyhark.be> (https://www.core-server.io)",
+  "license": "ISC",
+  "dependencies": {
+    "vue-cli-plugin-pressr": "1.0.4"
+  }
+}

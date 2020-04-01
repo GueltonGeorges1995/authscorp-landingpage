@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon_Multiple_Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F8FBFF" offset="0%"></stop>
+            <stop stop-color="#FAFBFB" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="360" height="317" rx="16"></rect>
+        <filter x="-9.7%" y="-7.9%" width="119.4%" height="122.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.02 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Other-pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Documentation" transform="translate(-929.000000, -3392.000000)">
+            <g id="Features" transform="translate(-36.000000, 1963.000000)">
+                <rect id="Base" fill="url(#linearGradient-1)" x="0" y="175" width="1440" height="1532"></rect>
+                <g id="Item" transform="translate(930.000000, 1390.000000)">
+                    <g id="Base">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                        <rect stroke="#E5EAF4" stroke-width="1" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="359" height="316" rx="16"></rect>
+                    </g>
+                    <g id="Icon_Multiple_Shape" transform="translate(32.000000, 36.000000)">
+                        <polygon id="Path" points="0 0 40 0 40 40 0 40"></polygon>
+                        <path d="M5.6,3.2 L24.8,3.2 C26.1254834,3.2 27.2,4.2745166 27.2,5.6 L27.2,24.8 C27.2,26.1254834 26.1254834,27.2 24.8,27.2 L5.6,27.2 C4.2745166,27.2 3.2,26.1254834 3.2,24.8 L3.2,5.6 C3.2,4.2745166 4.2745166,3.2 5.6,3.2 Z M33.6,12.8 L34.4,12.8 C35.7254834,12.8 36.8,13.8745166 36.8,15.2 L36.8,34.4 C36.8,35.7254834 35.7254834,36.8 34.4,36.8 L15.2,36.8 C13.8745166,36.8 12.8,35.7254834 12.8,34.4 L12.8,33.6 L29.6,33.6 C31.809139,33.6 33.6,31.809139 33.6,29.6 L33.6,12.8 Z" id="Path" fill="#1565D8"></path>
+                        <path d="M28.8,8 L29.6,8 C30.9254834,8 32,9.0745166 32,10.4 L32,29.6 C32,30.9254834 30.9254834,32 29.6,32 L10.4,32 C9.0745166,32 8,30.9254834 8,29.6 L8,28.8 L24.8,28.8 C27.009139,28.8 28.8,27.009139 28.8,24.8 L28.8,8 Z" id="Path" fill="#1565D8" opacity="0.3"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
