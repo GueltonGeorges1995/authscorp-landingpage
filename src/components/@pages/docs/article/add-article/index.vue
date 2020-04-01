@@ -13,32 +13,11 @@
     </v-toolbar>
     <div style="padding: 30px 100px">
       <v-layout row wrap>
-        <v-flex xs2>
-          <v-list-item>
-            <v-list-item-title class="title">{{sectionName}}</v-list-item-title>
-            <v-list-item-action>
-                 <docs-addArticle title="Add article" />
-            </v-list-item-action>
-          </v-list-item>
-
-          <v-list dense nav>
-            <docs-nav :articles="articles" />
-          </v-list>
-        </v-flex>
         <v-flex xs8 offset-xs1>
-          <v-breadcrumbs :items="breadcrumbs" style="padding-left: 0;">
-            <template v-slot:divider>
-              <v-icon>mdi-chevron-right</v-icon>
-            </template>
-          </v-breadcrumbs>
-          <h1 v-if="title !== null">{{title}}</h1>
-
           <v-btn @click="openEditor()" class="edit mx-2" fab dark large color="primary">
             <v-icon dark>mdi-pencil</v-icon>
           </v-btn>
-
-          <v-alert type="error" :value="err !== null" v-if="err !== null">{{err}}</v-alert>
-          <v-skeleton-loader type="article" v-else-if="content === null" />
+          <v-skeleton-loader type="article" v-if="content === null" />
           <article v-html="article" v-else-if="!showEditor" id="article-content" />
           <docs-editor v-model="content" v-else />
         </v-flex>
@@ -50,34 +29,20 @@
 <script>
 
   import marked from "marked";
-  import articles from "./articles.json";
 
   import Vue from "vue";
-  import DocsNav from "./nav";
-  import Editor from "./editor";
-  import addArticle from "./formAddArticle";
+  import DocsNav from "../nav";
+  import Editor from "../editor";
+  import addArticle from "../formAddArticle";
 
   Vue.component("docs-nav", DocsNav);
   Vue.component("docs-editor", Editor);
   Vue.component("docs-addArticle", addArticle);
 
   export default {
-    props: {
-      section: String,
-      uri:     String,
-    },
-    serverPrefetch() {
-      return this.loadArticle()
-    },
     data() {
       return {
-        content:    null,
-        title:      null,
-        time:       null,
-        err:        null,
-        id:         null,
-
-        articles:   articles[1].articles,
+        content:    "test",
         showEditor: false,
       }
     },
@@ -90,19 +55,6 @@
       sectionName() {
         const sectionName = this.section.split('-').join(' ').toLowerCase()
         return sectionName.substr(0,1).toUpperCase() + sectionName.substr(1)
-      },
-      breadcrumbs() {
-        return [
-          {
-            text: this.sectionName,
-            disabled: false,
-            href: '/docs/' + this.section,
-          },
-          {
-            text: this.title,
-            disabled: true,
-          }
-        ]
       }
     },
     watch: {
@@ -117,34 +69,10 @@
     },
     mounted() {
       this.loadArticle()
-      console.log(this.articles)
     },
     methods:{
       openEditor(){
         this.showEditor = !this.showEditor
-      },
-      loadArticle() {
-        return this.$api.get('docs/article?section='+this.section+'&uri='+this.uri).then((res) => {
-          this.content = res.content
-          this.title   = res.title
-          this.time    = res.time
-          this.id      = res.id
-
-          return res
-        }).catch((err) => {
-          this.err = err.error || err.message || err
-          console.error(err)
-        })
-      },
-      save() {
-          this.$api.put('docs/article', { id: this.id, title: this.title, content: this.content, section: this.section }).then((res) => {
-            // Temporary direct approval
-            return this.$api.post('docs/proposal', {
-              id: res.id
-            })
-          }).catch((err) => {
-            this.err = err.error || err.message || err
-          })
       }
     }
   };
@@ -215,6 +143,7 @@
       display: block;
       border-radius: 3px;
     }
+  
   }
 
 </style>

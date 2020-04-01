@@ -61,7 +61,7 @@
           </table>
         </v-card-text>
         <v-card-actions class="pb-5 mx-4">
-          <v-btn color="primary white--text" :disabled="!valid" type="submit" to='/docs/addArticle'>Continue</v-btn>
+          <v-btn color="primary white--text" :disabled="!valid" type="submit" to='/article/add'>Continue</v-btn>
         </v-card-actions>
       </form>
     </v-card>
