@@ -61,7 +61,7 @@
 <script>
 export default {
   data(){
-    return
+    return {}
   },
   methods:{
    
@@ -137,7 +137,6 @@ export default {
   overflow: hidden;
 }
 h2 {
-  font-family: Helvetica;
   font-size: 27px;
   color: #ffffff;
   line-height: 48px;
@@ -146,7 +145,6 @@ input {
   background: #ffffff;
   border: 1px solid #e6e8f6;
   border-radius: 7px;
-  font-family: Helvetica;
   font-size: 17px;
   color: #979ea5;
   letter-spacing: 0;

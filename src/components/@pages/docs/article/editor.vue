@@ -1,85 +1,121 @@
 <template>
-  <div id="editor">
-    <div class="position:absolute; top:10%; right:0" v-if="this.$parent.showEditor && !this.input">
-      <input type="file" @change="loadTextFile" />
-    </div>
-    <textarea :value="input" @input="update"></textarea>
-    <div v-html="compiledMarkdown"></div>
-
-    <v-btn @click="saveEditor()" class="edit mx-2" fab dark large color="green">
-      <v-icon dark>mdi-checkbox-marked-circle</v-icon>
-    </v-btn>
-  </div>
+    <article />
 </template>
-<script>
-import marked from "marked";
-import _ from "lodash";
-export default {
-  props: {
-    data: String
-  },
-  data() {
-    return {
-      input: this.data
-    };
-  },
-  computed: {
-    compiledMarkdown: function() {
-      return marked(this.input, { sanitize: true });
-    }
-  },
-  methods: {
-    update: _.debounce(function(e) {
-      this.input = e.target.value;
-    }, 300),
-    loadTextFile(ev) {
-      const file = ev.target.files[0];
-      const reader = new FileReader();
-      reader.onload = e => (this.input = e.target.result);
-      reader.readAsText(file);
-    },
-    saveEditor() {
-      console.log("SAVE!");
-        this.$parent.edit = this.input;
 
-      if (!this.$parent.showEditor) {
-        this.$parent.showEditor = true;
-      } else {
-        this.$parent.showEditor = false;
-      }
+<script>
+
+    // style="border: 2px dotted black; padding: 10px;"
+
+    import marked from "marked"
+    import turndown from 'turndown'
+
+    export default {
+        props: {
+            value: String,
+        },
+        created() {
+            const turnservice = new turndown()
+            turnservice.addRule('h1', {
+                filter: ['h1'],
+                replacement: function (content) {
+                    return '# ' + content + '\n'
+                }
+            }).addRule('h2', {
+                filter: ['h2'],
+                replacement: function (content) {
+                    return '## ' + content + '\n'
+                }
+            }).addRule('h3', {
+                filter: ['h3'],
+                replacement: function (content) {
+                    return '### ' + content + '\n'
+                }
+            }).addRule('h4', {
+                filter: ['h4'],
+                replacement: function (content) {
+                    return '#### ' + content + '\n'
+                }
+            }).addRule('h5', {
+                filter: ['h5'],
+                replacement: function (content) {
+                    return '#### ' + content + '\n'
+                }
+            }).addRule('pre', {
+                filter: ['pre'],
+                replacement: function (content) {
+                    if(content.indexOf('\n') == -1)
+                        return '`' + content + '`\n'
+                    // ToDo auto get lang from tag
+                    return '```\n' + content + '```\n'
+                }
+            })
+
+            this.turndown = turnservice.turndown.bind(turnservice)
+        },
+        mounted() {
+            if(typeof(Quill) !== 'undefined')
+                this.setup()
+        },
+        methods: {
+            setup() {
+                var quill = new window.Quill(this.$el, {
+                    theme: 'bubble',
+                    modules: {
+                        toolbar: [
+                            ['bold', 'italic', 'underline'],
+                            ['link', { 'header': '1' }, { 'header': '2' }], //image
+                            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                            ['blockquote', 'code-block'],
+                        ]
+                    }
+                });
+
+                quill.clipboard.dangerouslyPasteHTML(marked(this.value || '') + "\n");
+                quill.on("text-change", () => {
+                    var html = quill.container.firstChild.innerHTML;
+                    const md = this.turndown(html)
+                    console.log(md)
+                    this.$emit('input', md)
+                })
+            }
+        },
+        metaInfo() {
+            return {
+                link: [
+                    {
+                        rel: 'stylesheet',
+                        href: '/css/quill.bubble.css'
+                        // href: 'https://cdn.quilljs.com/1.3.6/quill.snow.css'
+                    }
+                ],
+                script: [
+                    {
+                        src: 'https://cdn.quilljs.com/1.3.6/quill.js',
+                        callback: () => {
+                            this.setup()
+                        }
+                    }
+                ]
+            }
+        }
     }
-  }
-};
+
 </script>
-<style scoped>
-html,
-body,
-#editor {
-  margin: 0;
-  height: 100%;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  color: #333;
-}
-textarea,
-#editor div {
-  display: inline-block;
-  width: 49%;
-  height: 100%;
-  vertical-align: top;
-  box-sizing: border-box;
-  padding: 0 20px;
-}
-textarea {
-  border: none;
-  border-right: 1px solid #ccc;
-  resize: none;
-  outline: none;
-  background-color: #f6f6f6;
-  font-size: 14px;
-  font-family: "Monaco", courier, monospace;
-  padding: 20px;
-}
-code {
-  color: #f66;
-}
+
+<style lang="scss">
+
+    .docs-editor {
+        position: relative;
+
+        .toolbar {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 60px;
+            z-index: 99;
+            background: #fff;
+        }
+    }
+
 </style>

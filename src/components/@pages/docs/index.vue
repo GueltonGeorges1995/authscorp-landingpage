@@ -433,7 +433,6 @@ export default {
 }
 
 .requireInstall {
-  font-family: Helvetica;
   font-size: 16px;
   color: #183b56;
   letter-spacing: 0;
@@ -442,11 +441,9 @@ export default {
 .titleGreen {
   color: #36b37e;
   font-size: 0.8em;
-  font-family: Helvetica;
   text-transform: uppercase;
 }
 .titleAwesome {
-  font-family: Helvetica;
   font-size: 36px;
   color: #183b56;
   letter-spacing: 0.2px;
@@ -455,7 +452,6 @@ export default {
   font-weight: normal;
 }
 .description {
-  font-family: Helvetica;
   font-size: 18px;
   color: #5a7184;
   letter-spacing: 0;
@@ -465,7 +461,6 @@ export default {
 }
 
 .titleCategory {
-  font-family: Helvetica;
   font-size: 20px;
   color: #5a7184;
   letter-spacing: 0;
@@ -485,7 +480,6 @@ export default {
 }
 
 .featureTitle {
-  font-family: Helvetica;
   font-size: 22px;
   color: #183b56;
   letter-spacing: 0.2px;
@@ -494,7 +488,6 @@ export default {
 }
 
 .featureText {
-  font-family: Helvetica;
   font-size: 18px;
   color: #5a7184;
   letter-spacing: 0;

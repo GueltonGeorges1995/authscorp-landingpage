@@ -89,7 +89,6 @@ export default {
     #pill {
         height: 42px;
         color: #5e82f1;
-        font-family: Lato;
         font-size: 17px;
         font-weight: 700;
         line-height: 20px;
@@ -98,7 +97,6 @@ export default {
     .cardtitle {
         height: 40px;
         color: #ffffff;
-        font-family: Lato;
         font-size: 24px;
         font-weight: 700;
         line-height: 29px;
@@ -118,7 +116,6 @@ export default {
         margin-top: 30px;
         height: 120px;
         color: #313236;
-        font-family: Lato;
         font-size: 32px;
         font-weight: 700;
         line-height: 61px;
@@ -128,7 +125,6 @@ export default {
         margin: 0;
         height: 58px;
         color: #ffffff;
-        font-family: Lato;
         font-size: 48px;
         font-weight: 700;
         line-height: 58px;
@@ -137,7 +133,6 @@ export default {
     .a2 {
         height: 22px;
         color: #ffffff;
-        font-family: Lato;
         font-size: 18px;
         font-weight: 700;
         line-height: 22px;
@@ -147,7 +142,6 @@ export default {
         width: 232px;
         height: 19px;
         color: #7c7d8d;
-        font-family: Lato;
         font-size: 16px;
         font-weight: 700;
         line-height: 19px;
@@ -160,7 +154,6 @@ export default {
         color: #264eee;
         border-radius: 30px;
         background-color: rgba(245,249,255);
-        font-family: Lato;
         font-size: 18px;
         font-weight: 700;
         line-height: 22px;

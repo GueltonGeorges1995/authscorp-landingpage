@@ -118,13 +118,11 @@
 }
 .nav-item {
   color: gray;
-  font-family: Helvetica;
 }
 .active {
   color: #264eee;
 }
 .logo {
-  font-family: Helvetica;
   color: dark !important;
 }
 
@@ -134,7 +132,6 @@
 
 a {
   text-decoration: none;
-  font-family: Helvetica;
 }
 .z-index-12 {
   z-index: 200 !important;

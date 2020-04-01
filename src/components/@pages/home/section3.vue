@@ -237,7 +237,6 @@ export default {
         background-color: white;
     }
     h2{
-        font-family: 'Lato', sans-serif; 
         font-size: 65px; 
         color: #313236;
         text-align :center;
@@ -253,7 +252,6 @@ export default {
         /* height: 1%; */
     }
     h3{
-        font-family: 'Lato', sans-serif; 
         font-size: 30px;
         /* font-weight: 600; */
         padding-bottom: 10px 
@@ -263,7 +261,6 @@ export default {
         padding-top: 48px;
     }
     p{       
-        font-family: 'Lato', sans-serif; 
         font-size: 20px;
         color: #7C7D8D;
         letter-spacing: 0;              

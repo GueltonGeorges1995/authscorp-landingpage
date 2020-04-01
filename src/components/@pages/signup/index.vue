@@ -68,7 +68,6 @@
 
 h2 {
     color: #264EEE;
-    font-family: Helvetica;
 }
 
 a {
