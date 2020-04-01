@@ -53,7 +53,7 @@
                     label="Name"
                     name="Name"
                     v-model="titleArticle"
-                    :rules="nameRules"
+                    :rules="[rules.title]"
                   />
                 </td>
               </tr>
@@ -61,7 +61,7 @@
           </table>
         </v-card-text>
         <v-card-actions class="pb-5 mx-4">
-          <v-btn color="primary white--text" :disabled="!valid" type="submit" to="/">Continue</v-btn>
+          <v-btn color="primary white--text" :disabled="!valid" type="submit" to='/docs/addArticle'>Continue</v-btn>
         </v-card-actions>
       </form>
     </v-card>
@@ -82,8 +82,7 @@ export default {
       titleArticle: "",
       rules: {
         required: v => !!v || "required",
-        title: v => !!v || "Name is required",
-        min: v => v == this.password || "It must be the same password"
+        title: v => !!v || "Name is required"
       },
       sections: ["Getting started", "API'S","Tutorials","Contribute"],
       selectedSection: null,

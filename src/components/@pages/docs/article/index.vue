@@ -55,7 +55,7 @@
   import Vue from "vue";
   import DocsNav from "./nav";
   import Editor from "./editor";
-  import addArticle from "./addArticle";
+  import addArticle from "./formAddArticle";
 
   Vue.component("docs-nav", DocsNav);
   Vue.component("docs-editor", Editor);
@@ -108,7 +108,6 @@
     watch: {
       content(val, oldval) {
         if(this.showEditor && oldval !== null && val !== oldval && val !== null) {
-          alert(this.saveTimeout)
           if(this.saveTimeout)
             clearTimeout(this.saveTimeout)
 
