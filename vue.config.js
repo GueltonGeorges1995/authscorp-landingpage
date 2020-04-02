@@ -1,3 +1,4 @@
+const CompressionPlugin = require('compression-webpack-plugin');
 const path = require('path')
 
 module.exports = {
@@ -14,6 +15,7 @@ module.exports = {
     }
   },
   configureWebpack: {
+    // mode: 'production',
     resolve: {
       extensions: ['.web.js', '.web.vue'],
       alias: {
@@ -36,6 +38,20 @@ module.exports = {
           use: 'raw-loader',
         },
       ],
+    },
+    plugins: [
+      new CompressionPlugin()
+    ],
+    optimization: {
+      // splitChunks: {
+      //   cacheGroups: {
+      //     commons: {
+      //       test: /[\\/]node_modules[\\/]/,
+      //       name: 'vendors',
+      //       chunks: 'all'
+      //     }
+      //   }
+      // }
     }
   },
   devServer: {

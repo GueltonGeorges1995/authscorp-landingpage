@@ -3,18 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
     "build": "npm run build:server -- --silent && npm run build:client -- --no-clean --silent && npm run prerender",
+    "lint": "vue-cli-service lint",
     "build:all": "vue-cli-service build:all",
     "build:client": "vue-cli-service build",
     "build:server": "WEBPACK_TARGET=node vue-cli-service build",
     "prerender": "vue-cli-service prerender",
-    "lint": "vue-cli-service lint"
+    "start": "vue-cli-service serve"
   },
   "dependencies": {
     "axios": "^0.19.2",
     "bn.js": "^5.1.1",
+    "compression-webpack-plugin": "^3.1.0",
     "core-js": "^3.6.4",
     "express": "^4.17.1",
     "express-validator": "^6.4.0",
@@ -36,6 +37,8 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
+    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "@fullhuman/vue-cli-plugin-purgecss": "^2.1.0",
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-eslint": "~4.2.0",
     "@vue/cli-service": "~4.2.0",

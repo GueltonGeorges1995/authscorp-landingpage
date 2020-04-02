@@ -5,7 +5,6 @@
 <script>
 
     // style="border: 2px dotted black; padding: 10px;"
-
     import marked from "marked"
 
     export default {
@@ -16,8 +15,7 @@
             if(typeof(window) === 'undefined')
                 return
 
-            // Require turndown here to prevent it to be loaded server side
-            const turndown = require('turndown')
+            const turndown = require('turndown').default
             const turnservice = new turndown()
             turnservice.addRule('h1', {
                 filter: ['h1'],
