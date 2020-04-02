@@ -22,33 +22,33 @@ const router = new VueRouter({
         component: () => import(/* webpackChunkName: "home" */ './components/WelcomePage.vue')
     },{
         path: '/signin',
-        component: import(/* webpackChunkName: "openid" */ '@pages/signin/index.vue')
+        component: () => import(/* webpackChunkName: "openid" */ '@pages/signin/index.vue')
     },{
         path: '/signup',
-        component: import(/* webpackChunkName: "openid" */ '@pages/signup/index.vue')
+        component: () => import(/* webpackChunkName: "openid" */ '@pages/signup/index.vue')
     },{
         path: '/forgotpassword',
-        component: import(/* webpackChunkName: "openid" */ '@pages/forgotpassword/index.vue')
+        component: () => import(/* webpackChunkName: "openid" */ '@pages/forgotpassword/index.vue')
     },{
         path: '/about-us',
-        component: import(/* webpackChunkName: "home" */ '@pages/about-us/index.vue')
+        component: () => import(/* webpackChunkName: "home" */ '@pages/about-us/index.vue')
     },{
         path: '/docs',
-        component: import(/* webpackChunkName: "docs" */ '@pages/docs/index.vue')
+        component: () => import(/* webpackChunkName: "docs" */ '@pages/docs/index.vue')
     },{
         path: '/docs/:section/:uri', // ToDo use SSR generator
         props: true,
-        component: import(/* webpackChunkName: "docs" */ '@pages/docs/article/index.vue')
+        component: () => import(/* webpackChunkName: "docs" */ '@pages/docs/article/index.vue')
     },{
         path: '/pricing',
-        component: import(/* webpackChunkName: "home" */ '@pages/pricing/index.vue')
+        component: () => import(/* webpackChunkName: "home" */ '@pages/pricing/index.vue')
     },{
         path: '/support',
-        component: import(/* webpackChunkName: "home" */ '@pages/support/index.vue')
+        component: () => import(/* webpackChunkName: "home" */ '@pages/support/index.vue')
     },{
         path: '/article/add/:section/:sub/:title',
         props: true,
-        component: import(/* webpackChunkName: "docs" */ '@pages/docs/article/add-article/index.vue')
+        component: () => import(/* webpackChunkName: "docs" */ '@pages/docs/article/add-article/index.vue')
     },{
         path: '*',
         component: Error

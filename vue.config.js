@@ -6,6 +6,8 @@ module.exports = {
   //   domain: 'https://www.authscorp.com',
   // },
   chainWebpack(config) {
+    config.plugins.delete('prefetch')
+
     if(config.get('target') == 'node') {
       config.merge({
         externals: {
@@ -32,7 +34,7 @@ module.exports = {
       }
     },
     plugins: [
-      //process.env.NODE_ENV === 'production' ? new CompressionPlugin() : null
+      process.env.NODE_ENV === 'production' ? new CompressionPlugin() : null
     ].filter((r) => r !== null),
   },
   devServer: {
