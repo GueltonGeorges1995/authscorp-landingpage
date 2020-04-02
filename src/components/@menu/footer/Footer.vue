@@ -29,27 +29,32 @@
           <v-col cols="0" sm="0" md="1"></v-col>
           <v-col cols="12" sm="12" md="2" class="nav-bottom inline">
             <v-btn color="white" class="social-btn">
-              <v-icon color="#979EA5">fab fa-telegram-plane</v-icon>Telegram
+              <v-icon color="#979EA5">fab fa-telegram-plane</v-icon>
+              <span class="ml-2">Telegram</span>
             </v-btn>
           </v-col>
           <v-col cols="12" sm="12" md="2" class="nav-bottom inline">
             <v-btn color="white" class="social-btn">
-              <v-icon color="#979EA5">fab fa-reddit-alien</v-icon>Subredit
+              <v-icon color="#979EA5">fab fa-reddit-alien</v-icon>
+                <span class="ml-2">Subredit</span>
             </v-btn>
           </v-col>
           <v-col cols="12" sm="12" md="2" class="nav-bottom inline">
             <v-btn color="primary" class="white--text social-btn">
-              <v-icon color="#fff">fab fa-slack</v-icon>slack
+              <v-icon color="#fff">fab fa-slack</v-icon>
+                <span class="ml-2">Slack</span>
             </v-btn>
           </v-col>
           <v-col cols="12" sm="12" md="2" class="nav-bottom inline">
             <v-btn color="white" class="social-btn">
-              <v-icon color="#979EA5">fab fa-linkedin</v-icon>Linkedin
+              <v-icon color="#979EA5">fab fa-linkedin</v-icon>
+                <span class="ml-2">Linkedin</span>
             </v-btn>
           </v-col>
           <v-col cols="12" sm="12" md="2" class="nav-bottom inline">
             <v-btn color="white" class="social-btn">
-              <v-icon color="#979EA5">fab fa-twitter</v-icon>Twitter
+              <v-icon color="#979EA5">fab fa-twitter</v-icon>
+                <span class="ml-2">Twitter</span>
             </v-btn>
           </v-col>
           <v-col cols="0" sm="0" md="1"></v-col>
