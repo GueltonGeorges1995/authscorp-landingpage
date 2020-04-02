@@ -129,7 +129,7 @@
     }
 
     blockquote {
-      border-left: 4px solid #ccc;
+      border-left: 4px solid #979ea5;
       margin-bottom: 15px;
       margin-top: 15px;
       padding-left: 16px;

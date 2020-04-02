@@ -399,257 +399,257 @@
 </template>
 
 <style scoped>
-section {
-  background-color: #f5f9ff;
-  padding-top: 15vh;
-}
-img {
-  width: 100%;
-}
-h2 {
-  font-size: 50px;
-  color: #313236;
-}
-p {
-  font-size: 19px;
-  color: #263035;
-  font-weight: bold;
-  opacity: 0.8;
-  letter-spacing: 0;
-  line-height: 180%;
-}
-.subtitle {
-  width: 90%;
-  margin-bottom: 5vh;
-}
-.pill {
-  width: 25%;
-  background-color: white;
-  border-radius: 20px;
-  padding: 10px;
-  margin-bottom: 5vh;
-}
-.card-box {
-  background: #ffffff;
-  box-shadow: -5px 0 0 0 #1ed660, 0 12px 24px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  /* background: #1ED660; */
-  border: 2px solid #ffffff;
-  border: 2px solid #ffffff;
-  border: 2px solid #ffffff;
-  margin-bottom: 4vh;
-}
-.card-plain {
-  background: #ffffff;
-  border-radius: 5px;
-  /* background: #1ED660; */
-  border: 2px solid #ffffff;
-  border: 2px solid #ffffff;
-  border: 2px solid #ffffff;
-  margin-bottom: 4vh;
-}
-.wrap {
-  margin: 28px;
-}
-.card-title {
-  font-size: 32px;
-  color: #264eee;
-  line-height: 180%;
-  padding-top: 15px;
-}
-.card-sub {
-  font-size: 20px;
-  color: #7c7d8d;
-  letter-spacing: 0;
-  line-height: 180%;
-  padding-bottom: 15px;
-}
-button {
-  outline: none;
-}
-
-@media (max-width: 1300px) {
+  section {
+    background-color: #f5f9ff;
+    padding-top: 15vh;
+  }
+  img {
+    width: 100%;
+  }
   h2 {
-    font-size: 45px;
+    font-size: 50px;
+    color: #313236;
   }
   p {
-    font-size: 16px;
+    font-size: 19px;
+    color: #263035;
+    font-weight: bold;
+    opacity: 0.8;
+    letter-spacing: 0;
+    line-height: 180%;
   }
-  .card-title {
-    font-size: 24px;
-  }
-  .card-sub {
-    font-size: 14px;
-  }
-  svg {
-    height: 30px;
-    width: 30px;
-  }
-}
-@media (max-width: 1000px) {
-  h2 {
-    font-size: 40px;
-  }
-  p {
-    font-size: 14px;
-  }
-  .card-title {
-    font-size: 20px;
-  }
-  .card-sub {
-    font-size: 12px;
-  }
-  svg {
-    height: 28px;
-    width: 28px;
+  .subtitle {
+    width: 90%;
+    margin-bottom: 5vh;
   }
   .pill {
-    width: 30%;
+    width: 25%;
     background-color: white;
     border-radius: 20px;
     padding: 10px;
-    margin-bottom: 3vh;
-    font-size: 15px;
+    margin-bottom: 5vh;
   }
-  section {
-    padding-top: 12vh;
+  .card-box {
+    background: #ffffff;
+    box-shadow: -5px 0 0 0 #1ed660, 0 12px 24px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    /* background: #1ED660; */
+    border: 2px solid #ffffff;
+    border: 2px solid #ffffff;
+    border: 2px solid #ffffff;
+    margin-bottom: 4vh;
   }
-  .wrap {
-    margin: 20px;
-  }
-}
-@media (max-width: 800px) {
-  h2 {
-    font-size: 35px;
-  }
-  p {
-    font-size: 12px;
-  }
-  .card-title {
-    font-size: 18px;
-    padding-top: 8px;
-  }
-  .card-sub {
-    font-size: 11px;
-    padding-bottom: 8px;
-  }
-  svg {
-    height: 25px;
-    width: 25px;
+  .card-plain {
+    background: #ffffff;
+    border-radius: 5px;
+    /* background: #1ED660; */
+    border: 2px solid #ffffff;
+    border: 2px solid #ffffff;
+    border: 2px solid #ffffff;
+    margin-bottom: 4vh;
   }
   .wrap {
-    margin: 18px;
-  }
-}
-@media (max-width: 700px) {
-  h2 {
-    font-size: 30px;
-  }
-  p {
-    font-size: 10px;
-  }
-  .subtitle {
-    margin-bottom: 20px;
-  }
-  .col-10 {
-    padding: 2px 12px;
+    margin: 28px;
   }
   .card-title {
-    font-size: 15px;
-    padding-top: 0;
+    font-size: 32px;
+    color: #264eee;
+    line-height: 180%;
+    padding-top: 15px;
   }
   .card-sub {
-    font-size: 9px;
-    padding-bottom: 0;
+    font-size: 20px;
+    color: #7c7d8d;
+    letter-spacing: 0;
+    line-height: 180%;
+    padding-bottom: 15px;
   }
-  svg {
-    height: 22px;
-    width: 22px;
+  button {
+    outline: none;
   }
-  .marg {
-    margin-bottom: 20px;
+
+  @media (max-width: 1300px) {
+    h2 {
+      font-size: 45px;
+    }
+    p {
+      font-size: 16px;
+    }
+    .card-title {
+      font-size: 24px;
+    }
+    .card-sub {
+      font-size: 14px;
+    }
+    svg {
+      height: 30px;
+      width: 30px;
+    }
   }
-  .wrap {
-    margin: 12px;
+  @media (max-width: 1000px) {
+    h2 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 14px;
+    }
+    .card-title {
+      font-size: 20px;
+    }
+    .card-sub {
+      font-size: 12px;
+    }
+    svg {
+      height: 28px;
+      width: 28px;
+    }
+    .pill {
+      width: 30%;
+      background-color: white;
+      border-radius: 20px;
+      padding: 10px;
+      margin-bottom: 3vh;
+      font-size: 15px;
+    }
+    section {
+      padding-top: 12vh;
+    }
+    .wrap {
+      margin: 20px;
+    }
   }
-  .pill {
-    width: 32%;
-    padding: 8px;
-    margin-bottom: 3vh;
-    font-size: 12px;
+  @media (max-width: 800px) {
+    h2 {
+      font-size: 35px;
+    }
+    p {
+      font-size: 12px;
+    }
+    .card-title {
+      font-size: 18px;
+      padding-top: 8px;
+    }
+    .card-sub {
+      font-size: 11px;
+      padding-bottom: 8px;
+    }
+    svg {
+      height: 25px;
+      width: 25px;
+    }
+    .wrap {
+      margin: 18px;
+    }
   }
-  section {
-    padding-top: 10vh;
+  @media (max-width: 700px) {
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 10px;
+    }
+    .subtitle {
+      margin-bottom: 20px;
+    }
+    .col-10 {
+      padding: 2px 12px;
+    }
+    .card-title {
+      font-size: 15px;
+      padding-top: 0;
+    }
+    .card-sub {
+      font-size: 9px;
+      padding-bottom: 0;
+    }
+    svg {
+      height: 22px;
+      width: 22px;
+    }
+    .marg {
+      margin-bottom: 20px;
+    }
+    .wrap {
+      margin: 12px;
+    }
+    .pill {
+      width: 32%;
+      padding: 8px;
+      margin-bottom: 3vh;
+      font-size: 12px;
+    }
+    section {
+      padding-top: 10vh;
+    }
   }
-}
-@media (max-width: 600px) {
-  h2 {
-    font-size: 22px;
+  @media (max-width: 600px) {
+    h2 {
+      font-size: 22px;
+    }
+    p {
+      font-size: 9px;
+    }
+    .subtitle {
+      margin-bottom: 20px;
+    }
+    .col-10 {
+      padding: 2px 12px;
+    }
+    .card-title {
+      font-size: 12px;
+      padding-top: 0;
+    }
+    .card-sub {
+      font-size: 8px;
+      padding-bottom: 0;
+    }
+    svg {
+      height: 18px;
+      width: 18px;
+    }
+    .marg {
+      margin-bottom: 20px;
+    }
+    .wrap {
+      margin: 10px;
+    }
+    .pill {
+      width: 30%;
+      padding: 8px;
+      font-size: 10px;
+    }
+    section {
+      padding-top: 8vh;
+    }
   }
-  p {
-    font-size: 9px;
+  @media (max-width: 450px) {
+    h2 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 7px;
+    }
+    .card-title {
+      font-size: 10px;
+    }
+    .card-sub {
+      font-size: 6px;
+    }
+    .col-10 {
+      padding: 2px 6px;
+    }
+    svg {
+      height: 15px;
+      width: 15px;
+    }
+    .pill {
+      width: 34%;
+      padding: 6px;
+      margin-bottom: 2vh;
+      font-size: 8px;
+    }
+    section {
+      padding-top: 6vh;
+    }
   }
-  .subtitle {
-    margin-bottom: 20px;
-  }
-  .col-10 {
-    padding: 2px 12px;
-  }
-  .card-title {
-    font-size: 12px;
-    padding-top: 0;
-  }
-  .card-sub {
-    font-size: 8px;
-    padding-bottom: 0;
-  }
-  svg {
-    height: 18px;
-    width: 18px;
-  }
-  .marg {
-    margin-bottom: 20px;
-  }
-  .wrap {
-    margin: 10px;
-  }
-  .pill {
-    width: 30%;
-    padding: 8px;
-    font-size: 10px;
-  }
-  section {
-    padding-top: 8vh;
-  }
-}
-@media (max-width: 450px) {
-  h2 {
-    font-size: 18px;
-  }
-  p {
-    font-size: 7px;
-  }
-  .card-title {
-    font-size: 10px;
-  }
-  .card-sub {
-    font-size: 6px;
-  }
-  .col-10 {
-    padding: 2px 6px;
-  }
-  svg {
-    height: 15px;
-    width: 15px;
-  }
-  .pill {
-    width: 34%;
-    padding: 6px;
-    margin-bottom: 2vh;
-    font-size: 8px;
-  }
-  section {
-    padding-top: 6vh;
-  }
-}
 </style>

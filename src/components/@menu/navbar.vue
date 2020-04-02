@@ -130,9 +130,6 @@
   padding: 0 5rem;
 }
 
-a {
-  text-decoration: none;
-}
 .z-index-12 {
   z-index: 200 !important;
 }

@@ -7,8 +7,9 @@
 </template>
 
 <script>
+
   import Navbar from "./components/@menu/navbar";
-  import Footer from "./components/@menu/footer/Footer.vue";
+  import Footer from "./components/@menu/footer";
 
   export default {
     name: "App",
@@ -20,4 +21,13 @@
       title: 'Authscorp'
     }
   };
+
 </script>
+
+<style>
+
+  a {
+    text-decoration: none;
+  }
+
+</style>

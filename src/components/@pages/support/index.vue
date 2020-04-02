@@ -215,7 +215,7 @@ export default {
     }
 
     .list-title {
-        color: #1565d8;
+        color: #264eee;
         font-size: 20px;
         font-weight: 700;
         line-height: 28px;

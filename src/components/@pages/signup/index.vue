@@ -70,9 +70,6 @@ h2 {
     color: #264EEE;
 }
 
-a {
-    text-decoration: none;
-}
 .bg-main-section {
   padding: 10rem;
   background-color: #f5f9ff;

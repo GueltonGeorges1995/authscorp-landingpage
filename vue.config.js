@@ -2,9 +2,11 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const path = require('path')
 
 module.exports = {
-  // prerender: {
-  //   domain: 'https://www.authscorp.com',
-  // },
+  pluginOptions: {
+    // prerender: {
+    //   domain: 'https://www.authscorp.com',
+    // },
+  },
   chainWebpack(config) {
     config.plugins.delete('prefetch')
 

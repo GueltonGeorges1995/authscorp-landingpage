@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="primary white--text">
         <v-container>
             <v-row id="title" justify="center">
                 <div style="margin: 0 auto;">
@@ -77,20 +77,9 @@
 </template>
 
 <style scoped>
-    @import url('https://fonts.google.com/specimen/Lato?selection.family=Lato');
-
-    @font-face {
-        font-family: 'sf_ui_displayregular';
-        src: url('../../../assets/fonts/sf-ui-display-regular-webfont.woff2') format('woff2'),
-             url('../../../assets/fonts/sf-ui-display-regular-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
 
     section {
         height: 100vh;
-        background: #264EEE;
-        color: white;
         position: relative;
     }
 
@@ -266,7 +255,6 @@
         padding: 50px 0;
         width: 303.51px;
         height: 46px;
-        font-family: 'sf_ui_displayregular';
         font-size: 19px;
         font-weight: 400;
         line-height: 23px;

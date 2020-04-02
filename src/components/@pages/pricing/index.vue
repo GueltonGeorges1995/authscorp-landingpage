@@ -1,6 +1,6 @@
 <template>
   <div id="Page-Pricing">
-    <section id="pricing-info" style="background-color:#F8FBFE;" class="clip-eb">
+    <section id="pricing-info" style="background-color:#F5F9FF;" class="clip-eb">
       <v-container>
         <v-layout row class="pt-10">
           <v-flex xs12 lg8 offset-lg-2>
@@ -33,7 +33,7 @@
                 <h2 class="mb-5" style="font-size:1.5em; color:#183B56; font-weight:normal">Standard</h2>
                 <p>All the basics for businesses that are just getting started.</p>
               </div>
-              <div class="mx-3 mb-3" style="border:1px solid #F8FBFE"></div>
+              <div class="mx-3 mb-3" style="border:1px solid #F5F9FF"></div>
               <div class="ml-3 mt-5">
                 <div class="mb-5 d-flex align-center">
                   <img src="../docs/images/icons/correct.svg" alt />
@@ -72,7 +72,7 @@
                 >Essentials</h2>
                 <p>Better for growing businesses that want more customers.</p>
               </div>
-              <div class="mx-3 mb-3" style="border:1px solid #F8FBFE"></div>
+              <div class="mx-3 mb-3" style="border:1px solid #F5F9FF"></div>
               <div class="ml-3 mt-5">
                 <div class="mb-5 d-flex align-center">
                   <img src="../docs/images/icons/correct.svg" alt />
@@ -100,16 +100,16 @@
             </v-card>
           </v-flex>
           <v-flex class="mb-5">
-            <v-card class="py-8 px-5 mx-3 d-flex flex-column" style="border-top:2px solid #1565D8">
+            <v-card class="py-8 px-5 mx-3 d-flex flex-column" style="border-top:2px solid #264eee">
               <div class="ml-3 mb-3">
-                <h1 class="mb-2 d-flex align-center" style="color: #1565D8; font-size:2em;">
+                <h1 class="mb-2 d-flex align-center" style="color: #264eee; font-size:2em;">
                   $339
                   <span class="txtMonth">/month</span>
                 </h1>
                 <h2 class="mb-5" style="font-size:1.5em; color:#183B56; font-weight:normal">Premium</h2>
                 <p>Advanced features for pros who need more customization.</p>
               </div>
-              <div class="mx-3 mb-3" style="border:1px solid #F8FBFE"></div>
+              <div class="mx-3 mb-3" style="border:1px solid #F5F9FF"></div>
               <div class="ml-3 mt-5">
                 <div class="mb-5 d-flex align-center">
                   <img src="../docs/images/icons/correct.svg" alt />
@@ -237,7 +237,7 @@
         </v-content>
       </v-container>
     </section>
-    <section id="Questions" class="clip-eb" style="background-color:#F8FBFE; padding-top:100px; ">
+    <section id="Questions" class="clip-eb" style="background-color:#F5F9FF; padding-top:100px; ">
       <v-container>
         <v-layout row>
           <v-flex xs12 lg8 offset-lg-2>
@@ -312,11 +312,11 @@ export default {
 </script>
 <style lang="scss" scoped>
 .logoRound {
-  background-color: #f8fbfe;
+  background-color: #F5F9FF;
   border-radius: 10px;
 }
 .txtMonth {
-  color: #b0b0b0;
+  color: #979ea5;
   font-weight: normal;
   font-size: 0.5em !important;
   margin-left: 5px;

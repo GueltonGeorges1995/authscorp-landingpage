@@ -1,5 +1,5 @@
 <template>
-    <header class="clip-eb">
+    <header class="primary clip-eb">
         <div class="round-before" />
         <div class="round-after" />
         <!--start:hero-->
@@ -19,11 +19,10 @@
     </header>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
-    .company-faq header {
-        background-color: #264EEE;
-        position: relative;        
+    header.primary.clip-eb {
+        position: relative;
 
         .round-before, .round-after {
             opacity: 0.15;
@@ -61,21 +60,9 @@
         }
 
         .hero {
-            padding-top: 300px;
+            padding-top: 140px;
             padding-bottom: 105px;
-            height: 600px;
-
-            p{
-                
-                font-style: normal;
-                font-weight: normal;
-                font-size: 24px;
-                line-height: 40px;
-                
-            }
         }
-
-        
     }
 
 </style>

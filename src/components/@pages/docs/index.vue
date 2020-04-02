@@ -156,7 +156,7 @@
       </v-container>
     </section>
 
-    <section id="Javascript" style="background-color:#F8FBFE; margin-top:-100px">
+    <section id="Javascript" style="background-color:#F5F9FF; margin-top:-100px">
       <v-container style="padding-top:100px">
         <v-layout row class="pt-10">
           <v-flex xs12 lg8 offset-lg-2>
@@ -171,21 +171,21 @@
         <v-layout row class="mt-10">
           <v-flex xs12>
             <div class="stats text-center" style="border-top:2px solid blue; background:white">
-              <v-flex xs3 style="border-right:2px solid #F8FBFE" class="py-8 px-10 mx-3">
+              <v-flex xs3 style="border-right:2px solid #F5F9FF" class="py-8 px-10 mx-3">
                 <div class="ic mb-2">
                   <img src="./images/icons/opened-file.svg" alt />
                 </div>
                 <h3 class="text-hkgrotesk font-bold text-black mb-3">4.98/5</h3>
                 <p class="text-gray mb-0">Average ratings</p>
               </v-flex>
-              <v-flex xs3 style="border-right:2px solid #F8FBFE" class="py-8 px-10 mx-3">
+              <v-flex xs3 style="border-right:2px solid #F5F9FF" class="py-8 px-10 mx-3">
                 <div class="ic mb-2">
                   <img src="./images/icons/opened-file.svg" alt />
                 </div>
                 <h3 class="text-hkgrotesk font-bold text-black mb-3">360k+</h3>
                 <p class="text-gray mb-0">Monthly installs</p>
               </v-flex>
-              <v-flex xs3 style="border-right:2px solid #F8FBFE" class="py-8 px-10 mx-3">
+              <v-flex xs3 style="border-right:2px solid #F5F9FF" class="py-8 px-10 mx-3">
                 <div class="ic mb-2">
                   <img src="./images/icons/opened-file.svg" alt />
                 </div>
@@ -205,7 +205,7 @@
       </v-container>
     </section>
 
-    <section style="background-color:#F8FBFE; padding-top:100px; ">
+    <section style="background-color:#F5F9FF; padding-top:100px; ">
       <v-container>
         <v-layout row>
           <v-flex xs12 lg8 offset-lg-2>
@@ -329,7 +329,7 @@
 
     <section
       class="clip-eb"
-      style="background-color:#F8FBFE; padding-top:100px; margin-bottom:-150px "
+      style="background-color:#F5F9FF; padding-top:100px; margin-bottom:-150px "
     >
       <v-container>
         <v-layout row>
@@ -421,133 +421,136 @@ export default {
 </script>
 
 <style lang="scss">
-.install-blok {
-  display: block;
-  margin: auto;
-  width: 40vw;
-}
-.panel {
-  height: 20vh;
-  background: #0f1f2b;
-  border-radius: 16px;
-}
+  .install-blok {
+    display: block;
+    margin: auto;
+    width: 40vw;
+  }
 
-.requireInstall {
-  font-size: 16px;
-  color: #183b56;
-  letter-spacing: 0;
-}
+  .panel {
+    height: 20vh;
+    background: #0f1f2b;
+    border-radius: 16px;
+  }
 
-.titleGreen {
-  color: #36b37e;
-  font-size: 0.8em;
-  text-transform: uppercase;
-}
-.titleAwesome {
-  font-size: 36px;
-  color: #183b56;
-  letter-spacing: 0.2px;
-  text-align: center;
-  line-height: 48px;
-  font-weight: normal;
-}
-.description {
-  font-size: 18px;
-  color: #5a7184;
-  letter-spacing: 0;
-  text-align: center;
-  line-height: 32px;
-  font-weight: normal;
-}
+  .requireInstall {
+    font-size: 16px;
+    color: #183b56;
+    letter-spacing: 0;
+  }
 
-.titleCategory {
-  font-size: 20px;
-  color: #5a7184;
-  letter-spacing: 0;
-  text-align: center;
-  line-height: 28px;
-  font-weight: normal;
-}
+  .titleGreen {
+    color: #36b37e;
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
 
-.stats {
-  display: flex;
-  flex-direction: row;
-}
-.clip-eb {
-  clip-path: ellipse(150% 120% at 50% -30%);
-  padding-bottom: 175px !important;
-  background-color: white;
-}
+  .titleAwesome {
+    font-size: 36px;
+    color: #183b56;
+    letter-spacing: 0.2px;
+    text-align: center;
+    line-height: 48px;
+    font-weight: normal;
+  }
 
-.featureTitle {
-  font-size: 22px;
-  color: #183b56;
-  letter-spacing: 0.2px;
-  line-height: 32px;
-  font-weight: normal;
-}
+  .description {
+    font-size: 18px;
+    color: #5a7184;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 32px;
+    font-weight: normal;
+  }
 
-.featureText {
-  font-size: 18px;
-  color: #5a7184;
-  letter-spacing: 0;
-  line-height: 32px;
-  font-weight: normal;
-}
+  .titleCategory {
+    font-size: 20px;
+    color: #5a7184;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 28px;
+    font-weight: normal;
+  }
 
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
   .stats {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: none;
+    flex-direction: row;
   }
-  .company-faq {
-    // header
-    header {
-      .hero {
-        padding-top: 40px;
-        padding-bottom: 64px;
+  .clip-eb {
+    clip-path: ellipse(150% 120% at 50% -30%);
+    padding-bottom: 175px !important;
+    background-color: white;
+  }
+
+  .featureTitle {
+    font-size: 22px;
+    color: #183b56;
+    letter-spacing: 0.2px;
+    line-height: 32px;
+    font-weight: normal;
+  }
+
+  .featureText {
+    font-size: 18px;
+    color: #5a7184;
+    letter-spacing: 0;
+    line-height: 32px;
+    font-weight: normal;
+  }
+
+  // Extra small devices (portrait phones, less than 576px)
+  @media (max-width: 575.98px) {
+    .stats {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: none;
+    }
+    .company-faq {
+      // header
+      header {
+        .hero {
+          padding-top: 40px;
+          padding-bottom: 64px;
+        }
       }
     }
   }
-}
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .stats {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .company-faq {
-    // header
-    header {
-      .hero {
-        padding-top: 40px;
-        padding-bottom: 64px;
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .stats {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .company-faq {
+      // header
+      header {
+        .hero {
+          padding-top: 40px;
+          padding-bottom: 64px;
+        }
       }
     }
   }
-}
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .company-faq {
-    // header
-    header {
-      &.clip-eb {
-        clip-path: ellipse(200% 120% at 50% -30%);
-      }
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .company-faq {
+      // header
+      header {
+        &.clip-eb {
+          clip-path: ellipse(200% 120% at 50% -30%);
+        }
 
-      .hero {
-        padding-top: 40px;
-        padding-bottom: 64px;
+        .hero {
+          padding-top: 40px;
+          padding-bottom: 64px;
+        }
       }
     }
   }
-}
 </style>

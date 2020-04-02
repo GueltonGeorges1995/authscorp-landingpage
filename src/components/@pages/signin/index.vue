@@ -148,9 +148,6 @@ h1 {
   font-size: 40px;
 }
 
-a {
-  text-decoration: none;
-}
 .bg-main-section {
   padding: 10rem;
   background-color: #f5f9ff;

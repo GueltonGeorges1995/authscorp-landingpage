@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-blue">
+  <div class="primary">
     <div class="square1"></div>
     <div class="square2"></div>
     <div class="square3"></div>
@@ -172,10 +172,10 @@
 
   input {
     background: #ffffff;
-    border: 1px solid #e6e8f6;
+    border: 1px solid #e5eaf4;
     border-radius: 7px;
     font-size: 17px;
-    color: #979ea5;
+    color: #7c7d8d;
     letter-spacing: 0;
     z-index: 11;
     height: 3.5rem;
@@ -197,15 +197,12 @@
     top: 21px;
   }
 
-  .bg-blue {
+  .primary {
     padding: 5.5rem 0;
-    background: #264eee;
     overflow: hidden;
     position: relative;
   }
-  /* .z-index-5 {
-    z-index: 5;
-  } */
+
   .square1 {
     content: " ";
     transform: rotate(-30deg);

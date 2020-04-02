@@ -16,7 +16,7 @@
         <v-flex xs2>
           <v-list-item>
             <v-list-item-title class="title">{{sectionName}}</v-list-item-title>
-            <v-list-item-action>
+            <v-list-item-action v-if="section !== 'legal'">
               <docs-addArticle title="Add article" />
             </v-list-item-action>
           </v-list-item>
@@ -239,10 +239,16 @@
     }
 
     blockquote {
-      border-left: 4px solid #ccc;
+      border-left: 3px solid #979ea5;
       margin-bottom: 15px;
       margin-top: 15px;
       padding-left: 16px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+
+      p:last-child {
+        margin-bottom: 0;
+      }
     }
 
     pre.ql-syntax, code {

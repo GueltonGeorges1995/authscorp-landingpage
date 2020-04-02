@@ -1,5 +1,5 @@
 <template>
-    <header class="clip-eb">
+    <header class="primary clip-eb">
         <div class="round-before" />
         <div class="round-after" />
         <!--start:hero-->
@@ -90,8 +90,7 @@
         }
     }
 
-    .company-faq header {
-        background-color: #264EEE;
+    header.primary.clip-eb {
         position: relative;
 
         .round-before, .round-after {
@@ -111,6 +110,7 @@
                 height: 750px;
             }
         }
+
         .round-before {
             background-image: linear-gradient(270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 100%);
             top: -500px;
@@ -132,7 +132,9 @@
             padding-top: 140px;
             padding-bottom: 105px;
         }
+    }
 
+    .company-faq header {
         .v-btn {
             margin-top: -6px;
         }

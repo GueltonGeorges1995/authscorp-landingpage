@@ -169,14 +169,84 @@
 
 <style lang="scss">
 
-.clip-eb {
-    clip-path: ellipse(150% 120% at 50% -30%);
-    padding-bottom: 175px !important;
-}
-.about{
-    padding-top: 60px;
+  .clip-eb {
+      clip-path: ellipse(150% 120% at 50% -30%);
+      padding-bottom: 175px !important;
+  }
+  .about{
+      padding-top: 60px;
+      .titre{
+          
+          font-style: normal;
+          font-weight: normal;
+          
+          font-size: 20px;
+          line-height: 19px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+
+          color: #264eee;
+      }
+      .about-text{
+        padding: 55px 50px 35px 35px;      
+        p{
+          
+          font-style: normal;
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 36px;
+          color: #183B56;
+          margin-bottom: 40px;
+        }
+        .bot-text{
+          margin-bottom: 100px;
+        }
+      }
+  }
+  .gallery{
+    margin-bottom: 150px;;
+    .gallery1{
+      border-radius: 12px;
+    }
+
+  }
+  .values{
+    margin-bottom: 200px;
+    h2{    
+      font-weight: normal;
+      font-size: 40px;
+      line-height: 50px;
+      letter-spacing: 0.3px;
+      color: #183B56;
+    }
+    .subtitle{
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 35px;
+      color: #5A7184;
+      padding-top: 35px;
+      padding-bottom: 120px ;
+
+    }
+    .logo{
+      height: 46px;
+      margin-bottom: 80px;
+    }
+    .value{
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 28px;
+      color: #5A7184;
+      padding-bottom: 40px;
+      width: 80%;
+
+    }  
+  }
+  .team{
+    padding-top: 60px;  
+    padding-bottom: 150px;
     .titre{
-         
+          
         font-style: normal;
         font-weight: normal;
         
@@ -185,493 +255,423 @@
         letter-spacing: 2px;
         text-transform: uppercase;
 
-        color: #1565D8;
+        color: #36B37E;
     }
-    .about-text{
-      padding: 55px 50px 35px 35px;      
-      p{
-        
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 36px;
-        color: #183B56;
-        margin-bottom: 40px;
-      }
-      .bot-text{
-        margin-bottom: 100px;
-      }
-    }
-}
-.gallery{
-  margin-bottom: 150px;;
-  .gallery1{
-    border-radius: 12px;
-  }
-
-}
-.values{
-  margin-bottom: 200px;
-  h2{    
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 50px;
-    letter-spacing: 0.3px;
-    color: #183B56;
-  }
-  .subtitle{
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 35px;
-    color: #5A7184;
-    padding-top: 35px;
-    padding-bottom: 120px ;
-
-  }
-  .logo{
-    height: 46px;
-    margin-bottom: 80px;
-  }
-  .value{
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 28px;
-    color: #5A7184;
-    padding-bottom: 40px;
-    width: 80%;
-
-  }  
-}
-.team{
-  padding-top: 60px;  
-  padding-bottom: 150px;
-  .titre{
-        
-      font-style: normal;
+    .team-text{
       font-weight: normal;
-      
       font-size: 20px;
-      line-height: 19px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-
-      color: #36B37E;
-  }
-  .team-text{
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 35px;
-    color: #5A7184;
-    padding-top: 200px;
-    padding-bottom: 40px;
-  }
-  .but{
-    font-weight: bold;
-  }
-  .photos{
-    height: 55vh;
-    position: relative;    
-    .dots{
-      bottom: 15%;
-      left: 25%;
-      position: absolute;
-      z-index: 10;
-    } 
-    .photo1{
-      position: absolute;
-      z-index: 15;
-      bottom: 0;
-      left:7%;
-      border-radius: 15px;
-      
-    } 
-    .photo2{
-      position: absolute;
-      z-index: 15;
-      left: 25%;
-      top:40%;
-      border-radius: 12px;
-      
-    } 
-    .photo3{
-      position: absolute;
-      z-index: 15;
-      left: -10%;
-      top:22%;
-      border-radius: 14px;
-      
-    } 
-    .photo4{
-      position: absolute;
-      z-index: 15;
-      left: 42%;
-      top:-10%;
-      border-radius: 18px;
-      
-    } 
-    .photo5{
-      position: absolute;
-      z-index: 15;
-      left: 48%;
-      top:48%;
-      border-radius: 14px;
-      
-    } 
-    .oval{
-      position: absolute;
-      z-index: 0;
-      left: -90%;
-      top: -60%;
+      line-height: 35px;
+      color: #5A7184;
+      padding-top: 200px;
+      padding-bottom: 40px;
     }
-      
-  }
-  .photos::after{
-      content:"";
-      position: absolute;
-      z-index: 10;
-      width: 28px;
-      height: 28px;
-      background-color:#F1F4F5;
-      border-radius: 50%;
-      left: -12.5%;
-      top:43%;
-  }
-  .photos::before{
-      content:"";
-      position: absolute;
-      z-index: 10;
-      width: 36px;
-      height: 36px;
-      background-color:#1565D8;
-      border-radius: 50%;
-      left: 65%;
-      top:25%;
-  }
+    .but{
+      font-weight: bold;
+    }
+    .photos{
+      height: 55vh;
+      position: relative;    
+      .dots{
+        bottom: 15%;
+        left: 25%;
+        position: absolute;
+        z-index: 10;
+      } 
+      .photo1{
+        position: absolute;
+        z-index: 15;
+        bottom: 0;
+        left:7%;
+        border-radius: 15px;
+        
+      } 
+      .photo2{
+        position: absolute;
+        z-index: 15;
+        left: 25%;
+        top:40%;
+        border-radius: 12px;
+        
+      } 
+      .photo3{
+        position: absolute;
+        z-index: 15;
+        left: -10%;
+        top:22%;
+        border-radius: 14px;
+        
+      } 
+      .photo4{
+        position: absolute;
+        z-index: 15;
+        left: 42%;
+        top:-10%;
+        border-radius: 18px;
+        
+      } 
+      .photo5{
+        position: absolute;
+        z-index: 15;
+        left: 48%;
+        top:48%;
+        border-radius: 14px;
+        
+      } 
+      .oval{
+        position: absolute;
+        z-index: 0;
+        left: -90%;
+        top: -60%;
+      }
+        
+    }
+    .photos::after{
+        content:"";
+        position: absolute;
+        z-index: 10;
+        width: 28px;
+        height: 28px;
+        background-color:#F1F4F5;
+        border-radius: 50%;
+        left: -12.5%;
+        top:43%;
+    }
+    .photos::before{
+        content:"";
+        position: absolute;
+        z-index: 10;
+        width: 36px;
+        height: 36px;
+        background-color:#264eee;
+        border-radius: 50%;
+        left: 65%;
+        top:25%;
+    }
 
-}
-.logos{
-  padding-top:450px;
-  padding-bottom: 200px;
-  background-color: #F5F9FF;  
+  }
+  .logos{
+    padding-top:450px;
+    padding-bottom: 200px;
+    background-color: #F5F9FF;  
+    
+    .white{
+      color: white;
+    }
+    .center{
+      width:100%;
+    }
   
-  .white{
-    color: white;
   }
-  .center{
-    width:100%;
-  }
- 
-}
-.circle{
-  background-image: url("./images/icons/bg.svg");
-  background-size: 100%;
-  height: 150px;
-}
-
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
-  .company-faq {
-    // header
-    header {
-      .hero {
-        padding-top: 40px;
-        padding-bottom: 64px;
-      }
-    }
-  }
-   .circle{
-    height: 50px;
-  }
-   .right-top{
-    height: 100px;
-  }
-   .photo1{      
-    width: 95px;
-    height: 95px;
-  } 
-  .photo2{      
-    width: 55px;
-    height: 55px;
-  } 
-  .photo3{      
-    width: 75px;
-    height: 75px;
-  } 
-  .photo4{     
-    width: 120px;
-    height: 130px;
-  } 
-  .photo5{      
-    width: 75px;
-    height: 75px;
-  } 
-  .dots{
-    height: 80px;
-  }
-   .brands{
-    padding-left: 10px;
-  }
-  .brand{
-    margin-right: 18px;
-    height: 24px;
-  }
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .company-faq {
-    // header
-    header {
-      .hero {
-        padding-top: 40px;
-        padding-bottom: 64px;
-      }
-    }
-  }
-   .circle{
-    height: 65px;
-  }
-  .pattern{
-    height: 40px;
-  }
-   .right-top{
+  .circle{
+    background-image: url("./images/icons/bg.svg");
+    background-size: 100%;
     height: 150px;
   }
-   .photo1{      
-    width: 95px;
-    height: 95px;
-  } 
-  .photo2{      
-    width: 55px;
-    height: 55px;
-  } 
-  .photo3{      
-    width: 75px;
-    height: 75px;
-  } 
-  .photo4{     
-    width: 120px;
-    height: 130px;
-  } 
-  .photo5{      
-    width: 75px;
-    height: 75px;
-  } 
-  .dots{
-    height: 80px;
-  }
-  .brands{
-    padding-left: 20px;
-  }
-  .brand{
-    margin-right: 22px;
-    height: 28px;
-  }
-}
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .company-faq {
-    // header
-    header {
-      &.clip-eb {
-        clip-path: ellipse(200% 120% at 50% -30%);
-      }
-
-      .hero {
-        padding-top: 40px;
-        padding-bottom: 64px;
+  // Extra small devices (portrait phones, less than 576px)
+  @media (max-width: 575.98px) {
+    .company-faq {
+      // header
+      header {
+        .hero {
+          padding-top: 40px;
+          padding-bottom: 64px;
+        }
       }
     }
+    .circle{
+      height: 50px;
+    }
+    .right-top{
+      height: 100px;
+    }
+    .photo1{      
+      width: 95px;
+      height: 95px;
+    } 
+    .photo2{      
+      width: 55px;
+      height: 55px;
+    } 
+    .photo3{      
+      width: 75px;
+      height: 75px;
+    } 
+    .photo4{     
+      width: 120px;
+      height: 130px;
+    } 
+    .photo5{      
+      width: 75px;
+      height: 75px;
+    } 
+    .dots{
+      height: 80px;
+    }
+    .brands{
+      padding-left: 10px;
+    }
+    .brand{
+      margin-right: 18px;
+      height: 24px;
+    }
   }
-   .circle{
-    height: 90px;
-  }
-  .pattern{
-    height: 60px;
-  }
-   .right-top{
-    height: 220px;
-  }
-   .photo1{      
-    width: 110px;
-    height: 110px;
-  } 
-  .photo2{      
-    width: 65px;
-    height: 65px;
-  } 
-  .photo3{      
-    width: 90px;
-    height: 90px;
-  } 
-  .photo4{     
-    width: 150px;
-    height: 160px;
-  } 
-  .photo5{      
-    width: 90px;
-    height: 90px;
-  } 
-  .dots{
-    height: 90px;
-  }
-  .brands{
-    padding-left: 70px;
-  }
-  .brand{
-    margin-right: 32px;
-    height: 36px;
-  }
-}
 
-@media (min-width: 991.98px) and (max-width: 1100px) {
-  .photo1{      
-    width: 110px;
-    height: 110px;
-  } 
-  .photo2{      
-    width: 65px;
-    height: 65px;
-  } 
-  .photo3{      
-    width: 90px;
-    height: 90px;
-  } 
-  .photo4{     
-    width: 150px;
-    height: 160px;
-  } 
-  .photo5{      
-    width: 90px;
-    height: 90px;
-  } 
-  .circle{
-    height: 90px;
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .company-faq {
+      // header
+      header {
+        .hero {
+          padding-top: 40px;
+          padding-bottom: 64px;
+        }
+      }
+    }
+    .circle{
+      height: 65px;
+    }
+    .pattern{
+      height: 40px;
+    }
+    .right-top{
+      height: 150px;
+    }
+    .photo1{      
+      width: 95px;
+      height: 95px;
+    } 
+    .photo2{      
+      width: 55px;
+      height: 55px;
+    } 
+    .photo3{      
+      width: 75px;
+      height: 75px;
+    } 
+    .photo4{     
+      width: 120px;
+      height: 130px;
+    } 
+    .photo5{      
+      width: 75px;
+      height: 75px;
+    } 
+    .dots{
+      height: 80px;
+    }
+    .brands{
+      padding-left: 20px;
+    }
+    .brand{
+      margin-right: 22px;
+      height: 28px;
+    }
   }
-  .right-top{
-    height: 250px;
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .company-faq {
+      // header
+      header {
+        &.clip-eb {
+          clip-path: ellipse(200% 120% at 50% -30%);
+        }
+
+        .hero {
+          padding-top: 40px;
+          padding-bottom: 64px;
+        }
+      }
+    }
+    .circle{
+      height: 90px;
+    }
+    .pattern{
+      height: 60px;
+    }
+    .right-top{
+      height: 220px;
+    }
+    .photo1{      
+      width: 110px;
+      height: 110px;
+    } 
+    .photo2{      
+      width: 65px;
+      height: 65px;
+    } 
+    .photo3{      
+      width: 90px;
+      height: 90px;
+    } 
+    .photo4{     
+      width: 150px;
+      height: 160px;
+    } 
+    .photo5{      
+      width: 90px;
+      height: 90px;
+    } 
+    .dots{
+      height: 90px;
+    }
+    .brands{
+      padding-left: 70px;
+    }
+    .brand{
+      margin-right: 32px;
+      height: 36px;
+    }
   }
-  .pattern{
-    height: 80px;
+
+  @media (min-width: 991.98px) and (max-width: 1100px) {
+    .photo1{      
+      width: 110px;
+      height: 110px;
+    } 
+    .photo2{      
+      width: 65px;
+      height: 65px;
+    } 
+    .photo3{      
+      width: 90px;
+      height: 90px;
+    } 
+    .photo4{     
+      width: 150px;
+      height: 160px;
+    } 
+    .photo5{      
+      width: 90px;
+      height: 90px;
+    } 
+    .circle{
+      height: 90px;
+    }
+    .right-top{
+      height: 250px;
+    }
+    .pattern{
+      height: 80px;
+    }
+    .dots{
+      height: 90px;
+    }
+    .logos{
+      padding-left: 70px;
+    }
+    .brand{
+      margin-right: 30px;
+      height: 30px;
+    }
   }
-  .dots{
-    height: 90px;
-  }
-  .logos{
-    padding-left: 70px;
-  }
-  .brand{
-    margin-right: 30px;
-    height: 30px;
-  }
-}
-@media (min-width: 1100px) and (max-width: 1400px) {
-  
-  .photo1{      
-    width: 140px;
-    height: 140px;
-  } 
-  .photo2{      
-    width: 70px;
-    height: 70px;
-  } 
-  .photo3{      
-    width: 100px;
-    height: 100px;
-  } 
-  .photo4{     
-    width: 160px;
-    height: 175px;
-  } 
-  .photo5{      
-    width: 100px;
-    height: 100px;
-  } 
-  .right-top{
-    height: 300px;
-  }
-  .circle{
-    height: 120px;
-  }
-  .brand{
-    margin-right: 55px;
-    height: 36px;
-  }
-  .logos{
-    padding-left: 80px;
-  }
+  @media (min-width: 1100px) and (max-width: 1400px) {
     
-  
-}
-@media (min-width: 1400px) and (max-width: 1800px) {
-  
-  .photo1{      
-    width: 160px;
-    height: 160px;
-  } 
-  .photo2{      
-    width: 80px;
-    height: 80px;
-  } 
-  .photo3{      
-    width: 120px;
-    height: 120px;
-  } 
-  .photo4{     
-    width: 180px;
-    height: 200px;
-  } 
-  .photo5{      
-    width: 120px;
-    height: 120px;
-  } 
-  .right-top{
-    height: 400px;
-  }
-  .brand{
-    margin-right: 70px;
-  }
-  .logos{
-    padding-left: 140px;
-  }
+    .photo1{      
+      width: 140px;
+      height: 140px;
+    } 
+    .photo2{      
+      width: 70px;
+      height: 70px;
+    } 
+    .photo3{      
+      width: 100px;
+      height: 100px;
+    } 
+    .photo4{     
+      width: 160px;
+      height: 175px;
+    } 
+    .photo5{      
+      width: 100px;
+      height: 100px;
+    } 
+    .right-top{
+      height: 300px;
+    }
+    .circle{
+      height: 120px;
+    }
+    .brand{
+      margin-right: 55px;
+      height: 36px;
+    }
+    .logos{
+      padding-left: 80px;
+    }
+      
     
-  
-}
-@media (min-width: 1800px){
-  .photo1{      
-    width: 160px;
-    height: 160px;
-  } 
-  .photo2{      
-    width: 80px;
-    height: 80px;
-  } 
-  .photo3{      
-    width: 120px;
-    height: 120px;
-  } 
-  .photo4{     
-    width: 180px;
-    height: 200px;
-  } 
-  .photo5{      
-    width: 120px;
-    height: 120px;
-  } 
-  .right-top{
-    height: 400px;
   }
-  
-  .right-top{
-    height: 450px;
+  @media (min-width: 1400px) and (max-width: 1800px) {
+    
+    .photo1{      
+      width: 160px;
+      height: 160px;
+    } 
+    .photo2{      
+      width: 80px;
+      height: 80px;
+    } 
+    .photo3{      
+      width: 120px;
+      height: 120px;
+    } 
+    .photo4{     
+      width: 180px;
+      height: 200px;
+    } 
+    .photo5{      
+      width: 120px;
+      height: 120px;
+    } 
+    .right-top{
+      height: 400px;
+    }
+    .brand{
+      margin-right: 70px;
+    }
+    .logos{
+      padding-left: 140px;
+    }
+      
+    
   }
-  .brand{
-    margin-right: 80px;
+  @media (min-width: 1800px){
+    .photo1{      
+      width: 160px;
+      height: 160px;
+    } 
+    .photo2{      
+      width: 80px;
+      height: 80px;
+    } 
+    .photo3{      
+      width: 120px;
+      height: 120px;
+    } 
+    .photo4{     
+      width: 180px;
+      height: 200px;
+    } 
+    .photo5{      
+      width: 120px;
+      height: 120px;
+    } 
+    .right-top{
+      height: 400px;
+    }
+    
+    .right-top{
+      height: 450px;
+    }
+    .brand{
+      margin-right: 80px;
+    }
+    .logos{
+      padding-left: 180px;
+    }
   }
-  .logos{
-    padding-left: 180px;
-  }
-}
 
 </style>

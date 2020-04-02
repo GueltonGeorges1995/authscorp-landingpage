@@ -68,14 +68,7 @@
   </section>
 </template>
 
-<script>
-export default {
-    name: 'Pricing'
-}
-</script>
-
 <style scoped>
-    @import url('https://fonts.google.com/specimen/Lato?selection.family=Lato');
 
     div {
         margin: 0 auto;

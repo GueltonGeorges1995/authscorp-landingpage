@@ -219,5 +219,26 @@
                 "uri": "use-my-own-database"
             }
         ]
+    },
+    {
+        "section": "legal",
+        "articles": [
+            {
+                "title": "Terms and conditions",
+                "uri": "terms-and-conditions"
+            },
+            {
+                "title": "Privacy policy",
+                "uri": "privacy-policy"
+            },
+            {
+                "title": "Cookie policy",
+                "uri": "cookie-policy"
+            },
+            {
+                "title": "Consumer claims",
+                "uri": "consumer-claims"
+            }
+        ]
     }
 ]
