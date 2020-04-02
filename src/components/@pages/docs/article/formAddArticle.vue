@@ -26,7 +26,7 @@
                     :items="sections"
                     label="Section"
                     name="section"
-                    v-model="sections"
+                    v-model="selectedSection"
                     :rules="[rules.required]"
                     outlined
                   ></v-select>
@@ -39,7 +39,7 @@
                     :items="subCategorie"
                     label="Sub Categorie"
                     name="sub-categorie"
-                    v-model="subCategorie"
+                    v-model="selectedSubCategorie"
                     :rules="[rules.required]"
                     outlined
                   />
@@ -61,7 +61,7 @@
           </table>
         </v-card-text>
         <v-card-actions class="pb-5 mx-4">
-          <v-btn color="primary white--text" :disabled="!valid" type="submit" to='/article/add'>Continue</v-btn>
+          <v-btn color="primary white--text" :disabled="!valid" type="submit"  :to="'/article/add/' + selectedSection + '/' + selectedSubCategorie + '/' + titleArticle">Continue</v-btn>
         </v-card-actions>
       </form>
     </v-card>

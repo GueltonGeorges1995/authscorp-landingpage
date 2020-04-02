@@ -58,7 +58,8 @@ const router = new VueRouter({
         path: '/support',
         component: Support
     },{
-        path: '/article/add',
+        path: '/article/add/:section/:sub/:title',
+        props: true,
         component: AddArticle
     },{
         path: '*',

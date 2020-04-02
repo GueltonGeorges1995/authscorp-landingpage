@@ -1,7 +1,7 @@
 <template>
   <div class="docs-template">
     <v-toolbar color="primary" dark style="padding: 0 6rem;">
-      <v-btn text to="/docs/getting-started/test">Getting started</v-btn>
+      <v-btn text to="/docs/getting-started/what-is-authscorp">Getting started</v-btn>
       <v-btn text to="/docs/tutorials/test">Tutorials</v-btn>
       <v-btn text to="/docs/libraries/test">Libraries</v-btn>
       <v-btn text to="/docs/openid/test">Openid</v-btn>
@@ -16,9 +16,9 @@
         <v-flex xs2>
           <v-list-item>
             <v-list-item-title class="title">{{sectionName}}</v-list-item-title>
-            <!--<v-list-item-action>
+            <v-list-item-action style="margin-left:10px">
                  <docs-addArticle title="Add article" />
-            </v-list-item-action>!-->
+            </v-list-item-action>
           </v-list-item>
 
           <v-list dense nav>
