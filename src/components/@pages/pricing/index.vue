@@ -37,19 +37,18 @@
               <div class="ml-3 mt-5">
                 <div class="mb-5 d-flex align-center">
                   <img src="../docs/images/icons/correct.svg" alt />
-                  <span class="requireInstall ml-4">Unlimited project use</span>
+                  <span class="requireInstall ml-4">Unlimitted users</span>
                 </div>
                 <div class="mb-5 d-flex align-center">
                   <img src="../docs/images/icons/correct.svg" alt />
-                  <span class="requireInstall ml-4">Advanced dashboard</span>
+                  <span class="requireInstall ml-4">Unlimitted organizations</span>
                 </div>
                 <div class="mb-5 d-flex align-center">
                   <img src="../docs/images/icons/correct.svg" alt />
-                  <span class="requireInstall ml-4">All components included</span>
+                  <span class="requireInstall ml-4">All openid configs available</span>
                 </div>
-                <div class="mb-5 d-flex align-center">
-                  <img src="../docs/images/icons/correct.svg" alt />
-                  <span class="requireInstall ml-4">Advanced insight</span>
+                   <div class="mb-5 d-flex align-center">
+                 &nbsp;<br>
                 </div>
               </div>
               <div class="mt-5 d-flex justify-center">
@@ -122,11 +121,11 @@
                 </div>
                 <div class="mb-5 d-flex align-center">
                   <img src="../docs/images/icons/correct.svg" alt />
-                  <span class="requireInstall ml-4">All components included</span>
+                  <span class="requireInstall ml-4">Mutlivariate components</span>
                 </div>
                 <div class="mb-5 d-flex align-center">
                   <img src="../docs/images/icons/correct.svg" alt />
-                  <span class="requireInstall ml-4">Advanced insight</span>
+                  <span class="requireInstall ml-4">Phone Support</span>
                 </div>
               </div>
               <div class="mt-5 d-flex justify-center">
