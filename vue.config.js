@@ -31,28 +31,9 @@ module.exports = {
         // '@tools':         path.join(__dirname, '../tools'),
       }
     },
-    module: {
-      rules: [
-        {
-          test: /\.md$/i,
-          use: 'raw-loader',
-        },
-      ],
-    },
     plugins: [
-      new CompressionPlugin()
-    ],
-    optimization: {
-      // splitChunks: {
-      //   cacheGroups: {
-      //     commons: {
-      //       test: /[\\/]node_modules[\\/]/,
-      //       name: 'vendors',
-      //       chunks: 'all'
-      //     }
-      //   }
-      // }
-    }
+      //process.env.NODE_ENV === 'production' ? new CompressionPlugin() : null
+    ].filter((r) => r !== null),
   },
   devServer: {
     // disableHostCheck: true, // localtunnel / NGROK

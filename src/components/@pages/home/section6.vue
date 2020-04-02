@@ -398,12 +398,6 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: "Section6"
-};
-</script>
-
 <style scoped>
 section {
   background-color: #f5f9ff;

@@ -6,18 +6,7 @@ import VueMeta from 'vue-meta'
 // import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import '../node_modules/material-design-icons-iconfont/dist/material-design-icons.css'
 
-import LandingPage from '@pages/home/index.vue';
-import WelcomePage from './components/WelcomePage.vue';
-import SignIn from '@pages/signin/index.vue';
-import SignUp from '@pages/signup/index.vue';
-import ForgotPassword from '@pages/forgotpassword/index.vue';
-import AboutUs from '@pages/about-us/index.vue';
-import Docs from '@pages/docs/index.vue';
-import DocsLayout from '@pages/docs/article/index.vue';
-import Pricing from '@pages/pricing/index.vue';
-import Support from '@pages/support/index.vue';
-import Error from '@pages/error/index.vue';
-import AddArticle from '@pages/docs/article/add-article/index.vue';
+import Error from '@pages/error/index.vue'
 
 Vue.use(VueRouter);
 Vue.use(VueMeta)
@@ -27,40 +16,39 @@ const router = new VueRouter({
     routes: Error.routes(Error).concat([
     {
         path: '/',
-        component: LandingPage
-    },
-        {
+        component: () => import(/* webpackChunkName: "home" */ '@pages/home/index.vue')
+    },{
         path: '/welcome',
-        component: WelcomePage
+        component: () => import(/* webpackChunkName: "home" */ './components/WelcomePage.vue')
     },{
         path: '/signin',
-        component: SignIn
+        component: import(/* webpackChunkName: "openid" */ '@pages/signin/index.vue')
     },{
         path: '/signup',
-        component: SignUp
+        component: import(/* webpackChunkName: "openid" */ '@pages/signup/index.vue')
     },{
         path: '/forgotpassword',
-        component: ForgotPassword
+        component: import(/* webpackChunkName: "openid" */ '@pages/forgotpassword/index.vue')
     },{
         path: '/about-us',
-        component: AboutUs
+        component: import(/* webpackChunkName: "home" */ '@pages/about-us/index.vue')
     },{
         path: '/docs',
-        component: Docs
+        component: import(/* webpackChunkName: "docs" */ '@pages/docs/index.vue')
     },{
         path: '/docs/:section/:uri', // ToDo use SSR generator
         props: true,
-        component: DocsLayout
+        component: import(/* webpackChunkName: "docs" */ '@pages/docs/article/index.vue')
     },{
         path: '/pricing',
-        component: Pricing
+        component: import(/* webpackChunkName: "home" */ '@pages/pricing/index.vue')
     },{
         path: '/support',
-        component: Support
+        component: import(/* webpackChunkName: "home" */ '@pages/support/index.vue')
     },{
         path: '/article/add/:section/:sub/:title',
         props: true,
-        component: AddArticle
+        component: import(/* webpackChunkName: "docs" */ '@pages/docs/article/add-article/index.vue')
     },{
         path: '*',
         component: Error
@@ -114,10 +102,19 @@ export default (context) => {
 
     app.$router.push(context.url)
     context.$router = app.$router
-    context.meta = app.$meta() // and here
 
-    return app
+    // context.meta = app.$meta()
+    // return app
+    return new Promise((resolve, reject) => {
+        // wait until router has resolved possible async components and hooks
+        router.onReady(() => {
+            context.meta = app.$meta()
+            resolve(app)
+        }, reject)
+    })
 }
   
 if(typeof(window) !== "undefined")
-    app.$mount('#app');
+    router.onReady(() => {
+        app.$mount('#app')
+    })

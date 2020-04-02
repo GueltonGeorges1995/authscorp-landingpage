@@ -76,12 +76,6 @@
     </section>
 </template>
 
-<script>
-export default {
-    name: 'Roadmap'
-}
-</script>
-
 <style scoped>
     @import url('https://fonts.google.com/specimen/Lato?selection.family=Lato');
 

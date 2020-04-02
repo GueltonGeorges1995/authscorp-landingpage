@@ -62,31 +62,32 @@
 </template>
 
 <script>
-import AuthscorpLib from "../../../authscorp-lib";
+  import AuthscorpLib from "../../../authscorp-lib";
 
-AuthscorpLib.init();
+  AuthscorpLib.init();
 
-export default {
-  data: () => ({
-    show1: false,
-    password: "",
-    valid: true,
-    err: null,
-    email: "",
-    emailRules: [
-      v => !!v || "E-mail is required",
-      // v => /.+@.+\..+/.test(v) || "E-mail must be valid"
-    ],
-    passwordRules: [v => !!v || "Password is required"]
-  }),
+  export default {
+    name: 'signin',
+    data: () => ({
+      show1: false,
+      password: "",
+      valid: true,
+      err: null,
+      email: "",
+      emailRules: [
+        v => !!v || "E-mail is required",
+        // v => /.+@.+\..+/.test(v) || "E-mail must be valid"
+      ],
+      passwordRules: [v => !!v || "Password is required"]
+    }),
 
-  methods: {
-    onError(e) {
-      e.preventDefault();
-      this.err = e.error;
+    methods: {
+      onError(e) {
+        e.preventDefault();
+        this.err = e.error;
+      }
     }
-  }
-};
+  };
 </script>
 
 <style scoped>
