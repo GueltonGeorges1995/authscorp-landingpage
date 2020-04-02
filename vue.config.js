@@ -34,7 +34,14 @@ module.exports = {
       }
     },
     plugins: [
-      process.env.NODE_ENV === 'production' ? new CompressionPlugin() : null
+      process.env.NODE_ENV === 'production' ? new CompressionPlugin() : null,
+      // process.env.NODE_ENV === 'production' ? new CompressionPlugin({
+      //   filename: '[path].br[query]',
+      //   algorithm: 'brotliCompress',
+      //   compressionOptions: { level: 11 },
+      //   threshold: 10240,
+      //   minRatio: 0.8,
+      // }) : null
     ].filter((r) => r !== null),
   },
   devServer: {
