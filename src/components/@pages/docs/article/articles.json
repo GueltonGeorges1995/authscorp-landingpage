@@ -146,51 +146,51 @@
         "articles": [
             {
                 "title": "Setup an api middleware",
-                "uri": "tutorials/setup-an-api-middleware"
+                "uri": "setup-an-api-middleware"
             },
             {
                 "title": "How to define custom permissions",
-                "uri": "tutorials/custom-permissions"
+                "uri": "custom-permissions"
             },
             {
                 "title": "Securise linux servers with authscorp",
-                "uri": "tutorials/linux-servers"
+                "uri": "linux-servers"
             },
             {
                 "title": "Setup my own portal",
-                "uri": "tutorials/own-portal"
+                "uri": "own-portal"
             },
             {
                 "title": "Customise pages",
-                "uri": "tutorials/customise-ui"
+                "uri": "customise-ui"
             },
             {
                 "title": "Start my first web project",
-                "uri": "tutorials/first-web-project"
+                "uri": "first-web-project"
             },
             {
                 "title": "Start my first mobile app project",
-                "uri": "tutorials/first-mobile-project"
+                "uri": "first-mobile-project"
             },
             {
                 "title": "Setting up machine-to-machine authorization",
-                "uri": "tutorials/machine-to-machine"
+                "uri": "machine-to-machine"
             },
             {
                 "title": "Setup windows logon",
-                "uri": "tutorials/windows"
+                "uri": "windows"
             },
             {
                 "title": "Kubernetes authentification",
-                "uri": "tutorials/kubernetes"
+                "uri": "kubernetes"
             },
             {
                 "title": "Grafana authentification",
-                "uri": "tutorials/grafana"
+                "uri": "grafana"
             },
             {
                 "title": "Elasticsearch authentification",
-                "uri": "tutorials/elasticsearch"
+                "uri": "elasticsearch"
             }
         ]
     },
@@ -199,15 +199,15 @@
         "articles": [
             {
                 "title": "What is openid",
-                "uri": "openid/what-is-openid"
+                "uri": "what-is-openid"
             },
             {
                 "title": "What are clients",
-                "uri": "openid/what-are-clients"
+                "uri": "what-are-clients"
             },
             {
                 "title": "What is the difference between a client and a user",
-                "uri": "openid/difference-between-client-and-user"
+                "uri": "difference-between-client-and-user"
             }
         ]
     },
@@ -216,7 +216,7 @@
         "articles": [
             {
                 "title": "Use my own database",
-                "uri": "plugins/use-my-own-database"
+                "uri": "use-my-own-database"
             }
         ]
     }

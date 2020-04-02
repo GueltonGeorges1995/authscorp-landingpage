@@ -7,13 +7,17 @@
     // style="border: 2px dotted black; padding: 10px;"
 
     import marked from "marked"
-    import turndown from 'turndown'
 
     export default {
         props: {
             value: String,
         },
         created() {
+            if(typeof(window) === 'undefined')
+                return
+
+            // Require turndown here to prevent it to be loaded server side
+            const turndown = require('turndown')
             const turnservice = new turndown()
             turnservice.addRule('h1', {
                 filter: ['h1'],

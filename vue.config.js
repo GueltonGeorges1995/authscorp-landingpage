@@ -4,6 +4,15 @@ module.exports = {
   // prerender: {
   //   domain: 'https://www.authscorp.com',
   // },
+  chainWebpack(config) {
+    if(config.get('target') == 'node') {
+      config.merge({
+        externals: {
+          turndown: 'turndown'
+        }
+      })
+    }
+  },
   configureWebpack: {
     resolve: {
       extensions: ['.web.js', '.web.vue'],

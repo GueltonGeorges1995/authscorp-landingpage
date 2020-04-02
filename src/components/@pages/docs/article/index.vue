@@ -132,8 +132,32 @@
     },
     mounted() {
       this.loadArticle()
+      // this.create_all(this.section, this.articles)
     },
     methods:{
+      create_all(section, articles) {
+        for(var article of articles) {
+          if(article.articles)
+            this.create_all(article.section || section, article.articles)
+          else
+            this.create(article.section || section, article.uri, article.title)
+        }
+      },
+      create(section, uri, title, content = '/') {
+        console.log('create', section, uri, title, content)
+        return this.$api.get('docs/article?section='+section+'&uri='+uri).catch(() => {
+          return this.$api.put('docs/article', { title, content, section }).then((res) => {
+            // Temporary direct approval
+            return this.$api.post('docs/proposal', {
+              id: res.id,
+              uri,
+            })
+          })
+        }).catch((err) => {
+          console.error(err)
+        })
+      },
+
       openEditor(){
         this.showEditor = !this.showEditor
       },
