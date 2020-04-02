@@ -1,17 +1,23 @@
 <template>
     <section>
+        <img id="oval2" src="./images/icons/oval2.svg" alt="">
         <v-container style="margin-bottom: 30px;">
             <v-row id="head">
                 <v-col cols="5">
                     <h1 id="title">Read out our documentation</h1>
                     <p id="description">From year to year we strive to invent the most innovative technology that is used by both small enterprises and space enterprises.</p>
-                    <v-btn color="primary">
+                    <v-btn color="primary" style="padding: 7px;">
                         Documentation
                         <v-icon>keyboard_arrow_right</v-icon>
                     </v-btn>
                 </v-col>
                 <v-col cols="7">
-
+                    <img id="demi" src="./images/icons/demi-circle.svg" alt="">
+                    <img id="pattern" src="./images/icons/pattern.svg" alt="">
+                    <img id="shape" src="./images/icons/shape.svg" alt="">
+                    <img id="oval" src="./images/icons/oval.svg" alt="">
+                    <v-img id="img1" height="434px" width="370px" src="./images/Image (1).png" fluid />
+                    <v-img id="img2" height="455px" width="354px" src="./images/Image (2).png" fluid />
                 </v-col>
             </v-row>
             <v-row justify="center">
@@ -79,7 +85,7 @@
                             <p>By submitting this form you agree to our terms and conditions and our Privacy Policy which explains how we may collect, use and disclose your personal information including to third parties.</p>
                         </v-col>
                     </v-row>
-                    <v-btn color="primary">Contact sales</v-btn>
+                    <v-btn color="primary" style="padding: 10px;">Contact sales</v-btn>
                 </v-form>
             </v-container>
         </v-row>
@@ -137,9 +143,14 @@ export default {
 </script>
 
 <style scoped>
+    #oval2 {
+        position: absolute;
+        top: 1%;
+    }
+
     #head {
-        margin-top: 100px;
-        margin-bottom: 100px;
+        margin-top: 200px;
+        margin-bottom: 320px;
     }
 
     #title {
@@ -151,6 +162,42 @@ export default {
 
     #description {
         margin: 25px 0;
+    }
+
+    #demi {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    #pattern {
+        position: absolute;
+        top: 7.5%;
+        right: 3%;
+    }
+
+    #shape {
+        position: absolute;
+        right: 0;
+        top: 21%;
+    }
+
+    #oval {
+        position: absolute;
+        top: 0;
+        right: 3%;
+    }
+
+    #img1 {
+        position: absolute;
+        top: 5%;
+        right: 27%;
+    }
+
+    #img2 {
+        position: absolute;
+        right: 0;
+        top: 10%;
     }
 
     #answer {
@@ -182,11 +229,12 @@ export default {
     }
 
     #bg {
-        background-color: #264EEE;
+        background: url("./images/icons/background.svg") no-repeat;
+        background-size: contain;
     }
 
     #sales {
-        padding-top: 100px;
+        padding-top: 90px;
         font-size: 56px;
         color: #ffffff;
         font-weight: 400;
@@ -211,7 +259,7 @@ export default {
 
     .form {
         padding: 70px;
-        margin-bottom: 100px;
+        margin-bottom: 130px;
         background-color: #fff;
         box-shadow: 0px 10px 35px rgba(0,0,0,0.03);
         border-radius: 10px;

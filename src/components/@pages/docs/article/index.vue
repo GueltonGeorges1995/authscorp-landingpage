@@ -16,9 +16,9 @@
         <v-flex xs2>
           <v-list-item>
             <v-list-item-title class="title">{{sectionName}}</v-list-item-title>
-            <!--<v-list-item-action>
+            <v-list-item-action>
                  <docs-addArticle title="Add article" />
-            </v-list-item-action>!-->
+            </v-list-item-action>
           </v-list-item>
 
           <v-list dense nav>

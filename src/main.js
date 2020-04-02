@@ -17,6 +17,7 @@ import DocsLayout from '@pages/docs/article/index.vue';
 import Pricing from '@pages/pricing/index.vue';
 import Support from '@pages/support/index.vue';
 import Error from '@pages/error/index.vue';
+import AddArticle from '@pages/docs/article/add-article/index.vue';
 
 Vue.use(VueRouter);
 Vue.use(VueMeta)
@@ -56,6 +57,10 @@ const router = new VueRouter({
     },{
         path: '/support',
         component: Support
+    },{
+        path: '/article/add/:section/:sub/:title',
+        props: true,
+        component: AddArticle
     },{
         path: '*',
         component: Error
