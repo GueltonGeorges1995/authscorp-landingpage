@@ -238,6 +238,10 @@
       font-size: 1.1em;
     }
 
+    ul, ol {
+      margin-bottom: 16px;
+    }
+
     blockquote {
       border-left: 3px solid #979ea5;
       margin-bottom: 15px;

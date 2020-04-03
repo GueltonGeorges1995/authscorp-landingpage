@@ -76,7 +76,6 @@
                 quill.on("text-change", () => {
                     var html = quill.container.firstChild.innerHTML;
                     const md = this.turndown(html)
-                    console.log(md)
                     this.$emit('input', md)
                 })
             }

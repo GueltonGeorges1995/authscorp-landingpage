@@ -62,10 +62,10 @@
       </v-container>
     </div>
     <div class="legal">
-      <router-link to="/docs/legal/terms-and-conditions">Terms and conditions</router-link>
-      <router-link to="/docs/legal/privacy-policy">Privacy policy</router-link>
-      <router-link to="/docs/legal/cookie-policy">Cookie policy</router-link>
       <router-link to="/docs/legal/consumer-claims">Consumer claims</router-link>
+      <router-link to="/docs/legal/cookie-policy">Cookie policy</router-link>
+      <router-link to="/docs/legal/privacy-policy">Privacy policy</router-link>
+      <router-link to="/docs/legal/terms-and-conditions">Terms and conditions</router-link>
     </div>
   </div>
 </template>
