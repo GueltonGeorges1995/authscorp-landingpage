@@ -3,19 +3,19 @@
         <img id="oval2" src="./images/icons/oval2.svg" alt="">
         <v-container style="margin-bottom: 30px;">
             <v-row id="head">
-                <v-col cols="5">
+                <v-col md="5" sm="10">
                     <h1 id="title">Read out our documentation</h1>
                     <p id="description">From year to year we strive to invent the most innovative technology that is used by both small enterprises and space enterprises.</p>
-                    <v-btn color="primary" style="padding: 7px;">
-                        Documentation
+                    <v-btn class="bouton" color="primary">
+                        <p style="margin: 10px 20px 10px 0;">Documentation</p>
                         <v-icon>keyboard_arrow_right</v-icon>
                     </v-btn>
                 </v-col>
                 <v-col cols="7">
-                    <img id="demi" src="./images/icons/demi-circle.svg" alt="">
-                    <img id="pattern" src="./images/icons/pattern.svg" alt="">
-                    <img id="shape" src="./images/icons/shape.svg" alt="">
-                    <img id="oval" src="./images/icons/oval.svg" alt="">
+                    <img id="demi" src="./images/icons/demi-circle.svg" alt="" fluid>
+                    <img id="pattern" src="./images/icons/pattern.svg" alt="" fluid>
+                    <img id="shape" src="./images/icons/shape.svg" alt="" fluid>
+                    <img id="oval" src="./images/icons/oval.svg" alt="" fluid>
                     <v-img id="img1" height="434px" width="370px" src="./images/Image (1).png" fluid />
                     <v-img id="img2" height="455px" width="354px" src="./images/Image (2).png" fluid />
                 </v-col>
@@ -28,12 +28,13 @@
             <v-row>
                 <v-col cols="12">
                     <v-list>
-                        <v-list-item>
-                            <v-list-item-content>
-                                <v-text-field solo required placeholder="Ask a question" v-model="search" />
+                        <v-list-item id="search">
+                            <v-list-item-content style="display: inline;">
+                                <span style="margin-right: 20px;">search</span>
+                                <input type="text" id="input" required placeholder="Ask a question" v-model="search" >
                             </v-list-item-content>
                             <v-list-item-action>
-                                <v-btn color="primary">Search</v-btn>
+                                <v-btn class="bouton" color="primary" style="padding: 0 30px;">Search</v-btn>
                             </v-list-item-action>
                         </v-list-item>
                     </v-list>
@@ -52,7 +53,7 @@
             </v-row>
         </v-container>
         <v-row justify="center" id="bg">
-            <v-col cols="6">
+            <v-col md="6" sm="10">
                 <h2 id="sales">Contact our sales team</h2>
                 <p id="help">If you need our help, have questions about how to use the platform or are experiencing technical difficulties, please do not hesitate to contact us.</p>
             </v-col>
@@ -85,7 +86,7 @@
                             <p>By submitting this form you agree to our terms and conditions and our Privacy Policy which explains how we may collect, use and disclose your personal information including to third parties.</p>
                         </v-col>
                     </v-row>
-                    <v-btn color="primary" style="padding: 10px;">Contact sales</v-btn>
+                    <v-btn class="bouton" color="primary">Contact sales</v-btn>
                 </v-form>
             </v-container>
         </v-row>
@@ -146,6 +147,7 @@ export default {
     #oval2 {
         position: absolute;
         top: 1%;
+        /* z-index: 6; */
     }
 
     #head {
@@ -162,6 +164,13 @@ export default {
 
     #description {
         margin: 25px 0;
+    }
+
+    .bouton {
+        padding-right: 5px;
+        font-size: 16px; 
+        font-weight: 700;
+        text-transform: none;
     }
 
     #demi {
@@ -200,11 +209,28 @@ export default {
         top: 10%;
     }
 
+    /* Search */
     #answer {
         font-size: 40px;
         font-weight: 700;
         line-height: 52px;
         letter-spacing: 0.2px;
+    }
+
+    #search {
+        height: 56px;
+        border: solid 1px #e5eaf4;
+        box-shadow: 0px 6px 10px rgba(0,0,0,0.03);
+    }
+
+    #input {
+        height: 19px;
+        width: 90%;
+        color: #b3bac5;
+        font-family: "Exo 2";
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
     }
 
     .question {
@@ -228,6 +254,7 @@ export default {
         line-height: 20px;
     }
 
+    /* Contact Sales */
     #bg {
         background: url("./images/icons/background.svg") no-repeat;
         background-size: contain;
@@ -263,5 +290,26 @@ export default {
         background-color: #fff;
         box-shadow: 0px 10px 35px rgba(0,0,0,0.03);
         border-radius: 10px;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 1400px) {
+        #oval2, #oval, #demi, #pattern, #shape, #img1, #img2  {
+            display: none;
+        }
+
+        #head {
+            margin: 50px 0;
+        }
+
+        #answer {
+            text-align: center;
+        }
+    }
+
+    @media screen and (max-width: 959px) {
+        #bg {
+            background-size: cover;
+        }
     }
 </style>
