@@ -1,20 +1,24 @@
 <template>
   <div class="bg-main-section">
-    <v-container fluid class="d-flex justify-center">
-      <v-col cols="12" sm="6" md="6" class="flex-mobile">
+    <v-container fluid class="d-flex justify-center my-5">
+      <v-col cols="12" sm="7" md="7" class="flex-mobile">
         <div class="bg-col">
           <v-row class="d-flex justify-center align-center">
-            <h1 class="my-2">Welcome Back.</h1>
+            <h1 class="my-4">Welcome Back.</h1>
             <v-col cols="12" sm="8">
+              <div class="d-flex justify-center align-center">
               <v-btn color="primary" x-large class="mb-10 signInGoogleBtn" style="position:relative; width: 100%">
                 <div class="bg-img-btn">
                   <img class="img-btn" src="./image/google-img-btn.png" alt />
-                </div>Sign in with google
+                </div>
+                <div class="btn-text">
+                      Sign in with google
+                </div>
               </v-btn>
-
+              </div>
               <div class="d-flex justify-center align-center">
                 <div class="barre"></div>
-                <h4 class="mx-5">Or, sign in with your email</h4>
+                <p style="font-size:0.9em; color:black; font-weight:bold" class="mx-5 mt-2">Or, sign in with your email</p>
                 <div class="barre"></div>
               </div>
             </v-col>
@@ -91,12 +95,67 @@
 </script>
 
 <style scoped>
+
+p {
+  color: gray;
+}
+.signInBtn {
+  padding: 0 10rem;
+  height: 60px;
+}
+.barre {
+  background-color: gainsboro;
+  height: 1px;
+  width: 50px;
+}
+.bg-img-btn {
+  width: 15%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 3px;
+  position: absolute;
+  top: -11px;
+  left: -15px;
+  z-index: 10;
+}
+.btn-text{
+  display:flex;
+  width:80%;
+  }
+.img-btn {
+  height: 25px;
+  width: 25px;
+}
+
+.signInGoogleBtn {
+  display:flex;
+  justify-content:flex-end;
+  height: 60px;
+}
+h1 {
+  font-size: 40px;
+}
+
+.bg-main-section {
+  padding-left: 10rem;
+  padding-right: 10rem;
+  background-color: #f5f9ff;
+
+}
+.bg-col {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 960px) {
   .flex-mobile {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3rem;
   }
   .bg-main-section {
     padding: 1rem !important;
@@ -110,51 +169,22 @@
   h1 {
     font-size: xx-large !important;
   }
+  .signInGoogleBtn {
+  justify-content: center !important;
 }
-
-p {
-  color: gray;
+  .btn-text{
+  display:flex;
+  width:100%;
+  }
 }
-.signInBtn {
-  padding: 0 10rem;
-  height: 60px;
-}
-.barre {
-  background-color: gainsboro;
-  height: 1px;
-  width: 70px;
-}
-.bg-img-btn {
-  width: 40px;
-  height: 40px;
-  display: flex;
+@media (max-width: 575.98px) {
+.btn-text{
+  display:flex;
+  width:100%;
   justify-content: center;
-  align-items: center;
-  background-color: white;
-  border-radius: 3px;
-  position: absolute;
-  top: -11px;
-  left: -15px;
-  z-index: 10;
+  }
+  .signInGoogleBtn {
+  justify-content: center !important;
 }
-.img-btn {
-  height: 25px;
-  width: 25px;
-}
-.signInGoogleBtn {
-  height: 60px;
-}
-h1 {
-  font-size: 40px;
-}
-
-.bg-main-section {
-  padding: 10rem;
-  background-color: #f5f9ff;
-}
-.bg-col {
-  background-color: #ffffff;
-  padding: 1rem 2rem;
-  border-radius: 10px;
 }
 </style>

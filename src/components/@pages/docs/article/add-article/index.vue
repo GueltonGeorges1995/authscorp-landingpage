@@ -8,7 +8,21 @@
       <v-btn text to="/docs/plugins/test">Plugins</v-btn>
       <v-spacer />
       <div class="search">
-        <v-text-field prepend-inner-icon="search" solo hide-details placeholder="Search" light />
+               <v-combobox
+                                no-filter
+                                prepend-inner-icon="search"
+                                placeholder="Ask a question"
+                                outlined
+                                hide-details
+                                light
+                                background-color="white"
+                                v-model="model"
+                                :items="entries"
+                                :loading="isLoading"
+                                :search-input.sync="search"
+                                hide-no-data
+                                item-text="title"
+                            ></v-combobox>
       </div>
     </v-toolbar>
     <div style="padding: 30px 100px">
@@ -60,6 +74,7 @@
 <script>
 
   import marked from "marked";
+  import authscorp from '../../../../../authscorp-lib/forms'
 
   import Vue from "vue";
   import DocsNav from "../nav";
@@ -73,12 +88,17 @@
   export default {
     data() {
       return {
+        id:null,
         content:    "Write your article here",
         title:      null,
         section:    null,
         subCategorie: null,
         err:        null,
         showEditor: false,
+          entries: [],
+            isLoading: false,
+            model: null,
+            search: null
       }
     },
     computed: {
@@ -103,7 +123,6 @@
       this.section = this.$route.params.section
       this.title   = this.$route.params.title
       this.subCategorie = this.$route.params.sub
-      this.loadArticle()
     },
     methods:{
       openEditor(){
@@ -113,19 +132,56 @@
         }
       },
       save() {
-          this.$api.post('docs/article', { title: this.title, content: this.content, section: this.section }).then((res) => {
-           console.log(res)
+        if(!this.id){
+           this.$api.post('docs/article', { title: this.title, content: this.content, section: this.section }).then((res) => {
+           this.id = res.id
           }).catch((err) => {
             console.log(err)
           })
+        }
+        else{
+           this.$api.post('docs/article', { id:this.id, title: this.title, content: this.content, section: this.section }).then((res) => {
+           this.id = res.id
+          }).catch((err) => {
+            console.log(err)
+          })
+        }    
       }
-    }
+    },
+      watch: {
+            search() {
+                if(this.$timeout)
+                    clearTimeout(this.$timeout)
+
+                // Set timeout to lower search requests (do not performs every time a key is pressed)
+                this.$timeout = setTimeout(() => {
+                    if(!this.search || this.search.length < 3) {
+                        if(!this.search)
+                            this.entries = []
+
+                        return
+                    }
+
+                    this.isLoading = true
+                    authscorp.request('POST', '/api/docs/search', {
+                        query: this.search,
+                    }).then((res) => {
+                        this.entries = res.data
+                    }).catch((err) => {
+                        console.error(err)
+                    }).finally(() => (this.isLoading = false))
+                }, 200);
+            },
+            model(val) {
+                if(typeof(val) === 'object' && val.uri)
+                    this.$router.push(val.uri)
+            }
+        },
   };
 
 </script>
 
 <style lang="scss">
-
   .docs-template {
     min-height: 100vh;
 
@@ -139,10 +195,13 @@
         right:5%;
         top:30%;
     }
+    .v-text-field fieldset, .v-text-field .v-input__control {
+    color: inherit;
+    border: none !important;
+    }
 
     .search {
       width: 250px;
-
       > .v-text-field .v-input__control {
         min-height: 40px;
       }
