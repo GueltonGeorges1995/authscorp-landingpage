@@ -1,21 +1,66 @@
 <template>
   <div class="docs-template">
-    <v-toolbar color="primary" dark style="padding: 0 6rem;">
-      <v-btn text>Sections</v-btn>
-      <v-btn text>Getting started</v-btn>
-      <v-btn text>Api's</v-btn>
-      <v-btn text>Tutorials</v-btn>
-      <v-btn text>Contribute</v-btn>
+  <v-toolbar color="primary" dark style="padding: 0 6rem;">
+      <v-btn text to="/docs/getting-started/test">Getting started</v-btn>
+      <v-btn text to="/docs/tutorials/test">Tutorials</v-btn>
+      <v-btn text to="/docs/libraries/test">Libraries</v-btn>
+      <v-btn text to="/docs/openid/test">Openid</v-btn>
+      <v-btn text to="/docs/plugins/test">Plugins</v-btn>
       <v-spacer />
       <div class="search">
-        <v-text-field prepend-inner-icon="search" solo hide-details placeholder="Search" light />
+               <v-combobox
+                                no-filter
+                                prepend-inner-icon="search"
+                                placeholder="Ask a question"
+                                outlined
+                                hide-details
+                                light
+                                background-color="white"
+                                v-model="model"
+                                :items="entries"
+                                :loading="isLoading"
+                                :search-input.sync="search"
+                                hide-no-data
+                                item-text="title"
+                            ></v-combobox>
       </div>
     </v-toolbar>
     <div style="padding: 30px 100px">
       <v-layout row wrap>
+        <v-flex xs2 class="d-flex justify-center flex-column">
+          <p>Title:</p>
+           <v-text-field
+            label="Title"
+            single-line
+            solo
+            v-model="title"
+            :disabled="!showEditor"
+          ></v-text-field>
+          <p>Section:</p>
+            <v-text-field
+            label="Section"
+            single-line
+            solo
+            v-model="section"
+            :disabled="!showEditor"
+
+          ></v-text-field>
+          <p>Sub-categorie:</p>
+            <v-text-field
+            label="Sub-categorie"
+            single-line
+            solo
+            v-model="subCategorie"
+            :disabled="!showEditor"
+
+          ></v-text-field>
+        </v-flex>
         <v-flex xs8 offset-xs1>
-          <v-btn @click="openEditor()" class="edit mx-2" fab dark large color="primary">
+          <v-btn @click="openEditor()" class="edit mx-2" fab dark large color="primary" v-if="!showEditor">
             <v-icon dark>mdi-pencil</v-icon>
+          </v-btn>   
+          <v-btn @click="openEditor()" class="edit mx-2" fab dark large color="green" v-else>
+            <v-icon dark>mdi-check</v-icon>
           </v-btn>
           <v-skeleton-loader type="article" v-if="content === null" />
           <article v-html="article" v-else-if="!showEditor" id="article-content" />
@@ -29,6 +74,7 @@
 <script>
 
   import marked from "marked";
+  import authscorp from '../../../../../authscorp-lib/forms'
 
   import Vue from "vue";
   import DocsNav from "../nav";
@@ -42,8 +88,17 @@
   export default {
     data() {
       return {
-        content:    "test",
+        id:null,
+        content:    "Write your article here",
+        title:      null,
+        section:    null,
+        subCategorie: null,
+        err:        null,
         showEditor: false,
+          entries: [],
+            isLoading: false,
+            model: null,
+            search: null
       }
     },
     computed: {
@@ -51,36 +106,82 @@
         if(this.content === null)
           return null
         return marked(this.content)
-      },
-      sectionName() {
-        const sectionName = this.section.split('-').join(' ').toLowerCase()
-        return sectionName.substr(0,1).toUpperCase() + sectionName.substr(1)
       }
     },
-    watch: {
-      content(val, oldval) {
-        if(this.showEditor && oldval !== null && val !== oldval && val !== null) {
-          if(this.saveTimeout)
-            clearTimeout(this.saveTimeout)
+    // watch: {
+    //   content(val, oldval) {
+    //     if(this.showEditor && oldval !== null && val !== oldval && val !== null) {
+    //       if(this.saveTimeout)
+    //         clearTimeout(this.saveTimeout)
 
-          this.saveTimeout = setTimeout(this.save, 500);
-        }
-      }
-    },
+    //       this.saveTimeout = setTimeout(this.save, 500);
+    //     }
+    //   }
+    // },
+    
     mounted() {
-      this.loadArticle()
+      this.section = this.$route.params.section
+      this.title   = this.$route.params.title
+      this.subCategorie = this.$route.params.sub
     },
     methods:{
       openEditor(){
         this.showEditor = !this.showEditor
+        if(!this.showEditor){
+          this.save();
+        }
+      },
+      save() {
+        if(!this.id){
+           this.$api.post('docs/article', { title: this.title, content: this.content, section: this.section }).then((res) => {
+           this.id = res.id
+          }).catch((err) => {
+            console.log(err)
+          })
+        }
+        else{
+           this.$api.post('docs/article', { id:this.id, title: this.title, content: this.content, section: this.section }).then((res) => {
+           this.id = res.id
+          }).catch((err) => {
+            console.log(err)
+          })
+        }    
       }
-    }
+    },
+      watch: {
+            search() {
+                if(this.$timeout)
+                    clearTimeout(this.$timeout)
+
+                // Set timeout to lower search requests (do not performs every time a key is pressed)
+                this.$timeout = setTimeout(() => {
+                    if(!this.search || this.search.length < 3) {
+                        if(!this.search)
+                            this.entries = []
+
+                        return
+                    }
+
+                    this.isLoading = true
+                    authscorp.request('POST', '/api/docs/search', {
+                        query: this.search,
+                    }).then((res) => {
+                        this.entries = res.data
+                    }).catch((err) => {
+                        console.error(err)
+                    }).finally(() => (this.isLoading = false))
+                }, 200);
+            },
+            model(val) {
+                if(typeof(val) === 'object' && val.uri)
+                    this.$router.push(val.uri)
+            }
+        },
   };
 
 </script>
 
 <style lang="scss">
-
   .docs-template {
     min-height: 100vh;
 
@@ -89,10 +190,18 @@
         right:5%;
         top:20%;
     }
+      .save{
+        position: fixed;
+        right:5%;
+        top:30%;
+    }
+    .v-text-field fieldset, .v-text-field .v-input__control {
+    color: inherit;
+    border: none !important;
+    }
 
     .search {
       width: 250px;
-
       > .v-text-field .v-input__control {
         min-height: 40px;
       }

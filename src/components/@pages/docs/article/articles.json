@@ -18,6 +18,11 @@
                 "title": "How it works",
                 "uri": "how-it-works"
             }
+            ,
+            {
+                "title": "Test",
+                "uri": "test"
+            }
         ]
     },
     {

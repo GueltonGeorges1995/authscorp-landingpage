@@ -50,12 +50,12 @@ module.exports = {
     // disableHostCheck: true, // localtunnel / NGROK
     proxy: {
       '^/api': {
-        target: 'http://10.3.177.83/',
+        target: 'http://localhost:8081/',
         ws: false,
         changeOrigin: true
       },
       '^/graphql': {
-        target: 'http://10.3.177.83/',
+        target: 'http://localhost:8081/',
         ws: false,
         changeOrigin: true
       }

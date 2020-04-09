@@ -3,13 +3,14 @@
         <img id="oval2" src="./images/icons/oval2.svg" alt="">
         <v-container style="margin-bottom: 30px;">
             <v-row id="head">
-                <v-col md="5" sm="10">
+                <v-col md="5" sm="10" style="z-index:2">
                     <h1 id="title">Read out our documentation</h1>
                     <p id="description">From year to year we strive to invent the most innovative technology that is used by both small enterprises and space enterprises.</p>
-                    <v-btn class="bouton" color="primary">
-                        <p style="margin: 10px 20px 10px 0;">Documentation</p>
-                        <v-icon>keyboard_arrow_right</v-icon>
-                    </v-btn>
+                 
+                    <v-btn color="primary">
+                  View documentation
+                  <v-icon dark right>arrow_forward_ios</v-icon>
+                </v-btn>
                 </v-col>
                 <v-col cols="7">
                     <img id="demi" src="./images/icons/demi-circle.svg" alt="" fluid>
@@ -147,7 +148,7 @@ export default {
     #oval2 {
         position: absolute;
         top: 1%;
-        /* z-index: 6; */
+         z-index: 1;
     }
 
     #head {

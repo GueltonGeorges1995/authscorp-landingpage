@@ -15,7 +15,7 @@
           <v-icon color="white">close</v-icon>
         </v-btn>
       </v-toolbar>
-      <form ref="form">
+      <v-form ref="form" v-model="valid">
         <v-card-text>
           <table class="settings-table">
             <tbody>
@@ -63,7 +63,7 @@
         <v-card-actions class="pb-5 mx-4">
           <v-btn color="primary white--text" :disabled="!valid" type="submit"  :to="'/article/add/' + selectedSection + '/' + selectedSubCategorie + '/' + titleArticle">Continue</v-btn>
         </v-card-actions>
-      </form>
+      </v-form>
     </v-card>
   </v-bottom-sheet>
 </template> 
