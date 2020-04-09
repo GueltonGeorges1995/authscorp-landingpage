@@ -1,6 +1,8 @@
 const CompressionPlugin = require('compression-webpack-plugin');
 const path = require('path')
 
+const api_server = 'http://10.3.177.83/'
+
 module.exports = {
   pluginOptions: {
     // prerender: {
@@ -50,12 +52,12 @@ module.exports = {
     // disableHostCheck: true, // localtunnel / NGROK
     proxy: {
       '^/api': {
-        target: 'http://localhost:8081/',
+        target: api_server,
         ws: false,
         changeOrigin: true
       },
       '^/graphql': {
-        target: 'http://localhost:8081/',
+        target: api_server,
         ws: false,
         changeOrigin: true
       }
