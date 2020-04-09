@@ -91,70 +91,72 @@
 </script>
 
 <style scoped>
-@media screen and (max-width: 960px) {
-  .flex-mobile {
+
+  @media screen and (max-width: 960px) {
+    .flex-mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem;
+    }
+    .bg-main-section {
+      padding: 1rem !important;
+    }
+    .bg-col {
+      padding: 1rem !important;
+    }
+    .bg-img-btn {
+      display: none !important;
+    }
+    h1 {
+      font-size: xx-large !important;
+    }
+  }
+
+  p {
+    color: gray;
+  }
+  .signInBtn {
+    padding: 0 10rem;
+    height: 60px;
+  }
+  .barre {
+    background-color: gainsboro;
+    height: 1px;
+    width: 70px;
+  }
+  .bg-img-btn {
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3rem;
+    background-color: white;
+    border-radius: 3px;
+    position: absolute;
+    top: -11px;
+    left: -15px;
+    z-index: 10;
   }
-  .bg-main-section {
-    padding: 1rem !important;
+  .img-btn {
+    height: 25px;
+    width: 25px;
   }
-  .bg-col {
-    padding: 1rem !important;
-  }
-  .bg-img-btn {
-    display: none !important;
+  .signInGoogleBtn {
+    height: 60px;
   }
   h1 {
-    font-size: xx-large !important;
+    font-size: 40px;
   }
-}
 
-p {
-  color: gray;
-}
-.signInBtn {
-  padding: 0 10rem;
-  height: 60px;
-}
-.barre {
-  background-color: gainsboro;
-  height: 1px;
-  width: 70px;
-}
-.bg-img-btn {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border-radius: 3px;
-  position: absolute;
-  top: -11px;
-  left: -15px;
-  z-index: 10;
-}
-.img-btn {
-  height: 25px;
-  width: 25px;
-}
-.signInGoogleBtn {
-  height: 60px;
-}
-h1 {
-  font-size: 40px;
-}
+  .bg-main-section {
+    padding: 10rem;
+    background-color: #f5f9ff;
+  }
+  .bg-col {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+  }
 
-.bg-main-section {
-  padding: 10rem;
-  background-color: #f5f9ff;
-}
-.bg-col {
-  background-color: #ffffff;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-}
 </style>
