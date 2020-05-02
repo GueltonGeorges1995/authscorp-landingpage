@@ -2,6 +2,7 @@
 node_modules
 /dist
 /vue-cli-plugin-pressr
+/vue-au-graphql-loader
 
 # local env files
 .env.local
