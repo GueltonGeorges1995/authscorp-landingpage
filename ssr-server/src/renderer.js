@@ -1,11 +1,11 @@
-const SsrPlugin = require('vue-cli-plugin-pressr/src/prerender')
-const request   = require('request-promise-native')
-const { createBundleRenderer } = require('vue-server-renderer');
-const minify    = require('html-minifier').minify;
+var SsrPlugin = require('vue-cli-plugin-pressr/src/prerender')
+var request   = require('request-promise-native')
+var { createBundleRenderer } = require('vue-server-renderer');
+var minify    = require('html-minifier').minify;
 
 // Replace api callers of vuejs instances
 function $api(server, mixin) {
-    // const bindRes = (res) => {
+    // var bindRes = (res) => {
 
     // }
 
@@ -39,7 +39,7 @@ function on_http_bunlde(host, cb) {
     var has_error = false
     var etag = null
 
-    const load = (ntag, template) => {
+    var load = (ntag, template) => {
         console.log('load bundle')
         return request(host + '/.ssr/vue-ssr-server-bundle.json').then((res) => {
             cb(template, JSON.parse(res))
@@ -47,7 +47,7 @@ function on_http_bunlde(host, cb) {
         })
     }
 
-    const update = () => {
+    var update = () => {
         request({
             uri: host + '/.ssr/template.html',
             headers: {
@@ -99,7 +99,7 @@ function clearCaches() {
 
 // Setup vuejs server renderer
 module.exports = function({ ssr_folder, http_bundle, watch_interval, api_server }) {
-    const ssr = new SsrPlugin({
+    var ssr = new SsrPlugin({
         sitemap: false,
         langRedirects: false,
         domain: '',
@@ -117,7 +117,7 @@ module.exports = function({ ssr_folder, http_bundle, watch_interval, api_server 
     return function(context) {
         // Try getting from caches
         if(ssr.caches[context.url]) {
-            const cache = ssr.caches[context.url]
+            var cache = ssr.caches[context.url]
             Object.assign(context, cache.ctx)
             cache.last_use = (new Date()).getTime()
 

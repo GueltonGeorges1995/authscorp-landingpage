@@ -15,8 +15,8 @@
             if(typeof(window) === 'undefined')
                 return
 
-            const turndown = require('turndown').default
-            const turnservice = new turndown()
+            var turndown = require('turndown').default
+            var turnservice = new turndown()
             turnservice.addRule('h1', {
                 filter: ['h1'],
                 replacement: function (content) {
@@ -75,7 +75,7 @@
                 quill.clipboard.dangerouslyPasteHTML(marked(this.value || '') + "\n");
                 quill.on("text-change", () => {
                     var html = quill.container.firstChild.innerHTML;
-                    const md = this.turndown(html)
+                    var md = this.turndown(html)
                     this.$emit('input', md)
                 })
             }

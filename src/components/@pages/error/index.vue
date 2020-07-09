@@ -964,7 +964,7 @@
 
 <script>
 
-  const statuses = {
+  var statuses = {
     "400": {
       title: '',
       message: '',

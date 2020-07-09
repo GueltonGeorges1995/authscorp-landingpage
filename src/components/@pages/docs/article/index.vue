@@ -92,7 +92,7 @@
         return marked(this.content)
       },
       sectionName() {
-        const sectionName = this.section.split('-').join(' ').toLowerCase()
+        var sectionName = this.section.split('-').join(' ').toLowerCase()
         return sectionName.substr(0,1).toUpperCase() + sectionName.substr(1)
       },
       breadcrumbs() {

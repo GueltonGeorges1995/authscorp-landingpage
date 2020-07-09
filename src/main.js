@@ -11,7 +11,7 @@ import Error from '@pages/error/index.vue'
 Vue.use(VueRouter);
 Vue.use(VueMeta)
 
-const router = new VueRouter({
+var router = new VueRouter({
     mode: 'history',
     routes: Error.routes(Error).concat([
     {
@@ -98,7 +98,7 @@ Vue.prototype.$api = {
 
 //------------------------------------
 
-const app = new Vue(Object.assign(App, {
+var app = new Vue(Object.assign(App, {
     vuetify,
     router,
 }))

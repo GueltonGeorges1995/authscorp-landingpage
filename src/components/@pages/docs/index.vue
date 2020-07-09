@@ -413,7 +413,7 @@ export default {
   },
   methods: {
     selectedOne(item) {
-      const elem = this.install.find(obj => obj.name === item);
+      var elem = this.install.find(obj => obj.name === item);
       this.selected = elem.methode;
     }
   }

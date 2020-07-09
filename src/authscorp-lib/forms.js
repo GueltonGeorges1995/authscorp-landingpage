@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const Forms = {
+var Forms = {
     request(method, url, data) {
         return axios({
             method,
@@ -18,7 +18,7 @@ const Forms = {
     trigger(elm, eventName, data) {
         try {
             // Camelcase & SnakCase sending trigger
-            const secondName = eventName.replace(/-\S*/g, function(txt){ return txt.charAt(1).toUpperCase() + txt.substr(2).toLowerCase();});
+            var secondName = eventName.replace(/-\S*/g, function(txt){ return txt.charAt(1).toUpperCase() + txt.substr(2).toLowerCase();});
             if(secondName !== eventName)
                 if(!this.trigger(elm, secondName, data))
                     return false;
@@ -61,7 +61,7 @@ const Forms = {
             var data = serializeArray(elm);
             var o = {};
             for (var k in data) {
-                const d = data[k];
+                var d = data[k];
                 if (o[d.name] !== undefined) {
                     if (!o[d.name].push) {
                         o[d.name] = [o[d.name]];
@@ -76,9 +76,9 @@ const Forms = {
         }
     },
     submit(elm) {
-        const method = (elm.getAttribute('method') || 'POST').toUpperCase();
-        const api    = elm.getAttribute('action');
-        const data   = Forms.serialize(elm);
+        var method = (elm.getAttribute('method') || 'POST').toUpperCase();
+        var api    = elm.getAttribute('action');
+        var data   = Forms.serialize(elm);
 
         if(!Forms.trigger(elm, 'api-prepare', { api: api, data, method }))
             return { defaultPrevented: true }
@@ -105,7 +105,7 @@ const Forms = {
         }).catch(console.error);
     },
     onSubmit(e) {
-        const elm = e.target;
+        var elm = e.target;
         if(!elm || (elm.tagName && String(elm.tagName).toLowerCase() !== 'form') || !elm.getAttribute('action') || e.defaultPrevented || !elm.hasAttribute('authscorp'))
             return false
 

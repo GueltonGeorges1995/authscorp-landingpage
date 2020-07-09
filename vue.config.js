@@ -1,7 +1,7 @@
-const CompressionPlugin = require('compression-webpack-plugin');
-const path = require('path')
+var CompressionPlugin = require('compression-webpack-plugin');
+var path = require('path')
 
-const api_server = 'http://10.3.177.83/'
+var api_server = 'http://10.3.177.83/'
 
 module.exports = {
   pluginOptions: {
